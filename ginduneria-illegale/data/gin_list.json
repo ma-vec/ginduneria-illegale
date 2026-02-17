@@ -1,0 +1,222 @@
+[
+  {
+    "id": "portofino_winter",
+    "nome": "Portofino Winter Edition",
+    "provenienza": "Portofino",
+    "isEmpty": false,
+    "bg-color": "#00477e",
+    "coordinate": { "lat": 44.303, "lon": 9.209 },
+    "aggettivi": [ "Elegiaco", "Mediterraneo", "Nostalgico" ],
+    "botaniche": [ "Rosmarino", "Lavanda", "Iris" ],
+    "profilo": "Il bevitore della Portofino Winter Edition è quello che vive il Natale come un atto estetico più che emotivo...",
+    "radar": { "dryness": 7.5, "uniqueness": 6.0, "balsamic": 8.5, "salinity": 4.0, "citrus": 6.5, "botanic-complexity": 7.0, "persistence": 8.0 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0.5, "botanic-complexity": -0.5, "persistence": 0.5 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.5, "citrus": 1.0, "botanic-complexity": 1.0, "persistence": 1.2 }, "consigliata": true }
+    ],
+    "ethicalIndex" : { "env": 90, "soc": 80, "trad": 85, "tot": 85, "motivation": "Certificato BCorp e parte di OneOcean per la tutela di Portofino"},
+    "antipasti": [
+      { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
+      { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
+    ],
+    "limited": "76/3000"
+  },
+  {
+    "id": "melagorai",
+    "nome": "Melagorai",
+    "provenienza": "Trento",
+    "isEmpty": false,
+    "bg-color": "#8b0000",
+    "coordinate": { "lat": 46.067, "lon": 11.121 },
+    "aggettivi": [ "Nobile", "Territoriale", "Elegante" ],
+    "botaniche": [ "Mela Jonagold", "Limone del Garda", "Ginepro montano" ],
+    "profilo": "Chi beve Melagorai è convinto di avere un rapporto sano con il territorio...",
+    "radar": { "dryness": 6.0, "uniqueness": 7.5, "balsamic": 5.0, "salinity": 2.0, "citrus": 8.0, "botanic-complexity": 6.5, "persistence": 7.0 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0.5, "balsamic": -0.8, "salinity": 0, "citrus": 0.8, "botanic-complexity": 0.5, "persistence": 0.5 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": 0.5, "uniqueness": 1.2, "balsamic": 0.8, "salinity": 0, "citrus": 1.5, "botanic-complexity": 1.0, "persistence": 0.8 }, "consigliata": true }
+    ],
+    "ethicalIndex" : { "env": 70, "soc": 85, "trad": 75, "tot": 77, "motivation": "Valorizza la filiera corta, partendo dai produttori locali della Valsugana"},
+    "antipasti": [
+      { "nome": "Involtini Bresaola e Caprino", "img": "path", "descrizione": "Tradizione alpina che sposa la mela Jonagold." },
+      { "nome": "Spiedini di Tofu e Mela", "img": "path", "descrizione": "[VEGANA] Tofu affumicato grigliato con cubetti di mela." }
+    ],
+    "limited": null
+  },
+  {
+    "id": "amuerte-white",
+    "nome": "Amuerte White",
+    "provenienza": "Belgio",
+    "isEmpty": false,
+    "bg-color": "#ffffff",
+    "coordinate": { "lat": 51.219, "lon": 4.402 },
+    "aggettivi": [ "Audace", "Teatrale", "Cinetico" ],
+    "botaniche": [ "Foglia di coca dal perù", "Finger lime dal Parco del Circeo", "Pepe del Sichuan" ],
+    "profilo": "Chi sceglie Amuerte White non beve gin: celebra un rito di lusso tribale...",
+    "radar": { "dryness": 5.5, "uniqueness": 9.5, "balsamic": 4.0, "salinity": 3.0, "citrus": 8.5, "botanic-complexity": 9.0, "persistence": 8.5 },
+    "toniche": [
+      { "label": "Light Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0, "balsamic": -0.2, "salinity": 0.2, "citrus": 1.0, "botanic-complexity": -1.0, "persistence": 0.5 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 0.8, "balsamic": 0.5, "salinity": 0.5, "citrus": 1.2, "botanic-complexity": 0.5, "persistence": 0.8 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 50, "soc": 55, "trad": 65, "tot": 67, "motivation": "Assenza di trasparenza sull'impatto etico reale della raccolta di foglie di coca in Perù."},
+    "antipasti": [
+      { "nome": "Ceviche di spigola", "img": "path", "descrizione": "Pesce crudo e lime per richiamare il Perù." },
+      { "nome": "Tacos con Avocado", "img": "path", "descrizione": "[VEGANA] Crema di avocado e peperoncino per la foglia di coca." }
+    ],
+    "limited": "8000 bottiglie al mondo"
+  },
+  {
+    "id": "bareksten-botanical",
+    "nome": "Bareksten botanical",
+    "provenienza": "Norvegia",
+    "isEmpty": false,
+    "bg-color": "#1a1a1a",
+    "coordinate": { "lat": 60.391, "lon": 5.322 },
+    "aggettivi": [ "Selvatico", "Tagliente", "Misterioso" ],
+    "botaniche": [ "Mirtilli selvatici", "Resina di pino", "Ginepro artico" ],
+    "profilo": "Ogni sorso è un atto mistico, un incontro silenzioso con la bruma scandinava...",
+    "radar": { "dryness": 8.5, "uniqueness": 8.0, "balsamic": 9.5, "salinity": 3.0, "citrus": 4.0, "botanic-complexity": 9.0, "persistence": 9.0 },
+    "toniche": [
+      { "label": "Classic Indian", "tipo": "indiana", "valori": { "dryness": 1.2, "uniqueness": 0, "balsamic": 1.0, "salinity": 0, "citrus": 0, "botanic-complexity": 0.5, "persistence": 1.0 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.0, "uniqueness": 0.5, "balsamic": 1.5, "salinity": 0, "citrus": 0.8, "botanic-complexity": 1.2, "persistence": 0.8 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 80, "soc": 70, "trad": 75, "tot": 75, "motivation": "Uso di botaniche esclusivamente locali e alcol base autoprodotto"},
+    "antipasti": [
+      { "nome": "Gravlax di salmone", "img": "path", "descrizione": "Salmone marinato all'aneto, sapore di fiordo." },
+      { "nome": "Carpaccio di Barbabietola", "img": "path", "descrizione": "[VEGANA] Note terrose che esaltano il muschio del gin." }
+    ],
+    "limited": null
+  },
+  {
+    "id": "son-of-a-birch",
+    "nome": "Son of a birch",
+    "provenienza": "Trento",
+    "isEmpty": false,
+    "bg-color": "#d2b48c",
+    "coordinate": { "lat": 46.155, "lon": 11.498 },
+    "aggettivi": [ "Boschivo", "Profondo", "Contemplativo" ],
+    "botaniche": [ "Betulla", "Cumino di montagna", "Lampone" ],
+    "profilo": "Bevi Son of a Birch solo per dire che ne esistono appena mille bottiglie l’anno...",
+    "radar": { "dryness": 7.0, "uniqueness": 9.0, "balsamic": 8.5, "salinity": 2.5, "citrus": 3.5, "botanic-complexity": 7.5, "persistence": 8.0 },
+    "toniche": [
+      { "label": "Premium Indian", "tipo": "indiana", "valori": { "dryness": 1.4, "uniqueness": 0.2, "balsamic": 0.8, "salinity": 0, "citrus": 0, "botanic-complexity": 0, "persistence": 0.5 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.8, "uniqueness": 1.0, "balsamic": 1.2, "salinity": 0, "citrus": 0.8, "botanic-complexity": 0.8, "persistence": 1.0 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 82, "soc": 75, "trad": 70, "tot": 75, "motivation": "Microproduttore locale da botaniche autoctone del trentino."},
+    "antipasti": [
+      { "nome": "Trota affumicata", "img": "path", "descrizione": "Delicatezza alpina perfetta con la betulla." },
+      { "nome": "Tempura di Salvia", "img": "path", "descrizione": "[VEGANA] Erbe fritte per richiamare la verticalità montana." }
+    ],
+    "limited": "tiratura limitata a 1000/anno"
+  },
+  {
+    "id": "rupis",
+    "nome": "Rupis botanico",
+    "provenienza": "Ischia",
+    "isEmpty": false,
+    "bg-color": "#4f7942",
+    "coordinate": { "lat": 40.733, "lon": 13.908 },
+    "aggettivi": [ "Vegetale", "Avvolgente", "Armonico" ],
+    "botaniche": [ "Rucola selvatica", "Pipernia", "Corbezzolo" ],
+    "profilo": "Ogni sorso di Rupis è un viaggio a Ischia che racconti con enfasi...",
+    "radar": { "dryness": 5.0, "uniqueness": 8.5, "balsamic": 6.5, "salinity": 4.5, "citrus": 6.0, "botanic-complexity": 8.0, "persistence": 7.5 },
+    "toniche": [
+      { "label": "Strong Indian", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0.5, "balsamic": 0.5, "salinity": 0.2, "citrus": -0.5, "botanic-complexity": -1.0, "persistence": 0.2 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.8, "citrus": 1.2, "botanic-complexity": 1.2, "persistence": 1.2 }, "consigliata": true }
+    ],
+     "ethicalIndex" : { "env": 75, "soc": 80, "trad": 80, "tot": 78, "motivation": "Microproduttore isolano che utilizza botaniche del territorio."},
+    "antipasti": [
+      { "nome": "Mozzarella di bufala e Arancia", "img": "path", "descrizione": "Il dolce del latte calma l'amaro della rucola." },
+      { "nome": "Crema di Fave e Cicoria", "img": "path", "descrizione": "[VEGANA] Tradizione del sud per il profilo vegetale." }
+    ],
+    "limited": null
+  },
+  {
+    "id": "gordon",
+    "nome": "Gordon's",
+    "provenienza": "Regno Unito",
+    "isEmpty": false,
+    "bg-color": "#ffdf00",
+    "coordinate": { "lat": 51.507, "lon": -0.127 },
+    "aggettivi": [ "Lineare", "Diretto", "Essenziale" ],
+    "botaniche": [ "Coriandolo", "Angelica", "Arancia Amara" ],
+    "profilo": "Scegli Gordon’s come gin “del popolo”, in linea con il tuo spirito democratico...",
+    "radar": { "dryness": 6.5, "uniqueness": 2.0, "balsamic": 5.0, "salinity": 1.0, "citrus": 5.5, "botanic-complexity": 4.0, "persistence": 4.0 },
+    "toniche": [
+      { "label": "Classic Indian", "tipo": "indiana", "valori": { "dryness": 1.0, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0, "botanic-complexity": 0, "persistence": 0 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.0, "uniqueness": 0.5, "balsamic": 0.2, "salinity": 0, "citrus": 1.0, "botanic-complexity": 0.5, "persistence": 0.2 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 65, "soc": 50, "trad": 70, "tot": 62, "motivation": "Processi efficienti in linea con obiettivi di Diageo ma produzione di massa e trasparenza limitata"},
+    "antipasti": [
+      { "nome": "Patatine classiche", "img": "path", "descrizione": "Il sale chiama il ginepro semplice." },
+      { "nome": "Hummus e Carote", "img": "path", "descrizione": "[VEGANA] Semplice e diretto come il distillato." }
+    ],
+    "limited": null
+  },
+  {
+    "id": "sipsmith",
+    "nome": "Sipsmith",
+    "provenienza": "Regno Unito",
+    "isEmpty": true,
+    "bg-color": "#004225",
+    "coordinate": { "lat": 51.492, "lon": -0.224 },
+    "aggettivi": [ "Equilibrato", "Raffinato", "Tradizionale" ],
+    "botaniche": [ "Arancia dolce", "Scorza di limone", "Cassia cinese" ],
+    "profilo": "Chi sceglie Sipsmith vuole sentirsi parte di un’élite cosmopolita...",
+    "radar": { "dryness": 9.0, "uniqueness": 5.0, "balsamic": 7.5, "salinity": 2.0, "citrus": 7.0, "botanic-complexity": 7.0, "persistence": 8.0 },
+    "toniche": [
+      { "label": "Premium Indian", "tipo": "indiana", "valori": { "dryness": 1.8, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0.5, "botanic-complexity": 0.2, "persistence": 0.5 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.2, "uniqueness": 0.8, "balsamic": 1.0, "salinity": 0, "citrus": 1.2, "botanic-complexity": 0.8, "persistence": 0.8 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 80, "soc": 80, "trad": 90, "tot": 83, "motivation": "Uno dei pionieri BCorp tra i distillatori, utilizza tradizionali alambicchi in rame d 2 secoli."},
+    "antipasti": [
+      { "nome": "Uova e Caviale", "img": "path", "descrizione": "Lusso classico per un London Dry superiore." },
+      { "nome": "Mandorle Tostate", "img": "path", "descrizione": "[VEGANA] Frutta secca salata per la cassia cinese." }
+    ],
+    "limited": null
+  },
+  {
+    "id": "malfy-rosa",
+    "nome": "Malfy Rosa",
+    "provenienza": "Torino",
+    "isEmpty": true,
+    "bg-color": "#ffc0cb",
+    "coordinate": { "lat": 44.915, "lon": 7.649 },
+    "aggettivi": [ "Solare", "Disinvolto", "Fresco" ],
+    "botaniche": [ "Pompelmo rosa", "Rabarbaro", "Limone" ],
+    "profilo": "Scegli Malfy rosa se il tuo gin tonic deve abbinarsi alla foto del tramonto...",
+    "radar": { "dryness": 3.5, "uniqueness": 6.0, "balsamic": 3.0, "salinity": 2.0, "citrus": 9.5, "botanic-complexity": 5.5, "persistence": 6.0 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.2, "uniqueness": -0.5, "balsamic": -0.5, "salinity": 0.5, "citrus": 1.0, "botanic-complexity": -1.0, "persistence": 0 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.0, "uniqueness": 1.5, "balsamic": 1.0, "salinity": 0, "citrus": 2.0, "botanic-complexity": 1.5, "persistence": 1.0 }, "consigliata": true }
+    ],
+    "antipasti": [
+      { "nome": "Gamberi al vapore", "img": "path", "descrizione": "Dolcezza agrumata che sposa il pompelmo." },
+      { "nome": "Olive di Cerignola", "img": "path", "descrizione": "[VEGANA] Grassezza e sale contro l'acidità rosa." }
+    ],
+    "ethicalIndex" : { "env": 60, "soc": 60, "trad": 55, "tot": 58, "motivation": "Sotto Pernod Ricard, presenta standard di riciclo e agricoltura sostenibile, ma identità molto orientata al marketing."},
+    "limited": null
+  },
+  {
+    "id": "castelgy",
+    "nome": "Castelgy",
+    "provenienza": "Germania",
+    "isEmpty": true,
+    "bg-color": "#808080",
+    "coordinate": { "lat": 51.165, "lon": 10.451 },
+    "aggettivi": [ "Minimale", "Spigoloso", "Generico" ],
+    "botaniche": [ "Coriandolo", "Angelica", "Limone" ],
+    "profilo": "Bevi Castelgy solo quando sei già abbastanza ubriaco...",
+    "radar": { "dryness": 7.0, "uniqueness": 1.0, "balsamic": 4.5, "salinity": 1.5, "citrus": 4.0, "botanic-complexity": 3.0, "persistence": 3.5 },
+    "toniche": [
+      { "label": "Economic Indian", "tipo": "indiana", "valori": { "dryness": 1.0, "uniqueness": 0, "balsamic": 0, "salinity": 0, "citrus": 0.5, "botanic-complexity": 0, "persistence": 0 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 0, "balsamic": 0, "salinity": 0, "citrus": 0.5, "botanic-complexity": 0, "persistence": 0 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 40, "soc": 55, "trad": 40, "tot": 45, "motivation": "Prodotto white label (Lidl). Prezzo basso che implica una filiera senza particolari tutele etiche o ambientali."},
+    "antipasti": [
+      { "nome": "Crostini al burro", "img": "path", "descrizione": "Base grassa per l'alcolicità grezza." },
+      { "nome": "Pringles Original", "img": "path", "descrizione": "[VEGANA] Il sapore dell'università e delle serate low-budget." }
+    ],
+    "limited": null
+  }
+]
