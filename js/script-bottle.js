@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const response = await fetch("/data/gin_list.json");
+            const response = await fetch("./data/gin_list.json");
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
