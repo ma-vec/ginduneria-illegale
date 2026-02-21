@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botanic = document.getElementById("botanic");
     const aggettivi = document.getElementById("aggettivi");
     const bottleImage = document.getElementById("bottle-image");
+    const profile = document.getElementById("profile");
 
     async function LoadBottle() {
 
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             aggettivi.textContent = ginObj.aggettivi.join(", ");
 
             bottleImage.alt = `Immagine di ${ginObj.nome}`;
+            profile.textContent = ginObj.profilo;
 
         } catch (err) {
             console.error(err);
