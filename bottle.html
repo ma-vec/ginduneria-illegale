@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>Bottle</title>
+<link rel="stylesheet" href="./css/style-bottle.css">
 </head>
 
 <body>
@@ -14,17 +15,18 @@
         <img id="bottle-image" src="" alt="Immagine della bottiglia">
         <h3 id="aggettivi"></h3>
     </div>
+
     <div id="bottle-profile">
         <p id="profile"></p>
     </div>
+
     <div id="radar-section">
-        <canvas id="radar-chart">
-            
-        </canvas>
+        <canvas id="radar-chart"></canvas>
     </div>
-    
 
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-
-    <script src="./js/script-bottle.js"></script>
+    <script src="./js/script-bottle.js" defer></script> <!-- Carica lo script dopo il DOM -->
 </body>
+</html>

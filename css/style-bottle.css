@@ -1,0 +1,9 @@
+#radar-section {
+  max-width: 40%;
+  margin: 60px auto;
+}
+
+#radar-chart {
+  width: 100% !important;
+  height: 35% !important;
+}
