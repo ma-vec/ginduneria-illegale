@@ -1,9 +1,57 @@
 #radar-section {
-  max-width: 40%;
+  width: 100%;
+  max-width: 500px;
   margin: 60px auto;
+  padding: 0 20px;
 }
 
-#radar-chart {
+#radarChart {
   width: 100% !important;
-  height: 35% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 768px) {
+  #radar-section {
+    max-width: 350px;
+  }
+}
+
+.tonic-table-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.tonic-table {
+    border-collapse: collapse;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.tonic-table td {
+    padding: 8px 16px;
+    border: none;
+}
+
+.param {
+    text-align: left;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.indian {
+    text-align: center;
+    color: #DAA520;
+    font-weight: 600;
+}
+
+.med {
+    text-align: center;
+    color: #0495CE;
+    font-weight: 600;
+}
+
+.spacer {
+    width: 40px;
 }

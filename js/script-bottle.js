@@ -9,22 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const aggettivi = document.getElementById("aggettivi");
     const bottleImage = document.getElementById("bottle-image");
     const profile = document.getElementById("profile");
+    const tonicbtn = document.getElementById("add-tonic-btn");
 
-    //colori radar
-    const axisColors = {
-    dryness: "rgba(210,180,140,0.8)",         // sabbia
-    uniqueness: "rgba(200,170,80,0.8)",       // oro
-    balsamic: "rgba(34,139,34,0.8)",          // verde scuro
-    salinity: "rgba(0,160,220,0.8)",          // azzurro
-    citrus: "rgba(255,180,0,0.8)",            // arancio
-    "botanic-complexity": "rgba(0,180,100,0.8)", // verde brillante
-    persistence: "rgba(150,120,255,0.8)"      // viola tenue
-    };
+    const indianColor = "#DAA520";
+    const mediterraneanColor = "#0495CE";
+    let radarChartInstance;
 
     async function LoadBottle() {
 
         if (!ginId) {
-            alert("ID bottiglia non fornito nella URL");
+            alert("ID bottiglia non fornito nel URL");
             return;
         }
 
@@ -63,123 +57,225 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // Carica il grafico radar
-    function LoadRadar(obj) {
-    const canvas = document.getElementById('radar-chart');
-    const ctx = canvas.getContext('2d');
+    // Converte HEX in rgba con opacità
+    function hexToRGBA(hex, opacity) {
+        const r = parseInt(hex.substring(1,3), 16);
+        const g = parseInt(hex.substring(3,5), 16);
+        const b = parseInt(hex.substring(5,7), 16);
+        return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    }
+    function LoadRadar(gin) {
 
-    const labels = [
+    const ctx = document.getElementById('radarChart').getContext('2d');
+
+    const radarLabels = [
         "Dryness",
         "Uniqueness",
         "Balsamic",
         "Salinity",
         "Citrus",
-        "Botanic",
+        "Botanic Complexity",
         "Persistence"
     ];
 
-    const values = [
-        obj.radar.dryness,
-        obj.radar.uniqueness,
-        obj.radar.balsamic,
-        obj.radar.salinity,
-        obj.radar.citrus,
-        obj.radar["botanic-complexity"],
-        obj.radar.persistence
+    const radarValues = [
+        gin.radar.dryness,
+        gin.radar.uniqueness,
+        gin.radar.balsamic,
+        gin.radar.salinity,
+        gin.radar.citrus,
+        gin.radar["botanic-complexity"],
+        gin.radar.persistence
     ];
 
-    const axisColors = [
-        "210,180,140",   // dryness
-        "200,170,80",    // uniqueness
-        "34,139,34",     // balsamic
-        "0,160,220",     // salinity
-        "255,180,0",     // citrus
-        "0,180,100",     // botanic
-        "150,120,255"    // persistence
-    ];
+    const mainColor = gin["bg-color"];
 
-    const gradientPlugin = {
-        id: 'customRadarGradient',
-        afterDatasetsDraw(chart) {
+    const valueLabelPlugin = {
+    id: 'valueLabels',
+    afterDatasetsDraw(chart) {
+        const { ctx } = chart;
 
-            const {ctx} = chart;
-            const meta = chart.getDatasetMeta(0);
-            const points = meta.data;
-
-            const centerX = chart.scales.r.xCenter;
-            const centerY = chart.scales.r.yCenter;
+        chart.data.datasets.forEach((dataset, datasetIndex) => {
+            const meta = chart.getDatasetMeta(datasetIndex);
 
             ctx.save();
+            ctx.fillStyle = dataset.borderColor;
+            ctx.font = "12px sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
 
-            for (let i = 0; i < points.length; i++) {
-
-                const p1 = points[i];
-                const p2 = points[(i + 1) % points.length];
-
-                const gradient = ctx.createRadialGradient(
-                    centerX,
-                    centerY,
-                    0,
-                    p1.x,
-                    p1.y,
-                    150
-                );
-
-                gradient.addColorStop(0, `rgba(${axisColors[i]}, 0.05)`);
-                gradient.addColorStop(1, `rgba(${axisColors[i]}, 0.8)`);
-
-                ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(p1.x, p1.y);
-                ctx.lineTo(p2.x, p2.y);
-                ctx.closePath();
-
-                ctx.fillStyle = gradient;
-                ctx.fill();
-            }
+            meta.data.forEach((point, index) => {
+                const value = dataset.data[index];
+                const offset = datasetIndex === 0 ? -12 : 12;
+                ctx.fillText(value, point.x, point.y + offset); // posiziona sopra o sotto il punto a seconda del dataset
+            });
 
             ctx.restore();
-        }
-    };
+        });
+    }
+};
 
-    new Chart(ctx, {
+    radarChartInstance = new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: labels,
+            labels: radarLabels,
             datasets: [{
-                data: values,
-                borderColor: "#d4af37",
+                label: gin.nome,
+                data: radarValues,
+                backgroundColor: hexToRGBA(mainColor, 0.25),
+                borderColor: mainColor,
                 borderWidth: 2,
-                pointRadius: 3,
-                pointBackgroundColor: "#d4af37",
-                fill: false
+                pointBackgroundColor: mainColor,
+                pointRadius: 4
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 r: {
-                    min: 0,
-                    max: 10,
-                    ticks: { display: false },
-                    grid: { color: "rgba(255,255,255,0.08)" },
-                    angleLines: { color: "rgba(255,255,255,0.15)" },
-                    pointLabels: {
-                        color: "#d4af37",
-                        font: {
-                            size: 13,
-                            weight: 500
-                        }
+                    ticks: {
+                        display: false
                     }
                 }
             },
             plugins: {
-                legend: { display: false }
+                legend: {
+                    display: false
+                }
             }
         },
-        plugins: [gradientPlugin]
+        plugins: [valueLabelPlugin]
     });
+    tonicbtn.addEventListener("click", () => {
+    if (radarChartInstance.data.datasets.length === 1) {
+        const txtdisclaimer = document.getElementById("tonic-disclaimer");
+        if (!txtdisclaimer) {
+            const disclaimer = document.createElement("p");
+            disclaimer.id = "tonic-disclaimer";
+            disclaimer.textContent = "Clicca sulla legenda per nascondere/mostrare a scelta i profili delle toniche e del gin";
+            disclaimer.style.fontSize = "0.9em";
+            disclaimer.style.fontStyle = "italic";
+            disclaimer.style.marginTop = "10px";
+            document.getElementById("radar-section").appendChild(disclaimer);
+            tonicbtn.textContent = "Rimuovi tonica";
+            addTonic(gin);
+            LoadTonicTable(gin);
+        }
+    } else {
+        radarChartInstance.data.datasets = radarChartInstance.data.datasets.slice(0,1);
+        radarChartInstance.options.plugins.legend.display = false; // nascondi la legenda quando rimuovi dataset
+        radarChartInstance.update();
+        tonicbtn.textContent = "+ Aggiungi tonica";
+        const disclaimer = document.getElementById("tonic-disclaimer");
+        if (disclaimer) {
+            disclaimer.remove();
+        }
     }
-      LoadBottle();  
 });
+}
+
+//Aggiungi tonica al radar e tabella
+function addTonic(gin) {
+
+    if (radarChartInstance.data.datasets.length > 1) return;
+
+    const i = gin.toniche[0].valori;
+    const m = gin.toniche[1].valori;
+
+    const IndianValues = [
+        gin.radar.dryness + i.dryness,
+        gin.radar.uniqueness,
+        gin.radar.balsamic + i.balsamic,
+        gin.radar.salinity + i.salinity,
+        gin.radar.citrus + i.citrus,
+        gin.radar["botanic-complexity"] + i["botanic-complexity"],
+        gin.radar.persistence + i.persistence
+    ];
+    const MediterreanValues = [
+        gin.radar.dryness + m.dryness,
+        gin.radar.uniqueness,
+        gin.radar.balsamic + m.balsamic,
+        gin.radar.salinity + m.salinity,
+        gin.radar.citrus + m.citrus,
+        gin.radar["botanic-complexity"] + m["botanic-complexity"],
+        gin.radar.persistence + m.persistence
+    ];
+
+    radarChartInstance.data.datasets.push({
+        label: "Indian Tonic",
+        data: IndianValues,
+        backgroundColor: hexToRGBA(indianColor, 0.25),
+        borderColor: indianColor,
+        borderWidth: 3,              // bordo marcato
+        pointBackgroundColor: indianColor,
+        pointBorderColor: "#ffffff",
+        pointBorderWidth: 2,
+        pointRadius: 4,
+        fill: true                   // area piena
+    });
+
+    radarChartInstance.data.datasets.push({
+        label: "Mediterrean Tonic",
+        data: MediterreanValues,
+        backgroundColor: hexToRGBA(mediterraneanColor, 0.25),
+        borderColor: mediterraneanColor,
+        borderWidth: 3,              // bordo marcato
+        pointBackgroundColor: mediterraneanColor,
+        pointBorderColor: "#ffffff",
+        pointBorderWidth: 2,
+        pointRadius: 4,
+        fill: true                   // area piena
+    });
+
+    radarChartInstance.options.plugins.legend.display = true; // mostra la legenda quando aggiungi dataset
+    radarChartInstance.update();
+}
+
+//Aggiungi tabella toniche
+function LoadTonicTable(gin) {
+
+    const tableBody = document.getElementById("tonic-table-body");
+
+    const params = [
+        { key: "dryness", label: "Dryness" },
+        { key: "balsamic", label: "Balsamic" },
+        { key: "salinity", label: "Salinity" },
+        { key: "citrus", label: "Citrus" },
+        { key: "botanic-complexity", label: "Botanic Complexity" },
+        { key: "persistence", label: "Persistence" }
+    ];
+
+    const indian = gin.toniche.tipo.find(t => t.nome === "indiana").valori;
+    const mediterranean = gin.toniche.tipo.find(t => t.nome === "mediterranea").valori;
+
+    tableBody.innerHTML = "";
+
+    for (let i = 0; i < 3; i++) {
+
+        const left = params[i];
+        const right = params[i + 3];
+
+        const row = `
+            <tr>
+                <td class="param">${left.label}</td>
+                <td class="indian">${indian[left.key]}</td>
+                <td class="med">${mediterranean[left.key]}</td>
+
+                <td class="spacer"></td>
+
+                <td class="param">${right.label}</td>
+                <td class="indian">${indian[right.key]}</td>
+                <td class="med">${mediterranean[right.key]}</td>
+            </tr>
+        `;
+
+        tableBody.innerHTML += row;
+    }
+}
+
+LoadBottle();
+}); 
+
 
     
