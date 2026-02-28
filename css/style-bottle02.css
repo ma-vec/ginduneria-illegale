@@ -52,7 +52,9 @@ body {
     position: relative;
     z-index: 2;
     max-width: 900px;
-    word-break: break-word;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Provenienza e botaniche */

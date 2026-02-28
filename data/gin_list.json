@@ -1,7 +1,73 @@
 [
   {
+    "id": "jr-fl",
+    "nome": "J. Rose",
+    "provenienza": "Salento",
+    "isEmpty": false,
+    "bg-color": "#C41E3A",
+    "coordinate": { "lat": 40.351, "lon": 18.175 },
+    "aggettivi": [ "Artistico", "Opulento", "Mediterraneo" ],
+    "botaniche": [ "Bergamotto", "Corteccia di quercia", "Fico d'india" ],
+    "profilo": "Non è un gin, è un colpo di tacco sul parquet. “Flamenco” non è solo un nome: è un pretesto culturale, un ponte tra Andalusia immaginata e design italiano. La bottiglia entra in scena prima ancora del primo sorso, con quella presenza da opera lirica in miniatura. Dentro c’è eleganza agrumata e speziata; fuori resta quella sottile autocelebrazione di aver scelto non un distillato, ma una dichiarazione estetica da esibire con studiata naturalezza.",
+    "radar": { "dryness": 8, "uniqueness": 9.0, "balsamic": 6.5, "salinity": 4.0, "citrus": 8, "botanic-complexity": 8.5, "persistence": 7.5 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 0.5, "uniqueness": 0, "balsamic": 1, "salinity": 0.5, "citrus": 1.5, "botanic-complexity": 0.5, "persistence": 1 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness":0, "balsamic": 1.5, "salinity": 1, "citrus": 0.5, "botanic-complexity": 1.0, "persistence": 1 }, "consigliata": true }
+    ],
+    "ethicalIndex" : { "env": 60, "soc": 70, "trad": 80, "tot": 70, "motivation": "Botaniche locali e tutela della tradizione london dry e arte italiana ma nessun impegno dichiarato"},
+    "antipasti": [
+      { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
+      { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
+    ],
+    "limited": "Follow the flow limited edition"
+  },
+  {
+    "id": "xoriguer",
+    "nome": "Xoriguer",
+    "provenienza": "Minorca",
+    "isEmpty": false,
+    "bg-color": "#9d4f22",
+    "coordinate": { "lat": 39.887, "lon": 4.263 },
+    "aggettivi": [ "Autentico", "Storico", "Resinoso" ],
+    "botaniche": [ "Alcol da uva", "Ginepro montano", "Botaniche segrete locali" ],
+    "profilo": "Qui non si parla, si declama. Minorca, il vento, il metodo tradizionale, il ginepro che sembra aver studiato navigazione. È un gin che pretende una luce bassa e un racconto marittimo anche se il mare più vicino è quello sullo sfondo del desktop. Salmastro quanto basta per evocare tempeste, abbastanza ruvido da sembrare unico, abbastanza teatrale da trasformare ogni sorso in un monologo shakespeariano con accento mediterraneo.",
+    "radar": { "dryness": 9, "uniqueness": 9.5, "balsamic": 8, "salinity": 3.0, "citrus": 4, "botanic-complexity": 7, "persistence": 8.7 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 0.8, "uniqueness": 0, "balsamic": 1, "salinity": 0.5, "citrus": 1, "botanic-complexity": 0.5, "persistence": 0.4 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 0, "balsamic": 1.5, "salinity": 0.8, "citrus": 1.5, "botanic-complexity": -0.5, "persistence": -0.3 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 80, "soc": 85, "trad": 100, "tot": 88, "motivation": "Sostiene economia dell'isola con produzione non industriale, alambicchi a legna del 1700. Unico gin IGP al mondo."},
+    "antipasti": [
+      { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
+      { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
+    ],
+    "limited": null
+  },
+    {
+    "id": "poseidon",
+    "nome": "Poseidon",
+    "provenienza": "Brescia",
+    "isEmpty": false,
+    "bg-color": "#003366",
+    "coordinate": { "lat": 45.526, "lon": 10.229 },
+    "aggettivi": [ "Impetuoso", "Vibrante", "Salmastro" ],
+    "botaniche": [ "Salicornia selvatica", "Limone", "Pompelmo rosa"],
+    "profilo": "Non è semplicemente un gin: è una presa di posizione liquida. La salicornia porta con sé quell’idea di mare vero, non da cartolina, e ogni botanica sembra voler ricordare che l’oceano è fragile ma tu sei informato, aggiornato, sensibile. La bottiglia, scultorea, non si limita a stare su un mobile: presidia lo spazio, come un oggetto che racconta valori prima ancora che profumi. Berlo è come dichiarare: “Sì, sto salvando il pianeta ma con gusto.” Il ghiaccio tintinna mentre parli di correnti marine e sostenibilità con la calma di chi, sul comodino, ha l'ultimo rapporto sulle micro-plastiche. Tutto questo davanti a un’enorme vetrata minimalista che incornicia un paesaggio lasciato strategicamente “selvaggio”, con pavimenti in microcemento, piante autoctone in vaso di design e la rassicurante certezza che l’impatto ambientale sia stato armonizzato quanto l’arredamento. Perché il mare va protetto, certo — ma con la giusta illuminazione naturale e un perfetto equilibrio cromatico.",
+    "radar": { "dryness": 8, "uniqueness": 8.7, "balsamic": 5.5, "salinity": 9.4, "citrus": 7.8, "botanic-complexity": 7.5, "persistence": 8.3 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 0.6, "uniqueness": 0, "balsamic": 0.5, "salinity": 0.2, "citrus": 0.6, "botanic-complexity": 0.5, "persistence": 0.8 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.2, "uniqueness": 0, "balsamic": 1.2, "salinity": 1, "citrus": 0.8, "botanic-complexity": 0.2, "persistence": 0.5 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 95, "soc": 88, "trad": 75, "tot": 86, "motivation": "Finanzia direttamente Sea Shepherd, plastica 100% riciclata. Sensibilizza su tutela oceani e specie da proteggere."},
+    "antipasti": [
+      { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
+      { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
+    ],
+    "limited": null
+  },
+  {
     "id": "portofino-winter",
-    "nome": "Portofino Winter",
+    "nome": "Portofino",
     "provenienza": "Portofino",
     "isEmpty": false,
     "bg-color": "#00477e",
@@ -19,7 +85,7 @@
       { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
     ],
-    "limited": "76/3000"
+    "limited": "Winter: numero 76/3000"
   },
   {
     "id": "melagorai",
@@ -45,7 +111,7 @@
   },
   {
     "id": "amuerte-white",
-    "nome": "Amuerte White",
+    "nome": "Amuerte W.",
     "provenienza": "Belgio",
     "isEmpty": false,
     "bg-color": "#ffba1f",
@@ -107,7 +173,7 @@
       { "nome": "Trota affumicata", "img": "path", "descrizione": "Delicatezza alpina perfetta con la betulla." },
       { "nome": "Tempura di Salvia", "img": "path", "descrizione": "[VEGANA] Erbe fritte per richiamare la verticalità montana." }
     ],
-    "limited": "tiratura limitata a 1000/anno"
+    "limited": "Tiratura limitata a 1000/anno"
   },
   {
     "id": "rupis",
@@ -166,7 +232,7 @@
     "radar": { "dryness": 9.0, "uniqueness": 5.0, "balsamic": 7.5, "salinity": 2.0, "citrus": 7.0, "botanic-complexity": 7.0, "persistence": 8.0 },
     "toniche": [
       { "label": "Premium Indian", "tipo": "indiana", "valori": { "dryness": 1.8, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0.5, "botanic-complexity": 0.2, "persistence": 0.5 }, "consigliata": true },
-      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.2, "uniqueness": 0.8, "balsamic": 1.0, "salinity": 0, "citrus": 1.2, "botanic-complexity": 0.8, "persistence": 0.8 }, "consigliata": false }
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.2, "uniqueness": 0.8, "balsamic": 1.0, "salinity": 0, "citrus": 1.2, "botanic-complexity": 0.8, "persistence": -0.4 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 80, "soc": 80, "trad": 90, "tot": 83, "motivation": "Uno dei pionieri BCorp tra i distillatori, utilizza tradizionali alambicchi in rame d 2 secoli."},
     "antipasti": [

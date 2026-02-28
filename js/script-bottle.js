@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bottleImage = document.getElementById("bottle-image");
     const profile = document.getElementById("profile");
     const tonicbtn = document.getElementById("add-tonic-btn");
+    const limited = document.getElementById("limited");
 
     const indianColor = "#DAA520";
     const mediterraneanColor = "#0495CE";
@@ -43,12 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
             bottleImage.src = `assets/images/${ginObj.id}.png`;
 
             botanic.textContent = ginObj.botaniche.join(", ");
-            aggettivi.textContent = ginObj.aggettivi.join(", ");
+            aggettivi.textContent = ginObj.aggettivi.join(" • ");
 
             bottleImage.alt = `Immagine di ${ginObj.nome}`;
             profile.textContent = ginObj.profilo;
+            if (ginObj.limited) {
+                limited.textContent = ginObj.limited;
+            }
 
-            // Set the gin's brand color as CSS variable for the gradient
             document.documentElement.style.setProperty('--gin-color', ginObj["bg-color"]);
 
             // Mini-map decorativa
@@ -140,8 +143,27 @@ document.addEventListener("DOMContentLoaded", () => {
             maintainAspectRatio: false,
             scales: {
                 r: {
+                    angleLines: {
+                        display: true,
+                        color: 'rgba(255, 255, 255, 0.25)',
+                        lineWidth: 0.8
+                    },
+                    grid: {
+                        display: true,
+                        color: 'rgba(255, 255, 255, 0.15)',
+                        lineWidth: 0.8
+                    },
                     ticks: {
                         display: false
+                    },
+                    pointLabels: {
+                        display: true,
+                        color: 'rgba(255, 255, 255, 0.6)',
+                        font: {
+                            family: 'Inter',
+                            size: 11,
+                            weight: '300'
+                        }
                     }
                 }
             },

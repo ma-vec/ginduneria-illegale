@@ -33,6 +33,33 @@ body {
 }
 
 /* ============================================================
+   BACK HOME BUTTON
+   ============================================================ */
+#back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 9px 18px;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#back-home:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+    letter-spacing: 0.3em;
+}
+
+/* ============================================================
    BOTTLE INFO (HERO SECTION)
    ============================================================ */
 #bottle-info {
@@ -56,14 +83,15 @@ body {
     top: 35vh; /* Posizionato a circa un terzo dello schermo */
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 90%;
     
     font-family: 'Playfair Display', serif;
     font-size: clamp(4rem, 15vw, 12rem); /* Testo gigantesco ma responsivo */
     font-weight: 400;
     letter-spacing: -0.02em;
     line-height: 1;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
     
     /* Effetto "watermark" Hendrick's-style */
     color: rgba(255, 255, 255, 0.15);
@@ -78,6 +106,14 @@ body {
     font-size: 0.8rem;
     letter-spacing: 0.4em;
     text-transform: uppercase;
+    color: var(--lightgreen);
+    margin-bottom: 1.5rem;
+    z-index: 2;
+}
+#limited {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
     color: var(--lightgreen);
     margin-bottom: 1.5rem;
     z-index: 2;
@@ -112,6 +148,7 @@ body {
     max-width: 700px;
     line-height: 1.6;
     z-index: 2;
+    margin-bottom: 0.7rem;
 }
 
 #aggettivi {
@@ -278,11 +315,11 @@ body {
 
 #profile {
     max-width: 750px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.25rem;
     line-height: 1.9;
     color: #dddddd;
-    text-align: center;
+    text-align: justify;
     font-weight: 400;
 }
 
