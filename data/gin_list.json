@@ -48,12 +48,12 @@
     "nome": "Amuerte White",
     "provenienza": "Belgio",
     "isEmpty": false,
-    "bg-color": "#ffffff",
+    "bg-color": "#ffba1f",
     "coordinate": { "lat": 51.219, "lon": 4.402 },
     "aggettivi": [ "Audace", "Teatrale", "Cinetico" ],
     "botaniche": [ "Foglia di coca dal perù", "Finger lime dal Parco del Circeo", "Pepe del Sichuan" ],
     "profilo": "Chi sceglie Amuerte White non beve gin: celebra un rito di lusso tribale...",
-    "radar": { "dryness": 5.5, "uniqueness": 9.5, "balsamic": 4.0, "salinity": 3.0, "citrus": 8.5, "botanic-complexity": 9.0, "persistence": 8.5 },
+    "radar": { "dryness": 5.5, "uniqueness": 8.5, "balsamic": 6.0, "salinity": 3.0, "citrus": 8.5, "botanic-complexity": 9.0, "persistence": 6.5 },
     "toniche": [
       { "label": "Light Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0, "balsamic": -0.2, "salinity": 0.2, "citrus": 1.0, "botanic-complexity": -1.0, "persistence": 0.5 }, "consigliata": true },
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 0.8, "balsamic": 0.5, "salinity": 0.5, "citrus": 1.2, "botanic-complexity": 0.5, "persistence": 0.8 }, "consigliata": false }
@@ -70,7 +70,7 @@
     "nome": "Bareksten",
     "provenienza": "Norvegia",
     "isEmpty": false,
-    "bg-color": "#1a1a1a",
+    "bg-color": "#c1c1c1",
     "coordinate": { "lat": 60.391, "lon": 5.322 },
     "aggettivi": [ "Selvatico", "Tagliente", "Misterioso" ],
     "botaniche": [ "Mirtilli selvatici", "Resina di pino", "Ginepro artico" ],
@@ -97,7 +97,7 @@
     "aggettivi": [ "Boschivo", "Profondo", "Contemplativo" ],
     "botaniche": [ "Betulla", "Cumino di montagna", "Lampone" ],
     "profilo": "Bevi Son of a Birch solo per dire che ne esistono appena mille bottiglie l’anno...",
-    "radar": { "dryness": 7.0, "uniqueness": 9.0, "balsamic": 8.5, "salinity": 2.5, "citrus": 3.5, "botanic-complexity": 7.5, "persistence": 8.0 },
+    "radar": { "dryness": 8.0, "uniqueness": 9.5, "balsamic": 8, "salinity": 2.5, "citrus": 3.5, "botanic-complexity": 8.5, "persistence": 9.0 },
     "toniche": [
       { "label": "Premium Indian", "tipo": "indiana", "valori": { "dryness": 1.4, "uniqueness": 0.2, "balsamic": 0.8, "salinity": 0, "citrus": 0, "botanic-complexity": 0, "persistence": 0.5 }, "consigliata": true },
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.8, "uniqueness": 1.0, "balsamic": 1.2, "salinity": 0, "citrus": 0.8, "botanic-complexity": 0.8, "persistence": 1.0 }, "consigliata": false }

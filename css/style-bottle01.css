@@ -1,0 +1,316 @@
+/* ============================================================
+   IMPORT FONT & VARIABILI
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+:root {
+    --gold: #D4AF37;
+    --dark: #050505;
+    --lightgreen: #00b89f;
+    --text-light: #f4f4f4;
+    --text-muted: #888888;
+    /* Variabile di fallback nel caso il JS fallisca */
+    --gin-color: #1a1a1a; 
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    /* A differenza della home, qui permettiamo lo scorrimento fluido */
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   BOTTLE INFO (HERO SECTION)
+   ============================================================ */
+#bottle-info {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 8vh 20px 10vh;
+    
+    /* Il gradiente che parte dal colore del brand e sfuma nel nero profondo */
+    background: linear-gradient(180deg, var(--gin-color) 0%, var(--dark) 85%);
+    z-index: 1;
+}
+
+/* Il nome del gin fa da "sfondo" testuale per creare profondità */
+#nome-bottiglia {
+    position: absolute;
+    top: 35vh; /* Posizionato a circa un terzo dello schermo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 15vw, 12rem); /* Testo gigantesco ma responsivo */
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    white-space: nowrap;
+    
+    /* Effetto "watermark" Hendrick's-style */
+    color: rgba(255, 255, 255, 0.15);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Dettagli della bottiglia */
+#pos {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--lightgreen);
+    margin-bottom: 1.5rem;
+    z-index: 2;
+}
+
+/* Immagine sormonta il titolo */
+#bottle-image {
+    position: relative;
+    z-index: 2;
+    height: 55vh; /* Altezza coerente e proporzionata */
+    width: auto;
+    max-width: 90%;
+    object-fit: contain;
+    
+    /* Ombra elegante per staccarla dal titolo */
+    filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.6));
+    margin-top: 5vh; /* Distanza dall'alto per incrociare il titolo nel punto giusto */
+    margin-bottom: 3rem;
+    
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#bottle-image:hover {
+    transform: scale(1.03) translateY(-10px);
+}
+
+#botanic {
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+    max-width: 700px;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+#aggettivi {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    z-index: 2;
+}
+
+/* ============================================================
+   MINI-MAP DECORATIVA
+   ============================================================ */
+#mini-map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40vw;
+    height: 40vw;
+    max-width: 450px;
+    max-height: 450px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.65;
+    border-radius: 0 0 0 50%;
+    overflow: hidden;
+    -webkit-mask-image: radial-gradient(circle at 100% 0%, black 15%, transparent 65%);
+    mask-image: radial-gradient(circle at 100% 0%, black 15%, transparent 65%);
+}
+
+/* Nasconde la scritta di attribuzione Leaflet */
+#mini-map .leaflet-control-attribution { display: none !important; }
+
+/* ============================================================
+   RADAR & TONIC SECTION
+   ============================================================ */
+#radar-section {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark);
+    position: relative;
+}
+
+#radar-section span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Bottone minimalista coerente con la Home */
+#add-tonic-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 16px 35px;
+    border-radius: 0;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#add-tonic-btn:hover {
+    border-color: var(--gold);
+    background: #ffffff;
+    color: #000000;
+    letter-spacing: 0.4em;
+}
+
+#radarChart {
+    max-width: 600px;
+    max-height: 600px;
+    margin: 20px 0 40px;
+    /* Leggera ombra per dare volume al grafico sul fondo nero */
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.03));
+}
+
+#tonic-disclaimer {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   TONIC TABLE STYLING
+   ============================================================ */
+.tonic-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 2rem;
+    padding-bottom: 20px;
+}
+
+.tonic-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.tonic-table td {
+    padding: 14px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Intestazioni riga (Parametri) */
+.tonic-table .param {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #aaaaaa;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.7rem;
+    padding-right: 20px;
+}
+
+.tonic-table .indian {
+    color: #DAA520; /* Indian Tonic Color */
+    font-weight: 500;
+}
+
+.tonic-table .med {
+    color: #0495CE; /* Med Tonic Color */
+    font-weight: 500;
+}
+
+/* Colonna spaziatrice centrale */
+.tonic-table .spacer {
+    width: 6%;
+    border-bottom: none;
+}
+
+/* ============================================================
+   PROFILE SECTION (DESCRIZIONE TESTUALE)
+   ============================================================ */
+#bottle-profile {
+    padding: 40px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+/* Linea decorativa minimalista sopra il profilo */
+#bottle-profile::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 40px;
+    opacity: 0.6;
+}
+
+#profile {
+    max-width: 750px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: #dddddd;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+    #mini-map {
+        display: none;
+    }
+
+    #nome-bottiglia {
+        top: 30vh;
+        font-size: clamp(3rem, 20vw, 6rem);
+    }
+    
+    #bottle-image {
+        height: 50vh;
+        margin-top: 2vh;
+    }
+
+    .tonic-table .param {
+        font-size: 0.65rem;
+        padding-right: 10px;
+    }
+    
+    #profile {
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+}

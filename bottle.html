@@ -4,11 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bottle</title>
-<link rel="stylesheet" href="./css/style-bottle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./css/style-bottle01.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
     <div id="bottle-info">
+        <div id="mini-map"></div>
         <h1 id="nome-bottiglia"></h1>
         <h3 id="pos"></h3>
         <h3 id="botanic"></h3>
@@ -31,6 +35,9 @@
     <div id="bottle-profile">
         <p id="profile"></p>
     </div>
+
+    <!-- Leaflet (mini-map) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

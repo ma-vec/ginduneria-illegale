@@ -48,6 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
             bottleImage.alt = `Immagine di ${ginObj.nome}`;
             profile.textContent = ginObj.profilo;
 
+            // Set the gin's brand color as CSS variable for the gradient
+            document.documentElement.style.setProperty('--gin-color', ginObj["bg-color"]);
+
+            // Mini-map decorativa
+            LoadMiniMap(ginObj);
+
             LoadRadar(ginObj);
 
         } catch (err) {
@@ -205,7 +211,7 @@ function addTonic(gin) {
     radarChartInstance.data.datasets.push({
         label: "Indian Tonic",
         data: IndianValues,
-        backgroundColor: hexToRGBA(indianColor, 0.25),
+        backgroundColor: hexToRGBA(indianColor, 0.1),
         borderColor: indianColor,
         borderWidth: 3,              // bordo marcato
         pointBackgroundColor: indianColor,
@@ -218,7 +224,7 @@ function addTonic(gin) {
     radarChartInstance.data.datasets.push({
         label: "Mediterrean Tonic",
         data: MediterreanValues,
-        backgroundColor: hexToRGBA(mediterraneanColor, 0.25),
+        backgroundColor: hexToRGBA(mediterraneanColor, 0.1),
         borderColor: mediterraneanColor,
         borderWidth: 3,              // bordo marcato
         pointBackgroundColor: mediterraneanColor,
@@ -246,10 +252,46 @@ function LoadTonicTable(gin) {
         { key: "persistence", label: "Persistence" }
     ];
 
-    const indian = gin.toniche.tipo.find(t => t.nome === "indiana").valori;
-    const mediterranean = gin.toniche.tipo.find(t => t.nome === "mediterranea").valori;
+    const indianTonic = gin.toniche.find(t => t.tipo === "indiana") || gin.toniche[0];
+    const mediterraneanTonic = gin.toniche.find(t => t.tipo === "mediterranea") || gin.toniche[1];
+
+    if (!indianTonic || !mediterraneanTonic) {
+        tableBody.innerHTML = "";
+        return;
+    }
+
+    let indianPrefix = "";
+    let mediterraneanPrefix = "";
+
+    if (indianTonic.consigliata) {
+        indianPrefix = "⭐ ";
+    }
+    if (mediterraneanTonic.consigliata) {
+        mediterraneanPrefix = "⭐ ";
+    }
+
+    let indianLabel = `${indianPrefix}${indianTonic.tipo}`;
+    let mediterraneanLabel = `${mediterraneanPrefix}${mediterraneanTonic.tipo}`;
+
+    let indianValues = indianTonic.valori;
+    let mediterraneanValues = mediterraneanTonic.valori;
+
 
     tableBody.innerHTML = "";
+
+    tableBody.innerHTML += `
+        <tr>
+            <td></td>
+            <td class="indian">${indianLabel}</td>
+            <td class="med">${mediterraneanLabel}</td>
+
+            <td class="spacer"></td>
+
+            <td></td>
+            <td class="indian">${indianLabel}</td>
+            <td class="med">${mediterraneanLabel}</td>
+        </tr>
+    `;
 
     for (let i = 0; i < 3; i++) {
 
@@ -259,19 +301,45 @@ function LoadTonicTable(gin) {
         const row = `
             <tr>
                 <td class="param">${left.label}</td>
-                <td class="indian">${indian[left.key]}</td>
-                <td class="med">${mediterranean[left.key]}</td>
+                <td class="indian">${indianValues[left.key]}</td>
+                <td class="med">${mediterraneanValues[left.key]}</td>
 
                 <td class="spacer"></td>
 
                 <td class="param">${right.label}</td>
-                <td class="indian">${indian[right.key]}</td>
-                <td class="med">${mediterranean[right.key]}</td>
+                <td class="indian">${indianValues[right.key]}</td>
+                <td class="med">${mediterraneanValues[right.key]}</td>
             </tr>
         `;
 
         tableBody.innerHTML += row;
     }
+}
+
+function LoadMiniMap(gin) {
+    const mapEl = document.getElementById('mini-map');
+    if (!mapEl || !gin.coordinate) return;
+    // Skip on narrow screens (CSS hides it, but avoid init overhead)
+    if (window.innerWidth <= 768) return;
+
+    const map = L.map('mini-map', {
+        zoomControl: false,
+        attributionControl: false,
+        dragging: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        touchZoom: false,
+        keyboard: false,
+        boxZoom: false
+    }).setView([gin.coordinate.lat, gin.coordinate.lon], 10);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
+    // Disabilita ogni interazione residua
+    map._handlers.forEach(h => h.disable());
 }
 
 LoadBottle();
