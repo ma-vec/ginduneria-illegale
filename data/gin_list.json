@@ -19,7 +19,7 @@
       { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
     ],
-    "limited": "Follow the flow limited edition"
+    "limited": "Flamenco limited edition"
   },
   {
     "id": "xoriguer",
@@ -30,7 +30,7 @@
     "coordinate": { "lat": 39.887, "lon": 4.263 },
     "aggettivi": [ "Autentico", "Storico", "Resinoso" ],
     "botaniche": [ "Alcol da uva", "Ginepro montano", "Botaniche segrete locali" ],
-    "profilo": "Qui non si parla, si declama. Minorca, il vento, il metodo tradizionale, il ginepro che sembra aver studiato navigazione. È un gin che pretende una luce bassa e un racconto marittimo anche se il mare più vicino è quello sullo sfondo del desktop. Salmastro quanto basta per evocare tempeste, abbastanza ruvido da sembrare unico, abbastanza teatrale da trasformare ogni sorso in un monologo shakespeariano con accento mediterraneo.",
+    "profilo": "Non è un gin, è un atto di conservazione culturale versato in un bicchiere basso. Alcol da uva — non neutro, sia chiaro — distillazione ancora a legna, metodo secolare minorchino tutelato IGP come una specie protetta. Qui non si segue il trend: lo si guarda dall’alto, con la pazienza di chi sa che esisteva già quando il trend non era ancora nato. La bottiglia in ceramica marrone con manico non è “design”: è un oggetto che sembra sottratto a una cambusa del Settecento e installato in salotto come se fosse un reperto antropologico. Non sopra il mobile bar — troppo ovvio — ma accanto a un distillatore ornamentale (funzionante, naturalmente) che troneggia tra una libreria di classici rilegati e una poltrona in cuoio vissuto. Perché la tradizione non si racconta: si mette in scena. Il bevitore di Xoriguer non milita, non finanzia, non compensa. Custodisce. Ti spiega con tono quieto ma definitivo perché l’alcol da uva “fa la differenza”, come se stesse parlando di vitigni autoctoni salvati dall’estinzione. Sorseggia lentamente davanti a una grande vetrata che affaccia su un giardino volutamente non perfetto — ghiaia, pietra, una pianta mediterranea scelta dopo settimane di ricerca — mentre il riscaldamento a pavimento neutralizza qualsiasi romanticismo climatico. Ad ogni sorso dice: “Io non bevo gin industriali”. Lo dice senza alzare la voce, ma con quella sicurezza un po’ inflessibile di chi considera la parola autenticità una categoria morale. E mentre il ghiaccio tintinna con disciplina quasi militare, la bottiglia marrone resta lì, compatta e silenziosa, come a ricordare che la tradizione non ha bisogno di urlare. Ha solo bisogno di essere riconosciuta da chi si sente all’altezza.",
     "radar": { "dryness": 9, "uniqueness": 9.5, "balsamic": 8, "salinity": 3.0, "citrus": 4, "botanic-complexity": 7, "persistence": 8.7 },
     "toniche": [
       { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 0.8, "uniqueness": 0, "balsamic": 1, "salinity": 0.5, "citrus": 1, "botanic-complexity": 0.5, "persistence": 0.4 }, "consigliata": true },
@@ -42,7 +42,7 @@
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
     ],
     "limited": null
-  },
+    },
     {
     "id": "poseidon",
     "nome": "Poseidon",
@@ -74,7 +74,7 @@
     "coordinate": { "lat": 44.303, "lon": 9.209 },
     "aggettivi": [ "Elegiaco", "Mediterraneo", "Nostalgico" ],
     "botaniche": [ "Rosmarino", "Lavanda", "Iris" ],
-    "profilo": "Il bevitore della Portofino Winter Edition è quello che vive il Natale come un atto estetico più che emotivo...",
+    "profilo": "Il bevitore della Portofino Winter Edition è quello che vive il Natale come un atto estetico più che emotivo. Ama questa bottiglia perché è numerata, e non perde mai l’occasione di ricordarlo con un sorriso da intenditore ferito dalla rarità. Non è un distillato, ma un paesaggio elegiaco: sorseggiandolo sente il rumore del mare d’inverno e il rintocco delle barche dei pescatori — che ovviamente non ha mai visto, ma gli piace immaginarle tra una degustazione e una foto in bianco e nero, mescolando il calore del Mediterraneo con il silenzio della neve.",
     "radar": { "dryness": 7.5, "uniqueness": 6.0, "balsamic": 8.5, "salinity": 4.0, "citrus": 6.5, "botanic-complexity": 7.0, "persistence": 8.0 },
     "toniche": [
       { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0.5, "botanic-complexity": -0.5, "persistence": 0.5 }, "consigliata": false },
@@ -96,7 +96,7 @@
     "coordinate": { "lat": 46.067, "lon": 11.121 },
     "aggettivi": [ "Nobile", "Territoriale", "Elegante" ],
     "botaniche": [ "Mela Jonagold", "Limone del Garda", "Ginepro montano" ],
-    "profilo": "Chi beve Melagorai è convinto di avere un rapporto sano con il territorio...",
+    "profilo": "Chi beve Melagorai è convinto di avere un rapporto sano con il territorio: Non folkloristico, non turistico: sano. Dice frasi come “si sente la mela, ma non è dolce” con un tono da persona che ha appena spiegato perché compra solo pane a lievitazione spontanea. La bottiglia la sceglie perché “non urla”, e infatti lui non urla mai — al massimo corregge con gentilezza. Quando versa Melagorai parla di mela Jonagold come se l’avesse raccolta personalmente, anche se l’unica cosa che ha raccolto nella vita è una shopper di tela al mercato bio. Il ginepro gli piace perché “rimette ordine”, il limone del Garda perché “pulisce senza invadere”: parole che usa spesso anche per descrivere le persone. Non cerca il colpo di scena, detesta i gin che fanno spettacolo.",
     "radar": { "dryness": 6.0, "uniqueness": 7.5, "balsamic": 5.0, "salinity": 2.0, "citrus": 8.0, "botanic-complexity": 6.5, "persistence": 7.0 },
     "toniche": [
       { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0.5, "balsamic": -0.8, "salinity": 0, "citrus": 0.8, "botanic-complexity": 0.5, "persistence": 0.5 }, "consigliata": false },
@@ -111,14 +111,14 @@
   },
   {
     "id": "amuerte-white",
-    "nome": "Amuerte W.",
+    "nome": "Amuerte",
     "provenienza": "Belgio",
     "isEmpty": false,
     "bg-color": "#ffba1f",
     "coordinate": { "lat": 51.219, "lon": 4.402 },
     "aggettivi": [ "Audace", "Teatrale", "Cinetico" ],
     "botaniche": [ "Foglia di coca dal perù", "Finger lime dal Parco del Circeo", "Pepe del Sichuan" ],
-    "profilo": "Chi sceglie Amuerte White non beve gin: celebra un rito di lusso tribale...",
+    "profilo": "Chi sceglie Amuerte White non beve gin: celebra un rito di lusso tribale con foglia d’oro e un teschio sulla bottiglia. Ti racconta che è “un viaggio sensoriale nel proibito”, ma in realtà cerca solo l’ebbrezza di sentirsi un contrabbandiere in giacca di lino. Quando lo sorseggia, guarda il bicchiere come se contenesse i segreti dell’élite sudamericana.",
     "radar": { "dryness": 5.5, "uniqueness": 8.5, "balsamic": 6.0, "salinity": 3.0, "citrus": 8.5, "botanic-complexity": 9.0, "persistence": 6.5 },
     "toniche": [
       { "label": "Light Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0, "balsamic": -0.2, "salinity": 0.2, "citrus": 1.0, "botanic-complexity": -1.0, "persistence": 0.5 }, "consigliata": true },
@@ -129,7 +129,7 @@
       { "nome": "Ceviche di spigola", "img": "path", "descrizione": "Pesce crudo e lime per richiamare il Perù." },
       { "nome": "Tacos con Avocado", "img": "path", "descrizione": "[VEGANA] Crema di avocado e peperoncino per la foglia di coca." }
     ],
-    "limited": "8000 bottiglie al mondo"
+    "limited": "White edition: 8000 bottiglie"
   },
   {
     "id": "bareksten-botanical",
@@ -140,7 +140,7 @@
     "coordinate": { "lat": 60.391, "lon": 5.322 },
     "aggettivi": [ "Selvatico", "Tagliente", "Misterioso" ],
     "botaniche": [ "Mirtilli selvatici", "Resina di pino", "Ginepro artico" ],
-    "profilo": "Ogni sorso è un atto mistico, un incontro silenzioso con la bruma scandinava...",
+    "profilo": "Scegli Bareksten Botanical non per berlo, ma per meditare con lui. Ogni sorso è un atto mistico, un incontro silenzioso con la bruma scandinava e il disagio esistenziale del suo master distiller — un uomo che probabilmente non sorride dal 2003, ma che “distilla emozioni, non alcol”. E lo adori proprio per questo: perché Bareksten sa di muschio, malinconia e autostima artigianale.",
     "radar": { "dryness": 8.5, "uniqueness": 8.0, "balsamic": 9.5, "salinity": 3.0, "citrus": 4.0, "botanic-complexity": 9.0, "persistence": 9.0 },
     "toniche": [
       { "label": "Classic Indian", "tipo": "indiana", "valori": { "dryness": 1.2, "uniqueness": 0, "balsamic": 1.0, "salinity": 0, "citrus": 0, "botanic-complexity": 0.5, "persistence": 1.0 }, "consigliata": true },
@@ -162,7 +162,7 @@
     "coordinate": { "lat": 46.155, "lon": 11.498 },
     "aggettivi": [ "Boschivo", "Profondo", "Contemplativo" ],
     "botaniche": [ "Betulla", "Cumino di montagna", "Lampone" ],
-    "profilo": "Bevi Son of a Birch solo per dire che ne esistono appena mille bottiglie l’anno...",
+    "profilo": "Bevi Son of a Birch solo per dire che ne esistono appena mille bottiglie l’anno. È il tuo lasciapassare elitario: se non lo conoscono (come è molto probabile), sorridi con compassione. Tu non bevi gin: partecipi a un rito iniziatico con betulla e storytelling nordico.",
     "radar": { "dryness": 8.0, "uniqueness": 9.5, "balsamic": 8, "salinity": 2.5, "citrus": 3.5, "botanic-complexity": 8.5, "persistence": 9.0 },
     "toniche": [
       { "label": "Premium Indian", "tipo": "indiana", "valori": { "dryness": 1.4, "uniqueness": 0.2, "balsamic": 0.8, "salinity": 0, "citrus": 0, "botanic-complexity": 0, "persistence": 0.5 }, "consigliata": true },
@@ -177,14 +177,14 @@
   },
   {
     "id": "rupis",
-    "nome": "Rupis botanico",
+    "nome": "Rupis",
     "provenienza": "Ischia",
     "isEmpty": false,
     "bg-color": "#4f7942",
     "coordinate": { "lat": 40.733, "lon": 13.908 },
     "aggettivi": [ "Vegetale", "Avvolgente", "Armonico" ],
     "botaniche": [ "Rucola selvatica", "Pipernia", "Corbezzolo" ],
-    "profilo": "Ogni sorso di Rupis è un viaggio a Ischia che racconti con enfasi...",
+    "profilo": "Ogni sorso di Rupis è un viaggio a Ischia che racconti con enfasi manco fossi nato lì. In realtà, ciò che ti piace è dire “botanico” scandendo bene le sillabe: il gin è buono, certo, ma la vera spezia sei tu, che trasformi la bottiglia in un souvenir di viaggio radical chic.",
     "radar": { "dryness": 5.0, "uniqueness": 8.5, "balsamic": 6.5, "salinity": 4.5, "citrus": 6.0, "botanic-complexity": 8.0, "persistence": 7.5 },
     "toniche": [
       { "label": "Strong Indian", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0.5, "balsamic": 0.5, "salinity": 0.2, "citrus": -0.5, "botanic-complexity": -1.0, "persistence": 0.2 }, "consigliata": false },
@@ -206,7 +206,7 @@
     "coordinate": { "lat": 51.507, "lon": -0.127 },
     "aggettivi": [ "Lineare", "Diretto", "Essenziale" ],
     "botaniche": [ "Coriandolo", "Angelica", "Arancia Amara" ],
-    "profilo": "Scegli Gordon’s come gin “del popolo”, in linea con il tuo spirito democratico...",
+    "profilo": "Scegli Gordon’s come gin “del popolo”, ma dentro di te pensi che sia un atto di beneficenza: un gin per le masse, che tu consideri il Tavernello delle botaniche. Lo citi solo per fingere inclusione.",
     "radar": { "dryness": 6.5, "uniqueness": 2.0, "balsamic": 5.0, "salinity": 1.0, "citrus": 5.5, "botanic-complexity": 4.0, "persistence": 4.0 },
     "toniche": [
       { "label": "Classic Indian", "tipo": "indiana", "valori": { "dryness": 1.0, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0, "botanic-complexity": 0, "persistence": 0 }, "consigliata": true },
@@ -228,7 +228,7 @@
     "coordinate": { "lat": 51.492, "lon": -0.224 },
     "aggettivi": [ "Equilibrato", "Raffinato", "Tradizionale" ],
     "botaniche": [ "Arancia dolce", "Scorza di limone", "Cassia cinese" ],
-    "profilo": "Chi sceglie Sipsmith vuole sentirsi parte di un’élite cosmopolita...",
+    "profilo": "Chi sceglie Sipsmith vuole sentirsi parte di un’élite cosmopolita: berlo è come indossare un trench a Londra anche sotto il sole di agosto, un gesto più identitario che dissetante.",
     "radar": { "dryness": 9.0, "uniqueness": 5.0, "balsamic": 7.5, "salinity": 2.0, "citrus": 7.0, "botanic-complexity": 7.0, "persistence": 8.0 },
     "toniche": [
       { "label": "Premium Indian", "tipo": "indiana", "valori": { "dryness": 1.8, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0.5, "botanic-complexity": 0.2, "persistence": 0.5 }, "consigliata": true },
@@ -250,7 +250,7 @@
     "coordinate": { "lat": 44.915, "lon": 7.649 },
     "aggettivi": [ "Solare", "Disinvolto", "Fresco" ],
     "botaniche": [ "Pompelmo rosa", "Rabarbaro", "Limone" ],
-    "profilo": "Scegli Malfy rosa se il tuo gin tonic deve abbinarsi alla foto del tramonto...",
+    "profilo": "Scegli Malfy rosa se il tuo gin tonic deve abbinarsi alla foto del tramonto: sei quel gin lover trendy che confonde il pompelmo rosa con filtro Valencia di Instagram, ma giura che sia “spirito mediterraneo autentico”.",
     "radar": { "dryness": 3.5, "uniqueness": 6.0, "balsamic": 3.0, "salinity": 2.0, "citrus": 9.5, "botanic-complexity": 5.5, "persistence": 6.0 },
     "toniche": [
       { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.2, "uniqueness": -0.5, "balsamic": -0.5, "salinity": 0.5, "citrus": 1.0, "botanic-complexity": -1.0, "persistence": 0 }, "consigliata": false },
@@ -272,7 +272,7 @@
     "coordinate": { "lat": 51.165, "lon": 10.451 },
     "aggettivi": [ "Minimale", "Spigoloso", "Generico" ],
     "botaniche": [ "Coriandolo", "Angelica", "Limone" ],
-    "profilo": "Bevi Castelgy solo quando sei già abbastanza ubriaco...",
+    "profilo": "Bevi Castelgy solo quando sei già abbastanza ubriaco da non sentire più differenze: in quel momento diventa l’amico proletario che ti accompagna nel finale di serata, tra dignità sospesa e ricordi universitari.",
     "radar": { "dryness": 7.0, "uniqueness": 1.0, "balsamic": 4.5, "salinity": 1.5, "citrus": 4.0, "botanic-complexity": 3.0, "persistence": 3.5 },
     "toniche": [
       { "label": "Economic Indian", "tipo": "indiana", "valori": { "dryness": 1.0, "uniqueness": 0, "balsamic": 0, "salinity": 0, "citrus": 0.5, "botanic-complexity": 0, "persistence": 0 }, "consigliata": true },

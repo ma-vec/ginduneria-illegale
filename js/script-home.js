@@ -14,7 +14,7 @@
     const words3 = phrase3.split(" ");
 
     let scrollAccumulator = 0;
-    const sensitivity = 45;
+    const sensitivity = 65; // Aumentato per rendere più lento lo scorrimento e permettere la lettura
     let heroComplete = false;
     const totalWords = words2.length + words3.length;
 
@@ -107,119 +107,14 @@
                 const btnText = document.createTextNode("Svela "+gin.nome);
                 svelaBtn.appendChild(btnText);
 
-                // Variabili per il modale
-                let modalOpen = false;
-                let modal = null;
-                let modalOverlay = null;
-
-                // Funzione per chiudere il modale
-                const closeModal = () => {
-                    if (modal) {
-                        modal.remove();
-                        modal = null;
-                    }
-                    if (modalOverlay) {
-                        modalOverlay.remove();
-                        modalOverlay = null;
-                    }
-                    modalOpen = false;
-                    
-                    // Riattiva scroll
-                    document.body.style.overflow = '';
-                    document.documentElement.style.overflow = '';
-                    
-                    // Re-enabled scroll on container
-                    if (container) {
-                        container.style.overflowY = 'scroll';
-                    }
-                    
-                    console.log('Modale chiuso');
-                };
-
                 // Evento click sul bottone Svela
                 svelaBtn.addEventListener("click", (e) => {
                     e.stopPropagation();
                     e.preventDefault();
                     
-                    console.log('Click su Svela per:', gin.id); // Debug
-                    
-                    if (modalOpen) {
-                        closeModal();
-                    } else {
-                        // Chiudi eventuali altri modali aperti
-                        document.querySelectorAll('.bottiglia-modal, .bottiglia-modal-overlay').forEach(el => el.remove());
-                        
-                        // Crea overlay per il modale
-                        modalOverlay = document.createElement("div");
-                        modalOverlay.classList.add("bottiglia-modal-overlay");
-                        
-                        // Crea modale per l'immagine
-                        modal = document.createElement("div");
-                        modal.classList.add("bottiglia-modal");
-
-                        titleGin = document.createElement("h2");
-                        titleGin.textContent=gin.nome;
-                        modal.appendChild(titleGin);
-
-                        br = document.createElement("br");
-                        modal.appendChild(br);
-
-                        placeGin = document.createElement("h4");
-                        placeGin.textContent = gin.provenienza;
-                        modal.appendChild(placeGin);
-                        
-                        // Aggiungi immagine della bottiglia
-                        const img = document.createElement("img");
-                        img.src = `./assets/images/${gin.id}.png`;
-                        img.alt = gin.name;
-                        img.loading = "lazy";
-                        
-                        // Gestione errore caricamento immagine
-                        img.onerror = () => {
-                            img.src = './assets/images/placeholder.png';
-                            console.warn(`Immagine non trovata per ${gin.id}, uso placeholder`);
-                        };
-                        
-                        // Gestione caricamento riuscito
-                        img.onload = () => {
-                            console.log(`Immagine ${gin.id} caricata con successo`);
-                        };
-                        
-                        modal.appendChild(img);
-                        
-                        // Bottone chiusura
-                        const closeBtn = document.createElement("div");
-                        closeBtn.classList.add("bottiglia-close");
-                        closeBtn.innerHTML = "×";
-                        
-                        closeBtn.addEventListener("click", (e) => {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            closeModal();
-                        });
-                        
-                        modal.appendChild(closeBtn);
-                        
-                        // Aggiungi alla sezione
-                        section.appendChild(modalOverlay);
-                        section.appendChild(modal);
-                        
-                        modalOpen = true;
-                        
-                        // Chiudi cliccando sull'overlay
-                        modalOverlay.addEventListener("click", closeModal);
-                        
-                        // Previeni scroll del body quando il modale è aperto
-                        document.body.style.overflow = 'hidden';
-                        document.documentElement.style.overflow = 'hidden';
-                        
-                        // Disabilita scroll sul container
-                        if (container) {
-                            container.style.overflowY = 'hidden';
-                        }
-                        
-                        console.log('Modale aperto per:', gin.id);
-                    }
+                    console.log('Click su Svela per:', gin.id);
+                    // Reindirizza alla pagina bottle.html con ID come query string
+                    window.location.href = `./bottle.html?id=${gin.id}`;
                 });
 
                 // ===== INTERSECTION OBSERVER =====
@@ -235,10 +130,6 @@
                             });
                         } else {
                             video.pause();
-                            // Chiudi il modale se aperto quando si esce dalla sezione
-                            if (modalOpen) {
-                                closeModal();
-                            }
                         }
                     });
                 }, { threshold: 0.3 });
@@ -327,7 +218,7 @@
             e.preventDefault();
         }
         
-        scrollAccumulator += Math.abs(e.deltaY) * 0.5;
+        scrollAccumulator += Math.abs(e.deltaY) * 0.3; // Rallenta lo scroll riducendo il moltiplicatore (prima era 0.5)
         
         if (!ticking) {
             window.requestAnimationFrame(() => {
@@ -376,7 +267,7 @@
         
         if (Math.abs(deltaY) > 5) {
             e.preventDefault();
-            scrollAccumulator += Math.abs(deltaY) * 0.3;
+            scrollAccumulator += Math.abs(deltaY) * 0.3; // Rallentato per mobile
             
             if (!ticking) {
                 window.requestAnimationFrame(() => {
@@ -387,22 +278,5 @@
             }
         }
     }, { passive: false });
-
-    // Aggiungi supporto tasto ESC per chiudere il modale
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            // Cerca tutti i modali aperti e chiudili
-            const openModals = document.querySelectorAll('.bottiglia-modal');
-            const openOverlays = document.querySelectorAll('.bottiglia-modal-overlay');
-            
-            openModals.forEach(modal => modal.remove());
-            openOverlays.forEach(overlay => overlay.remove());
-            
-            // Riattiva scroll
-            document.body.style.overflow = '';
-            document.documentElement.style.overflow = '';
-            container.style.overflowY = 'scroll';
-        }
-    });
 
 })();

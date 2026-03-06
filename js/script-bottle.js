@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const profile = document.getElementById("profile");
     const tonicbtn = document.getElementById("add-tonic-btn");
     const limited = document.getElementById("limited");
+    const etValue = document.getElementById("etValue");
+    const etDescription = document.getElementById("etDescription");
+    const etAmbiente = document.getElementById("etAmbiente");
+    const etSociale = document.getElementById("etSociale");
+    const etTradizione = document.getElementById("etTradizione");
+    const etAmbienteNum = document.getElementById("etAmbienteNum");
+    const etSocialeNum = document.getElementById("etSocialeNum");
+    const etTradizioneNum = document.getElementById("etTradizioneNum");
+    const etRating = document.getElementById("etRating");
 
     const indianColor = "#DAA520";
     const mediterraneanColor = "#0495CE";
@@ -54,10 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             document.documentElement.style.setProperty('--gin-color', ginObj["bg-color"]);
 
-            // Mini-map decorativa
             LoadMiniMap(ginObj);
 
             LoadRadar(ginObj);
+
+            LoadEthicalIndex(ginObj);
 
         } catch (err) {
             console.error(err);
@@ -341,7 +351,6 @@ function LoadTonicTable(gin) {
 function LoadMiniMap(gin) {
     const mapEl = document.getElementById('mini-map');
     if (!mapEl || !gin.coordinate) return;
-    // Skip on narrow screens (CSS hides it, but avoid init overhead)
     if (window.innerWidth <= 768) return;
 
     const map = L.map('mini-map', {
@@ -362,6 +371,43 @@ function LoadMiniMap(gin) {
 
     // Disabilita ogni interazione residua
     map._handlers.forEach(h => h.disable());
+}
+
+
+function LoadEthicalIndex(gin) {
+    const etichalDiv = document.getElementById("etichaldiv");
+    if (!gin.ethicalIndex) {
+        if(etichalDiv) etichalDiv.style.display = "none";
+        return;
+    }
+    if(etichalDiv) etichalDiv.style.display = "flex";
+    
+    let txtValue;
+    if (gin.ethicalIndex.tot >= 85) {
+        txtValue = "Eccellente";
+    } else if (gin.ethicalIndex.tot >= 75) {
+        txtValue = "Buono";
+    } else if (gin.ethicalIndex.tot >= 60) {
+        txtValue = "Nella media";
+    } else if (gin.ethicalIndex.tot >= 40) {
+        txtValue = "Scarso";
+    } else {
+        txtValue = "Pessimo";
+    }
+    etValue.textContent = gin.ethicalIndex.tot+" / 100";
+    etDescription.textContent = gin.ethicalIndex.motivation;
+    
+    // Set widths for bars
+    etAmbiente.style.width = gin.ethicalIndex.env + "%";
+    etSociale.style.width = gin.ethicalIndex.soc + "%";
+    etTradizione.style.width = gin.ethicalIndex.trad + "%";
+    
+    // Set text numbers
+    etAmbienteNum.textContent = gin.ethicalIndex.env;
+    etSocialeNum.textContent = gin.ethicalIndex.soc;
+    etTradizioneNum.textContent = gin.ethicalIndex.trad;
+    
+    etRating.textContent = txtValue;
 }
 
 LoadBottle();
