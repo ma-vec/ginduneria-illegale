@@ -20,10 +20,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const etSocialeNum = document.getElementById("etSocialeNum");
     const etTradizioneNum = document.getElementById("etTradizioneNum");
     const etRating = document.getElementById("etRating");
+    const nomeParl = document.getElementById("nomeParl");
+    const ParagAreaP = document.getElementById("paragAreaP");
+    const motPol = document.getElementById("motPol");
+
 
     const indianColor = "#DAA520";
     const mediterraneanColor = "#0495CE";
     let radarChartInstance;
+
+    // Totale politico
+    const totSeggi = 600;
+    let edx=0;
+    let cdx=0;
+    let dx=0;
+    let sx=0
+    let csx=0;
+    let esx=0; 
+    let perc = [];
+
+    function getPoliticalAreaId(item) {
+        if (!item || !item.politicalArea) return null;
+        if (typeof item.politicalArea === "string") return item.politicalArea;
+        return item.politicalArea.id || null;
+    }
 
     async function LoadBottle() {
 
@@ -40,6 +60,38 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const data = await response.json();
+            const totgin = data.length;
+
+            data.forEach(element => {
+                const areaId = getPoliticalAreaId(element);
+                switch (areaId) {
+                    case "edx":
+                        edx++;
+                        break;
+                    case "cdx":
+                        cdx++;
+                        break;
+                    case "dx":
+                        dx++;
+                        break;
+                    case "sx":
+                        sx++;
+                        break;
+                    case "csx":
+                        csx++;
+                        break;
+                    case "esx":
+                        esx++;
+                        break;
+                }
+            });
+
+            perc[0] = edx / totgin;
+            perc[1] = cdx / totgin;
+            perc[2] = dx / totgin;
+            perc[3] = sx / totgin;
+            perc[4] = csx / totgin;
+            perc[5] = esx / totgin;
 
             const ginObj = data.find(g => g.id === ginId);
 
@@ -68,6 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
             LoadRadar(ginObj);
 
             LoadEthicalIndex(ginObj);
+
+            LoadPoliticalChart(ginObj);
 
         } catch (err) {
             console.error(err);
@@ -110,29 +164,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainColor = gin["bg-color"];
 
     const valueLabelPlugin = {
-    id: 'valueLabels',
-    afterDatasetsDraw(chart) {
-        const { ctx } = chart;
+        id: 'valueLabels',
+        afterDatasetsDraw(chart) {
+            const { ctx } = chart;
 
-        chart.data.datasets.forEach((dataset, datasetIndex) => {
-            const meta = chart.getDatasetMeta(datasetIndex);
+            chart.data.datasets.forEach((dataset, datasetIndex) => {
+                const meta = chart.getDatasetMeta(datasetIndex);
 
-            ctx.save();
-            ctx.fillStyle = dataset.borderColor;
-            ctx.font = "12px sans-serif";
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
+                ctx.save();
+                ctx.fillStyle = dataset.borderColor;
+                ctx.font = "12px sans-serif";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
 
-            meta.data.forEach((point, index) => {
-                const value = dataset.data[index];
-                const offset = datasetIndex === 0 ? -12 : 12;
-                ctx.fillText(value, point.x, point.y + offset); // posiziona sopra o sotto il punto a seconda del dataset
+                meta.data.forEach((point, index) => {
+                    const value = dataset.data[index];
+                    const offset = datasetIndex === 0 ? -12 : 12;
+                    ctx.fillText(value, point.x, point.y + offset);
+                });
+
+                ctx.restore();
             });
-
-            ctx.restore();
-        });
-    }
-};
+        }
+    };
 
     radarChartInstance = new Chart(ctx, {
         type: 'radar',
@@ -388,7 +442,7 @@ function LoadEthicalIndex(gin) {
     } else if (gin.ethicalIndex.tot >= 75) {
         txtValue = "Buono";
     } else if (gin.ethicalIndex.tot >= 60) {
-        txtValue = "Nella media";
+        txtValue = "Sufficiente";
     } else if (gin.ethicalIndex.tot >= 40) {
         txtValue = "Scarso";
     } else {
@@ -409,6 +463,162 @@ function LoadEthicalIndex(gin) {
     
     etRating.textContent = txtValue;
 }
+
+function LoadPoliticalChart(gin) {
+        console.log("perc:", perc);
+console.log("totSeggi:", totSeggi);
+    const highchartsRef = window.Highcharts;
+    if (!highchartsRef) {
+        console.error("Highcharts non caricato: impossibile renderizzare il parlamento");
+        return;
+    }
+    if (!highchartsRef.seriesTypes || !highchartsRef.seriesTypes.item) {
+        console.error("Modulo item-series non caricato: impossibile usare il grafico parlamento");
+        return;
+    }
+
+    const container = document.getElementById("parliament-chart");
+    if (!container) return;
+    container.style.width = "100%";
+    container.style.maxWidth = "900px";
+    container.style.height = "430px";
+    container.style.margin = "0 auto";
+
+
+    const areas = [
+        
+        { name: "Centri Sociali e No-Borders", value: Number(perc[5] || 0), color: "#d8150f", label: "ESX" },
+        { name: "Sinistra", value: Number(perc[3] || 0), color: "#f39e4f", label: "SX" },
+        { name: "Radical Chic", value: Number(perc[4] || 0), color: "#ecc412", label: "CSX" },
+        { name: "Centrodestra", value: Number(perc[1] || 0), color: "#45ca10", label: "CDX" },
+        { name: "Conservatori", value: Number(perc[2] || 0), color: "#5dcbec", label: "DX" },
+        { name: "Sovranismo Hard", value: Number(perc[0] || 0), color: "#0b08aa", label: "EDX" },
+    ];
+
+    const seats = areas.map((area) => Math.round(area.value * totSeggi));
+    const seatDelta = totSeggi - seats.reduce((acc, value) => acc + value, 0);
+    if (seatDelta !== 0) {
+        const biggestIdx = seats.indexOf(Math.max(...seats));
+        seats[biggestIdx] += seatDelta;
+    }
+
+    const ginAreaId = getPoliticalAreaId(gin);
+    const areaIdByLabel = {
+        EDX: "edx",
+        CDX: "cdx",
+        DX: "dx",
+        SX: "sx",
+        CSX: "csx",
+        ESX: "esx"
+    };
+
+    const seriesData = areas.map((area, index) => {
+        const isSelected = areaIdByLabel[area.label] === ginAreaId;
+        return {
+            name: area.name,
+            y: seats[index],
+            color: area.color,
+            label: area.label,
+            borderColor: isSelected ? "#ffffff" : area.color,
+            borderWidth: isSelected ? 2 : 0
+        };
+    });
+
+    highchartsRef.chart("parliament-chart", {
+        chart: {
+            type: "item",
+            backgroundColor: "transparent"
+        },
+        title: {
+            text: "Parlamento dei gin",
+            style: {
+                color: "#ffffff"
+            }
+        },
+        subtitle: {
+            text: "",
+            style: {
+                color: "rgba(255,255,255,0.7)"
+            }
+        },
+        legend: {
+            labelFormat: '{name} <span style="opacity: 0.7">{y}</span>',
+            itemStyle: {
+                color: "#ffffff"
+            }
+        },
+        series: [{
+            name: "Seggi",
+            data: seriesData,
+            dataLabels: {
+                enabled: true,
+                format: "{point.label}",
+                style: {
+                    textOutline: "2px contrast",
+                    fontSize: "10px"
+                }
+            },
+            center: ["50%", "88%"],
+            size: "170%",
+            startAngle: -90,
+            endAngle: 90
+        }],
+        tooltip: {
+            headerFormat: "",
+            pointFormat: "<b>{point.name}</b><br>{point.y} seggi"
+        },
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 700
+                },
+                chartOptions: {
+                    series: [{
+                        dataLabels: {
+                            distance: -25
+                        }
+                    }]
+                }
+            }]
+        },
+        credits: {
+            enabled: false
+        }
+    });
+
+    let areaName = "Area non definita";
+    switch (ginAreaId) {
+        case "edx":
+            areaName = "Sovranismo Hard";
+            break;
+        case "cdx":
+            areaName = "Centrodestra";
+            break;
+        case "dx":
+            areaName = "Conservatori";
+            break;
+        case "sx":
+            areaName = "Sinistra";
+            break;
+        case "csx":
+            areaName = "Radical Chic";
+            break;
+        case "esx":
+            areaName = "Centri Sociali e No-Borders";
+            break;
+    }
+
+    const areaCode = ginAreaId ? ginAreaId.toUpperCase() : "N/D";
+    const areaMot = gin?.politicalArea && typeof gin.politicalArea === "object"
+        ? (gin.politicalArea.mot || "")
+        : "";
+
+    if (nomeParl) nomeParl.textContent += gin.nome;
+    if (ParagAreaP) ParagAreaP.textContent += `${areaName} (${areaCode})`;
+    if (motPol) motPol.textContent += areaMot;
+}
+
+
 
 LoadBottle();
 }); 

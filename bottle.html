@@ -6,7 +6,7 @@
 <title>Bottle</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="./css/style-bottle01.css">
+<link rel="stylesheet" href="./css/style-bottle.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
@@ -61,6 +61,15 @@
         </div>
     </div>
 
+    <div id="political-section">
+        <figure class="highcharts-figure">
+            <div id="parliament-chart"></div>
+        </figure>
+        <p id="nomeParl">Parlamentare: </p>
+        <p id="paragAreaP">Appartenenza: </p>
+        <p id="motPol">Ideologia: </p>
+    </div>
+
     <div id="bottle-profile">
         <p id="profile"></p>
     </div>
@@ -70,6 +79,11 @@
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Political chart -->
+<script src="https://cdn.jsdelivr.net/npm/highcharts@11/highcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@11/modules/item-series.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@11/modules/accessibility.js"></script>
 
     <script src="./js/script-bottle.js" defer></script> <!-- Carica lo script dopo il DOM -->
 </body>
