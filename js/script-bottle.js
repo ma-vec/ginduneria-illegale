@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nomeParl = document.getElementById("nomeParl");
     const ParagAreaP = document.getElementById("paragAreaP");
     const motPol = document.getElementById("motPol");
+    const ifEmpty = document.getElementById("ifEmpty");
 
 
     const indianColor = "#DAA520";
@@ -38,6 +39,207 @@ document.addEventListener("DOMContentLoaded", () => {
     let csx=0;
     let esx=0; 
     let perc = [];
+
+    // Navigazione tra bottiglie
+    let ginData = [];
+    const isNavigationTransition = sessionStorage.getItem("navTransition") === "true";
+    
+    function clearNavTransition() {
+        sessionStorage.removeItem("navTransition");
+    }
+    
+    async function loadGinList() {
+        try {
+            const response = await fetch("./data/gin_list.json");
+            if (!response.ok) throw new Error("Errore nel caricamento gin_list.json");
+            ginData = await response.json();
+        } catch (err) {
+            console.error("Errore nel caricamento della lista gin:", err);
+        }
+    }
+    
+    function getCurrentGinIndex() {
+        return ginData.findIndex(g => g.id === ginId);
+    }
+    
+    function getNextGinId(direction = 1) {
+        const currentIndex = getCurrentGinIndex();
+        if (currentIndex === -1) return null;
+        
+        const newIndex = (currentIndex + direction + ginData.length) % ginData.length;
+        return ginData[newIndex].id;
+    }
+    
+    async function navigateToGin(nextGinId) {
+        if (!nextGinId) return;
+        
+        const currentGin = ginData.find(g => g.id === ginId);
+        const nextGin = ginData.find(g => g.id === nextGinId);
+        
+        if (!currentGin || !nextGin) return;
+        
+        // Setta il flag per indicare che la prossima pagina viene da una transizione
+        sessionStorage.setItem("navTransition", "true");
+        
+        const bottleInfo = document.getElementById("bottle-info");
+        const currentColor = currentGin["bg-color"];
+        const nextColor = nextGin["bg-color"];
+        
+        // Aggiungi classe di transizione
+        bottleInfo.classList.add("transitioning");
+        
+        // Interpolazione del colore
+        const startColor = hexToColor(currentColor);
+        const endColor = hexToColor(nextColor);
+        
+        const startTime = performance.now();
+        const animationDuration = 1500; // 1.5 secondi
+        
+        function animate(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / animationDuration, 1);
+            
+            const r = Math.round(startColor.r + (endColor.r - startColor.r) * progress);
+            const g = Math.round(startColor.g + (endColor.g - startColor.g) * progress);
+            const b = Math.round(startColor.b + (endColor.b - startColor.b) * progress);
+            
+            const interpolatedColor = `#${((r << 16) | (g << 8) | b).toString(16).padStart(6, '0')}`;
+            document.documentElement.style.setProperty('--gin-color', interpolatedColor);
+            
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                // Navigazione completata, vai all'URL
+                window.location.href = `./bottle.html?id=${nextGinId}`;
+            }
+        }
+        
+        requestAnimationFrame(animate);
+    }
+    
+    function hexToColor(hex) {
+        return {
+            r: parseInt(hex.substring(1, 3), 16),
+            g: parseInt(hex.substring(3, 5), 16),
+            b: parseInt(hex.substring(5, 7), 16)
+        };
+    }
+    
+    function setupNavigationButtons() {
+        const prevBtn = document.getElementById("prev-bottle");
+        const nextBtn = document.getElementById("next-bottle");
+        
+        if (prevBtn) {
+            prevBtn.addEventListener("click", () => {
+                const prevGinId = getNextGinId(-1);
+                if (prevGinId) {
+                    navigateToGin(prevGinId);
+                }
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener("click", () => {
+                const nextGinId = getNextGinId(1);
+                if (nextGinId) {
+                    navigateToGin(nextGinId);
+                }
+            });
+        }
+    }
+
+    function setupDragAndKeyboard() {
+        const bottleInfo = document.getElementById("bottle-info");
+        let isDragging = false;
+        let startX = 0;
+        let currentX = 0;
+
+        // ============================================================
+        // DRAG HANDLER
+        // ============================================================
+        bottleInfo.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            currentX = startX;
+            bottleInfo.style.cursor = "grabbing";
+            bottleInfo.classList.add("dragging");
+        });
+
+        document.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            
+            currentX = e.clientX;
+            const deltaX = currentX - startX;
+            const dragThreshold = window.innerWidth * 0.2; // 20% della larghezza dello schermo
+            
+            // Calcola l'opacità dell'altra bottiglia in base al drag
+            const opacity = Math.min(Math.abs(deltaX) / dragThreshold, 1);
+            bottleInfo.style.setProperty("--drag-opacity", opacity);
+            
+            // Applica un leggero offset visivo
+            const offsetAmount = (deltaX / window.innerWidth) * 10; // max 10% di spostamento
+            bottleInfo.style.setProperty("--drag-offset", `${offsetAmount}%`);
+        });
+
+        document.addEventListener("mouseup", (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+            bottleInfo.style.cursor = "grab";
+            bottleInfo.classList.remove("dragging");
+            
+            const deltaX = currentX - startX;
+            const dragThreshold = window.innerWidth * 0.2; // 20% della larghezza
+            
+            // Se il drag è abbastanza lungo, naviga
+            if (Math.abs(deltaX) > dragThreshold) {
+                const direction = deltaX > 0 ? -1 : 1; // drag destro = indietro, drag sinistro = avanti
+                const nextGinId = getNextGinId(direction);
+                if (nextGinId) {
+                    navigateToGin(nextGinId);
+                }
+            } else {
+                // Rimbalza indietro con transizione smooth
+                bottleInfo.classList.add("snap-back");
+                bottleInfo.style.setProperty("--drag-opacity", "0");
+                bottleInfo.style.setProperty("--drag-offset", "0%");
+                
+                // Rimuovi la classe dopo la transizione
+                setTimeout(() => {
+                    bottleInfo.classList.remove("snap-back");
+                }, 300);
+            }
+        });
+
+        // ============================================================
+        // KEYBOARD HANDLER
+        // ============================================================
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") {
+                const prevGinId = getNextGinId(-1);
+                if (prevGinId) {
+                    navigateToGin(prevGinId);
+                }
+            } else if (e.key === "ArrowRight") {
+                const nextGinId = getNextGinId(1);
+                if (nextGinId) {
+                    navigateToGin(nextGinId);
+                }
+            }
+        });
+
+        // Imposta il cursore su "grab" quando si entra nell'area
+        bottleInfo.addEventListener("mouseenter", () => {
+            if (!isDragging) {
+                bottleInfo.style.cursor = "grab";
+            }
+        });
+
+        bottleInfo.addEventListener("mouseleave", () => {
+            if (!isDragging) {
+                bottleInfo.style.cursor = "default";
+            }
+        });
+    }
 
     function getPoliticalAreaId(item) {
         if (!item || !item.politicalArea) return null;
@@ -104,13 +306,16 @@ document.addEventListener("DOMContentLoaded", () => {
             pos.textContent = ginObj.provenienza;
             bottleImage.src = `assets/images/${ginObj.id}.png`;
 
-            botanic.textContent = ginObj.botaniche.join(", ");
+            botanic.textContent = ginObj.botaniche.join(", ")+" • "+ginObj.alc+"% alc.";
             aggettivi.textContent = ginObj.aggettivi.join(" • ");
 
             bottleImage.alt = `Immagine di ${ginObj.nome}`;
             profile.textContent = ginObj.profilo;
             if (ginObj.limited) {
                 limited.textContent = ginObj.limited;
+            }
+            if(ginObj.isEmpty) {
+                ifEmpty.textContent = "Esaurito";
             }
 
             document.documentElement.style.setProperty('--gin-color', ginObj["bg-color"]);
@@ -619,6 +824,18 @@ console.log("totSeggi:", totSeggi);
 }
 
 
+
+// Inizializza navigazione e carica dati
+(async () => {
+    await loadGinList();
+    setupNavigationButtons();
+    setupDragAndKeyboard();
+    
+    // Se torniamo dall'accesso diretto, non applicare transizione
+    if (!isNavigationTransition) {
+        clearNavTransition();
+    }
+})();
 
 LoadBottle();
 }); 

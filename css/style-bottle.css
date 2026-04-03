@@ -9,8 +9,11 @@
     --lightgreen: #00b89f;
     --text-light: #f4f4f4;
     --text-muted: #888888;
+    --red: #a72517;
     /* Variabile di fallback nel caso il JS fallisca */
-    --gin-color: #1a1a1a; 
+    --gin-color: #1a1a1a;
+    --drag-opacity: 0;
+    --drag-offset: 0%;
 }
 
 /* ============================================================
@@ -60,6 +63,49 @@ body {
 }
 
 /* ============================================================
+   NAVIGATION ARROWS
+   ============================================================ */
+.nav-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 16px;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0.6;
+}
+
+.nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow-left {
+    left: 20px;
+}
+
+.nav-arrow-right {
+    right: 20px;
+}
+
+/* ============================================================
    BOTTLE INFO (HERO SECTION)
    ============================================================ */
 #bottle-info {
@@ -75,6 +121,35 @@ body {
     /* Il gradiente che parte dal colore del brand e sfuma nel nero profondo */
     background: linear-gradient(180deg, var(--gin-color) 0%, var(--dark) 85%);
     z-index: 1;
+    transition: none;
+}
+
+#bottle-info.transitioning {
+    transition: background 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#bottle-info.dragging {
+    transition: none;
+}
+
+#bottle-info.snap-back {
+    transition: --drag-opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), --drag-offset 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Pseudo-elemento per l'anteprima della bottiglia durante il drag */
+#bottle-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: var(--drag-opacity);
+    transition: opacity 0.05s ease-out;
+    z-index: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
+    transform: translateX(var(--drag-offset));
 }
 
 /* Il nome del gin fa da "sfondo" testuale per creare profondità */
@@ -115,6 +190,14 @@ body {
     font-size: 0.75rem;
     letter-spacing: 0.3em;
     color: var(--lightgreen);
+    margin-bottom: 1.5rem;
+    z-index: 2;
+}
+#ifEmpty {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    color: var(--red);
     margin-bottom: 1.5rem;
     z-index: 2;
 }
