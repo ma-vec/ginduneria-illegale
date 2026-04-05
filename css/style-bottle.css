@@ -177,8 +177,8 @@ body {
 
 /* Dettagli della bottiglia */
 #pos {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
+    font-family: "Twemoji Country Flags",'Inter', sans-serif;
+    font-size: 0.9rem;
     letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--lightgreen);

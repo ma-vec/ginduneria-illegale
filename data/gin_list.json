@@ -2,7 +2,7 @@
   {
     "id": "jr-fl",
     "nome": "J. Rose",
-    "provenienza": "Salento",
+    "provenienza": "🇮🇹 Salento",
     "isEmpty": false,
     "bg-color": "#C41E3A",
     "coordinate": { "lat": 40.351, "lon": 18.175 },
@@ -29,7 +29,7 @@
   {
     "id": "xoriguer",
     "nome": "Xoriguer",
-    "provenienza": "Minorca",
+    "provenienza": "🇪🇸 Minorca",
     "isEmpty": false,
     "bg-color": "#9d4f22",
     "coordinate": { "lat": 39.887, "lon": 4.263 },
@@ -56,7 +56,7 @@
   {
     "id": "poseidon",
     "nome": "Poseidon",
-    "provenienza": "Brescia",
+    "provenienza": "🇮🇹 Brescia",
     "isEmpty": false,
     "bg-color": "#003366",
     "coordinate": { "lat": 45.526, "lon": 10.229 },
@@ -83,7 +83,7 @@
   {
     "id": "portofino-winter",
     "nome": "Portofino",
-    "provenienza": "Portofino",
+    "provenienza": "🇮🇹 Portofino",
     "isEmpty": false,
     "bg-color": "#00477e",
     "coordinate": { "lat": 44.303, "lon": 9.209 },
@@ -110,7 +110,7 @@
   {
     "id": "melagorai",
     "nome": "Melagorai",
-    "provenienza": "Trento",
+    "provenienza": "🇮🇹 Trento",
     "isEmpty": false,
     "bg-color": "#8b0000",
     "coordinate": { "lat": 46.067, "lon": 11.121 },
@@ -137,7 +137,7 @@
   {
     "id": "amuerte-white",
     "nome": "Amuerte",
-    "provenienza": "Belgio",
+    "provenienza": "🇧🇪 Belgio",
     "isEmpty": false,
     "bg-color": "#ffba1f",
     "coordinate": { "lat": 51.219, "lon": 4.402 },
@@ -164,7 +164,7 @@
   {
     "id": "bareksten-botanical",
     "nome": "Bareksten",
-    "provenienza": "Norvegia",
+    "provenienza": "🇳🇴 Norvegia",
     "isEmpty": false,
     "bg-color": "#c1c1c1",
     "coordinate": { "lat": 60.391, "lon": 5.322 },
@@ -191,7 +191,7 @@
   {
     "id": "son-of-a-birch",
     "nome": "Son of a birch",
-    "provenienza": "Trento",
+    "provenienza": "🇮🇹 Trento",
     "isEmpty": false,
     "bg-color": "#d2b48c",
     "coordinate": { "lat": 46.155, "lon": 11.498 },
@@ -218,7 +218,7 @@
   {
     "id": "rupis",
     "nome": "Rupis",
-    "provenienza": "Ischia",
+    "provenienza": "🇮🇹 Ischia",
     "isEmpty": false,
     "bg-color": "#4f7942",
     "coordinate": { "lat": 40.733, "lon": 13.908 },
@@ -245,7 +245,7 @@
   {
     "id": "gordon",
     "nome": "Gordon's",
-    "provenienza": "Regno Unito",
+    "provenienza": "🇬🇧 Regno Unito",
     "isEmpty": false,
     "bg-color": "#ffdf00",
     "coordinate": { "lat": 51.507, "lon": -0.127 },
@@ -272,7 +272,7 @@
   {
     "id": "sipsmith",
     "nome": "Sipsmith",
-    "provenienza": "Regno Unito",
+    "provenienza": "🇬🇧 Regno Unito",
     "isEmpty": true,
     "bg-color": "#004225",
     "coordinate": { "lat": 51.492, "lon": -0.224 },
@@ -299,7 +299,7 @@
   {
     "id": "malfy-rosa",
     "nome": "Malfy Rosa",
-    "provenienza": "Torino",
+    "provenienza": "🇮🇹 Torino",
     "isEmpty": true,
     "bg-color": "#ffc0cb",
     "coordinate": { "lat": 44.915, "lon": 7.649 },
@@ -326,7 +326,7 @@
   {
     "id": "castelgy",
     "nome": "Castelgy",
-    "provenienza": "Germania",
+    "provenienza": "🇩🇪 Germania",
     "isEmpty": true,
     "bg-color": "#808080",
     "coordinate": { "lat": 51.165, "lon": 10.451 },

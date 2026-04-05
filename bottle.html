@@ -84,9 +84,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Political chart -->
-<script src="https://cdn.jsdelivr.net/npm/highcharts@11/highcharts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highcharts@11/modules/item-series.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highcharts@11/modules/accessibility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@11/highcharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@11/modules/item-series.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@11/modules/accessibility.js"></script>
+    <script type="module" defer>
+    import { polyfillCountryFlagEmojis } from "https://cdn.skypack.dev/country-flag-emoji-polyfill";
+    polyfillCountryFlagEmojis();
+    </script>
 
     <script src="./js/script-bottle.js" defer></script> <!-- Carica lo script dopo il DOM -->
 </body>
