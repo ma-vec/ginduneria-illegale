@@ -175,6 +175,27 @@ body {
     user-select: none;
 }
 
+#temp {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    z-index: 2;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: right;
+    line-height: 1;
+    padding: 8px 10px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 999px;
+    background: rgba(5, 5, 5, 0.42);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
 /* Dettagli della bottiglia */
 #pos {
     font-family: "Twemoji Country Flags",'Inter', sans-serif;
@@ -517,6 +538,56 @@ body {
     color: #bbbbbb;
 }
 
+.status-dot {
+    --status-color: #18c96b;
+    position: relative;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: var(--status-color);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.55), 0 0 12px color-mix(in srgb, var(--status-color) 55%, transparent);
+}
+
+.status-dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1.4px solid color-mix(in srgb, var(--status-color) 88%, transparent);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+    animation: statusPulse 1.9s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+
+.status-active {
+    --status-color: #1fd37a;
+}
+
+.status-life {
+    --status-color: #d4af37;
+}
+
+@keyframes statusPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.85;
+    }
+    60% {
+        transform: translate(-50%, -50%) scale(2.2);
+        opacity: 0.32;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.8);
+        opacity: 0;
+    }
+}
+
 #motPol {
     margin-top: 0.9rem;
     font-size: 1rem;
@@ -565,6 +636,14 @@ body {
 @media (max-width: 768px) {
     #mini-map {
         display: none;
+    }
+
+    #temp {
+        top: 10px;
+        right: 12px;
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+        padding: 7px 9px;
     }
 
     #nome-bottiglia {

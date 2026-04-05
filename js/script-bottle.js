@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ParagAreaP = document.getElementById("paragAreaP");
     const motPol = document.getElementById("motPol");
     const ifEmpty = document.getElementById("ifEmpty");
+    const temp = document.getElementById("temp");
 
 
     const indianColor = "#DAA520";
@@ -302,6 +303,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            async function updateTemp() {
+                try {
+                    const weather = await getCurrentWeather(ginObj.coordinate.lat, ginObj.coordinate.lon);
+                    const weatherEmoji = getWeatherEmoji(weather.weatherCode, weather.isDay);
+                    const roundedTemp = Math.round(weather.temperature);
+                    temp.textContent = `${weatherEmoji} ${roundedTemp} °C`;
+                } catch (err) {
+                    console.error("Errore nel caricamento meteo:", err);
+                    temp.textContent = "-- °C";
+                }
+            }
+            updateTemp();
             nome.textContent = ginObj.nome;
             pos.textContent = ginObj.provenienza;
             bottleImage.src = `assets/images/${ginObj.id}.png`;
@@ -818,9 +831,82 @@ console.log("totSeggi:", totSeggi);
         ? (gin.politicalArea.mot || "")
         : "";
 
-    if (nomeParl) nomeParl.textContent += gin.nome;
+    if (nomeParl) {
+        const isLifeSenator = Boolean(gin.isEmpty);
+        nomeParl.textContent = "";
+
+        const statusDot = document.createElement("span");
+        statusDot.className = `status-dot ${isLifeSenator ? "status-life" : "status-active"}`;
+        statusDot.setAttribute("aria-hidden", "true");
+
+        const roleText = document.createElement("span");
+        roleText.textContent = `${isLifeSenator ? "Senatore a vita" : "Parlamentare"}: ${gin.nome}`;
+
+        nomeParl.append(statusDot, roleText);
+    }
     if (ParagAreaP) ParagAreaP.textContent += `${areaName} (${areaCode})`;
     if (motPol) motPol.textContent += areaMot;
+}
+
+function getWeatherEmoji(weatherCode, isDay) {
+    switch (weatherCode) {
+        case 0:
+            return isDay ? "☀️" : "🌙"; // Sereno
+        case 1:
+            return isDay ? "🌤️" : "🌙"; // Prevalentemente sereno
+        case 2:
+            return "⛅"; // Parzialmente nuvoloso
+        case 3:
+            return "☁️"; // Coperto
+        case 45:
+        case 48:
+            return "🌫️"; // Nebbia
+        case 51:
+        case 53:
+        case 55:
+        case 56:
+        case 57:
+            return "🌦️"; // Pioviggine
+        case 61:
+        case 63:
+        case 65:
+        case 66:
+        case 67:
+        case 80:
+        case 81:
+        case 82:
+            return "🌧️"; // Pioggia/rovesci
+        case 71:
+        case 73:
+        case 75:
+        case 77:
+        case 85:
+        case 86:
+            return "❄️"; // Neve
+        case 95:
+        case 96:
+        case 99:
+            return "⛈️"; // Temporale
+        default:
+            return "🌡️";
+    }
+}
+
+async function getCurrentWeather(latitude, longitude) {
+  const response = await fetch(
+    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,is_day&timezone=auto&models=ecmwf_ifs025`
+  );
+
+  if (!response.ok) {
+    throw new Error(`Errore API: ${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  return {
+    temperature: data.current.temperature_2m,
+    weatherCode: data.current.weather_code,
+    isDay: data.current.is_day === 1
+  };
 }
 
 
