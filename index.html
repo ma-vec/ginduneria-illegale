@@ -5,38 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GinDuneria</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="./css/style-home-modern.css">
 </head>
-<body>
+<body class="mode-list">
+<div class="view-toggle" aria-label="Selettore vista home">
+    <button type="button" class="view-toggle__button is-active" data-view="list" aria-pressed="true">Vista elenco</button>
+    <button type="button" class="view-toggle__button" data-view="video" aria-pressed="false">Vista video</button>
+</div>
+
 <div class="container" id="container">
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="hero">
-        <h1>
-            Non tutti hanno un <span class="accent">palato</span>,
-            alcuni bevono solo <span class="accent">abitudini</span>.
-        </h1>
-        
-        <div class="phrase-container">
-            <div id="text2" class="dynamic-text"></div>
-            <div id="text3" class="dynamic-text"></div>
-            <div id="cta-text" class="dynamic-text cta" style="display: none;">↓ continua a scorrere ↓</div>
+    <section class="catalog-section" id="catalog-section">
+        <div class="catalog-header">
+            <p class="eyebrow">Libreria dei terroir</p>
+            <h2>Le bottiglie, una dopo l'altra, in un flusso continuo di storia ed esperienze.</h2>
         </div>
-
-        <!-- Progress bar-->
-        <div class="scroll-progress">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
-
-        <!-- Overlay luce interattiva -->
-        <div class="glass-overlay"></div>
+        <div class="catalog-grid" id="catalog-grid"></div>
     </section>
         
         <!-- Overlay artistico -->
 
 </div>
 
+<script type="module" defer>
+    import { polyfillCountryFlagEmojis } from "https://cdn.skypack.dev/country-flag-emoji-polyfill";
+    polyfillCountryFlagEmojis();
+</script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="./js/script-home.js" defer></script>
 
-<script src="./js/script-home.js"></script>
 </body>
 </html>

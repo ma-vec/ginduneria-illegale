@@ -20,6 +20,9 @@
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
     ],
     "limited": "Flamenco limited edition",
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/ee29e2c8-117c-11ee-b074-bf4cb3d6144a/sNVMFnQ9ux.lottie", "16%", "76%", "160px", "-10deg", "0.9"]
+    ],
     "politicalArea": {
       "id": "edx",
       "mot": "Con quel design ricercato e le etichette ispirate a icone classiche, punta tutto sull'estetica del bello e della tradizione. È il gin che marcia, non marcisce, servito rigorosamente in un bicchiere di marmo"
@@ -47,6 +50,9 @@
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
     ],
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/eb0916e0-1177-11ee-846e-c3b4e95d5694/d7Z1Gp0K0S.lottie", "74%", "24%", "148px", "0deg", "0.85"]
+    ],
     "politicalArea": {
       "id": "cdx",
       "mot": "Il gin di Minorca che sembra un liquore d'altri tempi. Rappresenta quella componente centrista e un po' isolazionista che sopravvive ai secoli grazie a un mix di erbe segrete e alleanze di comodo."
@@ -74,6 +80,9 @@
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
     ],
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/69380222-1152-11ee-a797-53a1a12e57c6/YBIJvutdMA.lottie", "76%", "50%", "210px", "0deg", "0.92"]
+    ],
     "politicalArea": {
       "id": "esx",
       "mot": "Il leader della piazza. Essendo quello che finanzia Sea Shepherd, è ufficialmente il gin che pattuglia i mari, sperona le baleniere e presidia i confini marittimi in nome dell'ecologia militante. Se ci fosse un centro sociale in mezzo all'oceano, servirebbe solo Poseidon."
@@ -101,6 +110,9 @@
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
     ],
     "limited": "Winter: numero 76/3000",
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/6ba2aa90-824e-11ee-a7cf-c3fd209086bd/0TDmW9r8jM.lottie", "78%", "50%", "240px", "0deg", "0.95"]
+    ],
     "politicalArea": {
       "id": "dx",
       "mot": "La quintessenza della Dolce Vita e del lusso ligure. Rappresenta quella destra elegante, da yacht a Paraggi, che profuma di lavanda e di: 'lei non sa chi sono io'."
@@ -128,6 +140,9 @@
       { "nome": "Spiedini di Tofu e Mela", "img": "path", "descrizione": "[VEGANA] Tofu affumicato grigliato con cubetti di mela." }
     ],
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "20%", "80%", "150px", "-8deg", "0.9"]
+    ],
     "politicalArea": {
       "id": "sx",
       "mot": "Arriva dai boschi del Trentino, sa di resina e di aria di montagna. È l'ala verde che vuole il ritorno alla natura, la protezione delle valli e la decrescita felice (ma con un ottimo grado alcolico)."
@@ -155,6 +170,10 @@
       { "nome": "Tacos con Avocado", "img": "path", "descrizione": "[VEGANA] Crema di avocado e peperoncino per la foglia di coca." }
     ],
     "limited": "White edition: 8000 bottiglie",
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/ee29e2c8-117c-11ee-b074-bf4cb3d6144a/sNVMFnQ9ux.lottie", "74%", "18%", "170px", "0deg", "0.85"],
+      ["https://assets-v2.lottiefiles.com/a/69380222-1152-11ee-a797-53a1a12e57c6/YBIJvutdMA.lottie", "76%", "82%", "150px", "0deg", "0.7"]
+    ],
     "politicalArea": {
       "id": "csx",
       "mot": "Il gin con la foglia di coca e la bottiglia col teschio d'oro. Rappresenta l'ala radical che vuole trasgredire ma con un portafoglio gonfio. È la sinistra che frequenta i loft a Milano parlando di diritti civili e luxury lifestyle."
@@ -182,6 +201,9 @@
       { "nome": "Carpaccio di Barbabietola", "img": "path", "descrizione": "[VEGANA] Note terrose che esaltano il muschio del gin." }
     ],
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "24%", "14%", "140px", "4deg", "0.85"]
+    ],
     "politicalArea": {
       "id": "esx",
       "mot": "Arriva dalle foreste norvegesi, scuro, selvaggio e primordiale. È l'anima Black Bloc della lista: misterioso, anti-sistema e decisamente poco incline ai compromessi della grande distribuzione."
@@ -209,6 +231,9 @@
       { "nome": "Tempura di Salvia", "img": "path", "descrizione": "[VEGANA] Erbe fritte per richiamare la verticalità montana." }
     ],
     "limited": "Tiratura limitata a 1000/anno",
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "22%", "82%", "138px", "-6deg", "0.82"]
+    ],
     "politicalArea": {
       "id": "sx",
       "mot": "Già dal nome capisci che ha voglia di contestare. Con la sua linfa di betulla, è il gin che partecipa ai friday for future e guarda con sospetto chiunque usi cannucce di plastica."
@@ -236,6 +261,9 @@
       { "nome": "Crema di Fave e Cicoria", "img": "path", "descrizione": "[VEGANA] Tradizione del sud per il profilo vegetale." }
     ],
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "22%", "76%", "132px", "-4deg", "0.82"]
+    ],
     "politicalArea": {
       "id": "dx",
       "mot": "Il barone del Sud. Radicato nel territorio, legato alle tradizioni dell'isola e con un'eleganza un po' antica. È il grande elettore che decide le sorti della coalizione davanti a un tramonto sul mare."
@@ -263,6 +291,9 @@
       { "nome": "Hummus e Carote", "img": "path", "descrizione": "[VEGANA] Semplice e diretto come il distillato." }
     ],
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/6ba2aa90-824e-11ee-a7cf-c3fd209086bd/0TDmW9r8jM.lottie", "18%", "82%", "140px", "6deg", "0.8"]
+    ],
     "politicalArea": {
       "id": "dx",
       "mot": "Il Berlusconi dei gin. È ovunque, lo conoscono tutti, ha fatto la storia e non schiatta mai. È l'istituzione che promette meno tasse (sulle toniche) e più party per tutti."
@@ -290,6 +321,9 @@
       { "nome": "Mandorle Tostate", "img": "path", "descrizione": "[VEGANA] Frutta secca salata per la cassia cinese." }
     ],
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/ee29e2c8-117c-11ee-b074-bf4cb3d6144a/sNVMFnQ9ux.lottie", "20%", "18%", "142px", "-8deg", "0.82"]
+    ],
     "politicalArea": {
       "id": "cdx",
       "mot": "Il Gin con la G maiuscola. Londinese, impeccabile, moderato in tutto. È il centro perfetto: rassicura i mercati e piace sia a destra che a sinistra perché non urla mai, ma governa il bicchiere con competenza tecnica."
@@ -317,6 +351,9 @@
     ],
     "ethicalIndex" : { "env": 60, "soc": 60, "trad": 55, "tot": 58, "motivation": "Sotto Pernod Ricard, presenta standard di riciclo e agricoltura sostenibile, ma identità molto orientata al marketing."},
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/69380222-1152-11ee-a797-53a1a12e57c6/YBIJvutdMA.lottie", "24%", "82%", "150px", "0deg", "0.8"]
+    ],
     "politicalArea": {
       "id": "csx",
       "mot": "Il volto glam e inclusivo della coalizione. È colorato, profuma di pompelmo e piace a chi vuole sentirsi in vacanza anche quando si parla di riforme strutturali. Molto Instagrammabile, molto riformista"
@@ -344,6 +381,9 @@
       { "nome": "Pringles Original", "img": "path", "descrizione": "[VEGANA] Il sapore dell'università e delle serate low-budget." }
     ],
     "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "26%", "18%", "132px", "-3deg", "0.78"]
+    ],
     "politicalArea": {
       "id": "edx",
       "mot": "Il gin del discount che non deve chiedere mai. Rappresenta il sovranismo della gente comune che diffida delle élite del bere miscelato. Costa poco, picchia forte e reclama la sovranità del fegato."
