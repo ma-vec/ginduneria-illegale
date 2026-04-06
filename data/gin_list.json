@@ -90,36 +90,6 @@
     "alc": 45
   },
   {
-    "id": "portofino-winter",
-    "nome": "Portofino",
-    "provenienza": "🇮🇹 Portofino",
-    "isEmpty": false,
-    "bg-color": "#00477e",
-    "coordinate": { "lat": 44.3035, "lon": 9.2094 },
-    "aggettivi": [ "Elegiaco", "Mediterraneo", "Nostalgico" ],
-    "botaniche": [ "Rosmarino", "Lavanda", "Iris" ],
-    "profilo": "Il bevitore della Portofino Winter Edition è quello che vive il Natale come un atto estetico più che emotivo. Ama questa bottiglia perché è numerata, e non perde mai l'occasione di ricordarlo con un sorriso da intenditore ferito dalla rarità. Non è un distillato, ma un paesaggio elegiaco: sorseggiandolo sente il rumore del mare d'inverno e il rintocco delle barche dei pescatori — che ovviamente non ha mai visto, ma gli piace immaginarle tra una degustazione e una foto in bianco e nero, mescolando il calore del Mediterraneo con il silenzio della neve.",
-    "radar": { "dryness": 7.5, "uniqueness": 6.0, "balsamic": 8.5, "salinity": 4.0, "citrus": 6.5, "botanic-complexity": 7.0, "persistence": 8.0 },
-    "toniche": [
-      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0.5, "botanic-complexity": -0.5, "persistence": 0.5 }, "consigliata": false },
-      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.5, "citrus": 1.0, "botanic-complexity": 1.0, "persistence": 1.2 }, "consigliata": true }
-    ],
-    "ethicalIndex" : { "env": 90, "soc": 80, "trad": 85, "tot": 85, "motivation": "Certificato BCorp e parte di OneOcean per la tutela di Portofino"},
-    "antipasti": [
-      { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
-      { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
-    ],
-    "limited": "Winter: numero 76/3000",
-    "decorations": [
-      ["https://assets-v2.lottiefiles.com/a/6ba2aa90-824e-11ee-a7cf-c3fd209086bd/0TDmW9r8jM.lottie", "78%", "50%", "240px", "0deg", "0.95"]
-    ],
-    "politicalArea": {
-      "id": "dx",
-      "mot": "La quintessenza della Dolce Vita e del lusso ligure. Rappresenta quella destra elegante, da yacht a Paraggi, che profuma di lavanda e di: 'lei non sa chi sono io'."
-    },
-    "alc": 43
-  },
-  {
     "id": "melagorai",
     "nome": "Melagorai",
     "provenienza": "🇮🇹 Trento",
@@ -148,6 +118,36 @@
       "mot": "Arriva dai boschi del Trentino, sa di resina e di aria di montagna. È l'ala verde che vuole il ritorno alla natura, la protezione delle valli e la decrescita felice (ma con un ottimo grado alcolico)."
     },
     "alc": 45
+  },
+    {
+    "id": "portofino-winter",
+    "nome": "Portofino",
+    "provenienza": "🇮🇹 Portofino",
+    "isEmpty": false,
+    "bg-color": "#00477e",
+    "coordinate": { "lat": 44.3035, "lon": 9.2094 },
+    "aggettivi": [ "Elegiaco", "Mediterraneo", "Nostalgico" ],
+    "botaniche": [ "Rosmarino", "Lavanda", "Iris" ],
+    "profilo": "Il bevitore della Portofino Winter Edition è quello che vive il Natale come un atto estetico più che emotivo. Ama questa bottiglia perché è numerata, e non perde mai l'occasione di ricordarlo con un sorriso da intenditore ferito dalla rarità. Non è un distillato, ma un paesaggio elegiaco: sorseggiandolo sente il rumore del mare d'inverno e il rintocco delle barche dei pescatori — che ovviamente non ha mai visto, ma gli piace immaginarle tra una degustazione e una foto in bianco e nero, mescolando il calore del Mediterraneo con il silenzio della neve.",
+    "radar": { "dryness": 7.5, "uniqueness": 6.0, "balsamic": 8.5, "salinity": 4.0, "citrus": 6.5, "botanic-complexity": 7.0, "persistence": 8.0 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 0.5, "botanic-complexity": -0.5, "persistence": 0.5 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.5, "citrus": 1.0, "botanic-complexity": 1.0, "persistence": 1.2 }, "consigliata": true }
+    ],
+    "ethicalIndex" : { "env": 90, "soc": 80, "trad": 85, "tot": 85, "motivation": "Certificato BCorp e parte di OneOcean per la tutela di Portofino"},
+    "antipasti": [
+      { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
+      { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
+    ],
+    "limited": "Winter: numero 76/3000",
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/6ba2aa90-824e-11ee-a7cf-c3fd209086bd/0TDmW9r8jM.lottie", "78%", "50%", "240px", "0deg", "0.95"]
+    ],
+    "politicalArea": {
+      "id": "dx",
+      "mot": "La quintessenza della Dolce Vita e del lusso ligure. Rappresenta quella destra elegante, da yacht a Paraggi, che profuma di lavanda e di: 'lei non sa chi sono io'."
+    },
+    "alc": 43
   },
   {
     "id": "amuerte-white",

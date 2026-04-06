@@ -738,7 +738,7 @@ console.log("totSeggi:", totSeggi);
             color: area.color,
             label: area.label,
             borderColor: isSelected ? "#ffffff" : area.color,
-            borderWidth: isSelected ? 2 : 0
+            borderWidth: isSelected ? 0.8 : 0
         };
     });
 

@@ -342,6 +342,47 @@ section{ height:100vh; scroll-snap-align:start; display:flex; align-items:center
     border-color: rgba(212,175,55,0.35);
 }
 
+.corkscrew{
+    position: fixed;
+    top: var(--start-y, 50%);
+    left: var(--start-x, -50px);
+    width: 31px;
+    height: 104px;
+    z-index: 4000;
+    color: var(--accent);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.corkscrew svg{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 8px rgba(212,175,55,0.4));
+}
+
+.corkscrew.is-animating{
+    animation: corkScrewFlight 1.08s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+}
+
+@keyframes corkScrewFlight{
+    0%{
+        left: var(--start-x, -50px);
+        top: var(--start-y, 50%);
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0deg) scaleX(1);
+    }
+    50%{
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(15deg) scaleX(1.05);
+    }
+    100%{
+        left: var(--end-x, 50%);
+        top: var(--end-y, 50%);
+        opacity: 0.8;
+        transform: translate(-50%, -50%) rotate(180deg) scaleX(0.95);
+    }
+}
+
 .catalog-preview-overlay{
     position: fixed;
     inset: 0;
@@ -856,6 +897,9 @@ section{ height:100vh; scroll-snap-align:start; display:flex; align-items:center
     .catalog-card__image-wrap{ min-height: 144px; }
     .catalog-card__image{ max-width: 72px; max-height: 144px; }
     .catalog-card__top-row h3{ font-size: 1.25rem; }
+    .catalog-card__top-meta{ display: none; }
+    .catalog-card__botanics{ display: none; }
+    .catalog-card__meta{ display: none; }
     .catalog-preview-stage__bottle{ width: min(44vw, 240px); }
     .catalog-preview-stage__meta{ bottom: 10vh; }
     .catalog-preview__fan{ right: 6%; top: 14%; width: 120px; height: 120px; }

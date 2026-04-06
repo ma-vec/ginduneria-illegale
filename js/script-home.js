@@ -5,20 +5,6 @@
     const catalogGrid = document.getElementById("catalog-grid");
     const viewButtons = Array.from(document.querySelectorAll(".view-toggle__button"));
 
-    const text2 = document.getElementById("text2");
-    const text3 = document.getElementById("text3");
-    const ctaText = document.getElementById("cta-text");
-    const progressBar = document.getElementById("progressBar");
-
-    const phrase2 = "Se cerchi qualcosa perché agli altri piace, esci pure, non voglio farti perdere tempo. Duna non ti porterà rancore.";
-    const phrase3 = "Altrimenti continua a scorrere.";
-
-    const words2 = phrase2.split(" ");
-    const words3 = phrase3.split(" ");
-
-    const sensitivity = 65;
-    const totalWords = words2.length + words3.length;
-
     let scrollAccumulator = 0;
     let heroComplete = false;
     let ticking = false;
@@ -573,61 +559,115 @@
         return layer;
     }
 
+    function createCorkscrew() {
+        const corkscrew = document.createElement("div");
+        corkscrew.className = "corkscrew";
+        corkscrew.innerHTML = `
+            <svg viewBox="0 0 24 80" xmlns="http://www.w3.org/2000/svg" width="24" height="80">
+                <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+                    <!-- Manico -->
+                    <rect x="4" y="2" width="16" height="14" rx="2" fill="currentColor" opacity="0.9"/>
+                    <!-- Spira -->
+                    <circle cx="12" cy="30" r="4" opacity="0.8"/>
+                    <circle cx="12" cy="40" r="5" opacity="0.7"/>
+                    <circle cx="12" cy="52" r="5" opacity="0.7"/>
+                    <circle cx="12" cy="64" r="4" opacity="0.8"/>
+                    <!-- Punta -->
+                    <path d="M 10 72 Q 12 75 12 80 Q 12 75 14 72" stroke-width="1.5" fill="none"/>
+                </g>
+            </svg>
+        `;
+        return corkscrew;
+    }
+
+    function playCorkScrewAnimation(card) {
+        return new Promise((resolve) => {
+            const corkscrew = createCorkscrew();
+            document.body.appendChild(corkscrew);
+
+            const cardRect = card.getBoundingClientRect();
+            const bottleImage = card.querySelector("img");
+            const bottleRect = bottleImage ? bottleImage.getBoundingClientRect() : cardRect;
+            
+            const cardCenterX = bottleRect.left + bottleRect.width / 2;
+            const bottleTopY = bottleRect.top;
+
+            const startX = -50;
+            const startY = window.innerHeight / 2;
+
+            corkscrew.style.setProperty("--start-x", `${startX}px`);
+            corkscrew.style.setProperty("--start-y", `${startY}px`);
+            corkscrew.style.setProperty("--end-x", `${cardCenterX}px`);
+            corkscrew.style.setProperty("--end-y", `${bottleTopY}px`);
+
+            window.requestAnimationFrame(() => {
+                corkscrew.classList.add("is-animating");
+            });
+
+            window.setTimeout(() => {
+                corkscrew.remove();
+                resolve();
+            }, 850);
+        });
+    }
+
     function playBottlePreview(gin, card) {
         card.classList.add("is-opening");
 
-        const overlay = document.createElement("div");
-        overlay.className = "catalog-preview-overlay";
-        overlay.style.setProperty("--preview-color", gin["bg-color"] || "#D4AF37");
+        playCorkScrewAnimation(card).then(() => {
+            const overlay = document.createElement("div");
+            overlay.className = "catalog-preview-overlay";
+            overlay.style.setProperty("--preview-color", gin["bg-color"] || "#D4AF37");
 
-        const stage = document.createElement("div");
-        stage.className = "catalog-preview-stage";
+            const stage = document.createElement("div");
+            stage.className = "catalog-preview-stage";
 
-        const glow = document.createElement("div");
-        glow.className = "catalog-preview-stage__glow";
+            const glow = document.createElement("div");
+            glow.className = "catalog-preview-stage__glow";
 
-        const image = card.querySelector("img");
-        const bottle = document.createElement("img");
-        bottle.className = "catalog-preview-stage__bottle";
-        bottle.src = image ? image.src : `./assets/images/${gin.id}.png`;
-        bottle.alt = `Preview ${gin.nome}`;
+            const image = card.querySelector("img");
+            const bottle = document.createElement("img");
+            bottle.className = "catalog-preview-stage__bottle";
+            bottle.src = image ? image.src : `./assets/images/${gin.id}.png`;
+            bottle.alt = `Preview ${gin.nome}`;
 
-        const meta = document.createElement("div");
-        meta.className = "catalog-preview-stage__meta";
-        meta.innerHTML = `
-            <span>Apri bottiglia</span>
-            <strong>${gin.nome}</strong>
-            <em>${gin.provenienza}</em>
-        `;
+            const meta = document.createElement("div");
+            meta.className = "catalog-preview-stage__meta";
+            meta.innerHTML = `
+                <span>Apri bottiglia</span>
+                <strong>${gin.nome}</strong>
+                <em>${gin.provenienza}</em>
+            `;
 
-        const decorationLayer = createPreviewDecorationLayer(gin);
-        const flamencoLayer = createFlamencoLayer(gin);
+            const decorationLayer = createPreviewDecorationLayer(gin);
+            const flamencoLayer = createFlamencoLayer(gin);
 
-        stage.appendChild(glow);
-        if (decorationLayer.childElementCount > 0) {
-            stage.appendChild(decorationLayer);
-        }
-        if (flamencoLayer) {
-            stage.appendChild(flamencoLayer);
-        }
-        stage.appendChild(bottle);
-        stage.appendChild(meta);
+            stage.appendChild(glow);
+            if (decorationLayer.childElementCount > 0) {
+                stage.appendChild(decorationLayer);
+            }
+            if (flamencoLayer) {
+                stage.appendChild(flamencoLayer);
+            }
+            stage.appendChild(bottle);
+            stage.appendChild(meta);
 
-        overlay.appendChild(stage);
-        document.body.appendChild(overlay);
+            overlay.appendChild(stage);
+            document.body.appendChild(overlay);
 
-        window.requestAnimationFrame(() => {
-            overlay.classList.add("is-visible");
+            window.requestAnimationFrame(() => {
+                overlay.classList.add("is-visible");
+            });
+
+            window.setTimeout(() => {
+                overlay.classList.remove("is-visible");
+                overlay.classList.add("is-leaving");
+            }, 1100);
+
+            window.setTimeout(() => {
+                window.location.href = `./bottle.html?id=${gin.id}`;
+            }, 1600);
         });
-
-        window.setTimeout(() => {
-            overlay.classList.remove("is-visible");
-            overlay.classList.add("is-leaving");
-        }, 1100);
-
-        window.setTimeout(() => {
-            window.location.href = `./bottle.html?id=${gin.id}`;
-        }, 1600);
     }
 
     function renderCatalog(data) {
@@ -638,6 +678,10 @@
         data.forEach((gin, index) => {
             catalogGrid.appendChild(createBottleCard(gin, index));
         });
+
+        if (window.polyfillCountryFlagEmojis) {
+            window.polyfillCountryFlagEmojis();
+        }
     }
 
     function createVideoSection(gin) {
