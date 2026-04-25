@@ -185,12 +185,12 @@
     "nome": "Bareksten",
     "provenienza": "🇳🇴 Norvegia",
     "isEmpty": false,
-    "bg-color": "#c1c1c1",
+    "bg-color": "#9DA1AA",
     "coordinate": { "lat": 60.393, "lon": 5.3242 },
     "aggettivi": [ "Selvatico", "Tagliente", "Misterioso" ],
     "botaniche": [ "Mirtilli selvatici", "Resina di pino", "Ginepro artico" ],
     "profilo": "Scegli Bareksten Botanical non per berlo, ma per meditare con lui. Ogni sorso è un atto mistico, un incontro silenzioso con la bruma scandinava e il disagio esistenziale del suo master distiller — un uomo che probabilmente non sorride dal 2003, ma che “distilla emozioni, non alcol”. E lo adori proprio per questo: perché Bareksten sa di muschio, malinconia e autostima artigianale.",
-    "radar": { "dryness": 8.5, "uniqueness": 8.0, "balsamic": 9.5, "salinity": 3.0, "citrus": 4.0, "botanic-complexity": 9.0, "persistence": 9.0 },
+    "radar": { "dryness": 8.5, "uniqueness": 8.0, "balsamic": 9.5, "salinity": 3.0, "citrus": 4.0, "botanic-complexity": 9.0, "persistence": 8.5 },
     "toniche": [
       { "label": "Classic Indian", "tipo": "indiana", "valori": { "dryness": 1.2, "uniqueness": 0, "balsamic": 1.0, "salinity": 0, "citrus": 0, "botanic-complexity": 0.5, "persistence": 1.0 }, "consigliata": true },
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.0, "uniqueness": 0.5, "balsamic": 1.5, "salinity": 0, "citrus": 0.8, "botanic-complexity": 1.2, "persistence": 0.8 }, "consigliata": false }
@@ -209,6 +209,37 @@
       "mot": "Arriva dalle foreste norvegesi, scuro, selvaggio e primordiale. È l'anima Black Bloc della lista: misterioso, anti-sistema e decisamente poco incline ai compromessi della grande distribuzione."
     },
     "alc": 46
+  },
+  {
+    "id": "bareksten-double",
+    "nome": "Bareksten Double",
+    "provenienza": "🇳🇴 Norvegia",
+    "isEmpty": false,
+    "bg-color": "#E4E5E0",
+    "coordinate": { "lat": 60.393, "lon": 5.3242 },
+    "aggettivi": [ "Monolitico", "Essenziale", "Inflessibile" ],
+    "botaniche": [ "Ginepro raddoppiato", "Mirtillo selvatico", "Erbe di sottobosco" ],
+    "profilo": "Il Double Gin è il manifesto di Stig Bareksten: la prova che meno è meglio, se quel meno ti colpisce come un tronco di pino norvegese. Se la Botanical era introspezione, la Double è dottrina. Qui non si cerca più l’equilibrio, ma una versione più pura, più concentrata, quasi ideologica del gin nordico. È come se qualcuno avesse preso la foresta, tolto ogni concessione superflua e deciso che la complessità dovesse diventare una questione di rigore, non di piacere. Non è qualcosa che ti accoglie, è qualcosa a cui ti adegui. Il sorso è netto, verticale, quasi disciplinante — bosco, resina, ombra, ma senza quella gentilezza che rendeva la Botanical contemplativa. Qui c’è una linea più dura, più coerente, come se il master distiller avesse semplicemente eliminato tutto ciò che poteva sembrare indulgente, inclusa qualsiasi forma di entusiasmo non necessario. Lo versi lentamente, magari spiegando che “non è per tutti” con quella calma appena compiaciuta di chi ha deciso che il piacere è sopravvalutato. Niente ghiaccio all’inizio: prima si valuta, poi eventualmente si concede.",
+    "radar": { 
+  "dryness": 9.5, "uniqueness": 7.0, "balsamic": 9.5, "salinity": 4.0, "citrus": 2.5, "botanic-complexity": 6.5, "persistence": 9 },
+    "toniche": [
+      { "label": "Super Dry Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0, "balsamic": 0.5, "salinity": 0.2, "citrus": -0.5, "botanic-complexity": -0.5, "persistence": 1.2 }, "consigliata": true },
+      { "label": "Elderflower Tonic", "tipo": "mediterranea", "valori": { "dryness": -2.0, "uniqueness": 0.8, "balsamic": -1.0, "salinity": 0, "citrus": 0.5, "botanic-complexity": 1.5, "persistence": -0.5 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 80, "soc": 70, "trad": 75, "tot": 75, "motivation": "Uso di botaniche esclusivamente locali e alcol base autoprodotto"},
+    "antipasti": [
+      { "nome": "Aringa affumicata", "img": "path", "descrizione": "Sapore forte e primordiale per reggere il corpo del gin." },
+      { "nome": "Pane di segale e burro salato", "img": "path", "descrizione": "L'essenzialità del nord che sposa la secchezza del Double." }
+    ],
+    "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "24%", "14%", "140px", "4deg", "0.60"]
+    ],
+    "politicalArea": {
+      "id": "esx",
+      "mot": "Crede nella teoria del raddoppio della lotta: doppia distillazione, doppia intensità, zero concessioni ai fronzoli. Mentre il fratello Botanical si perde nei boschi a sussurrare alle bacche, il Double Gin è l'anima disciplinata, essenziale. Guarda il Botanical con affetto ma lo trova troppo fricchettone con tutte quelle botaniche. Il Double ne usa meno, ma le usa per colpire più forte"
+    },
+    "alc": 43
   },
   {
     "id": "son-of-a-birch",
