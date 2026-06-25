@@ -1,5 +1,157 @@
 ﻿[
   {
+    "id": "isl-hr",
+    "nome": "Isle of Harris",
+    "provenienza": "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scozia",
+    "isEmpty": false,
+    "bg-color": "#4E7FA7",
+    "coordinate": { "lat": 57.896, "lon": -6.803 },
+    "aggettivi": [ "Iodato", "Iptonico", "Ascetico" ],
+    "botaniche": [ "Sugar Kelp", "Pepe cubebe", "Liquirizia" ],
+    "profilo": "Non è un gin, è un referendum sull'autenticità. Isle of Harris viene scelto da chi considera il termine 'terroir marino' una conversazione da aperitivo perfettamente normale. La bottiglia sembra disegnata da un architetto scandinavo durante un ritiro spirituale sull'Atlantico del Nord, mentre il protagonista botanico è il Sugar Kelp raccolto a mano da Lewis Mackenzie, raccoglitore di kelp professionista e presenza ricorrente nell'universo narrativo del gin: uno di quei rarissimi casi in cui il personaggio secondario del brand esiste davvero, ha un lavoro preciso e contribuisce concretamente all'economia dell'isola. Berlo significa dichiarare con studiata nonchalance che il mare non è uno sfondo, ma una categoria estetica. Il risultato? Ginepro elegante, agrumi misurati, salinità sussurrata e la sensazione che il tuo gin tonic abbia letto più saggi di ecologia di chi lo sta bevendo.",
+    "radar": {
+      "dryness": 8.5,
+      "uniqueness": 9.5,
+      "balsamic": 5.5,
+      "salinity": 8.5,
+      "citrus": 7.0,
+      "botanic-complexity": 8.0,
+      "persistence": 8.0
+    },
+    "toniche": [
+      {
+        "label": "Indian Tonic",
+        "tipo": "indiana",
+        "valori": {
+          "dryness": 0.5,
+          "uniqueness": 0,
+          "balsamic": 0.5,
+          "salinity": 0,
+          "citrus": 1,
+          "botanic-complexity": 0.5,
+          "persistence": 1
+        },
+        "consigliata": true
+      },
+      {
+        "label": "Mediterranean Tonic",
+        "tipo": "mediterranea",
+        "valori": {
+          "dryness": -0.5,
+          "uniqueness": 0.5,
+          "balsamic": 1,
+          "salinity": 1,
+          "citrus": 0.5,
+          "botanic-complexity": 1,
+          "persistence": 1
+        },
+        "consigliata": false
+      }
+    ],
+    "ethicalIndex": {
+      "env": 95,
+      "soc": 100,
+      "trad": 85,
+      "tot": 93,
+      "motivation": "Sugar Kelp raccolto manualmente in modo sostenibile, produzione interamente locale, creazione di occupazione stabile nelle Ebridi Esterne e forte legame con la comunità dell'isola."
+    },
+    "politicalArea": {
+      "id": "esx",
+      "mot": "Il gin ufficiale di chi legge report sulla biodiversità marina per piacere personale. Se una bottiglia può avere un ecosistema, un programma di sviluppo locale e un sub di fiducia con nome e cognome, questa è lei."
+    },
+    "alc": 45
+  },
+  {
+  "id": "ki-no-bi",
+  "nome": "Ki No Bi",
+  "provenienza": "🇯🇵 Giappone",
+  "isEmpty": false,
+  "bg-color": "#D48E48",
+  "coordinate": { "lat": 35.0116, "lon": 135.7681 },
+  "aggettivi": [ "Zen", "Minimalista", "Dottrinale" ],
+  "botaniche": [ "Tè Gyokuro", "Yuzu Giallo", "Legno di Hinoki" ],
+  "profilo": "Il bevitore di Ki No Bi non si concede un drink: officia una liturgia laica di purificazione intellettuale. Se provi a nominare lo Yuzu o il tè Gyokuro con l'accento sbagliato, ti correggerà all'istante con un sussurro gelido e quel finto sorriso di sommesso sconforto tipico di chi si sente culturalmente superiore. Adora questa bottiglia perché incarna un radical-chic austero e cerebrale: niente retorica esotica spicciola o finto selvaggio, solo un rigore millimetrico. È capace di spendere metà delle sue entrate in arredamento d'Oriente rigorosamente minimalista e lampade artigianali in carta di riso, tutto per circondarsi di un'elevazione spirituale che puntualmente ti sbandiera a cena. Servire questo distillato a casa sua richiede il rispetto di regole inflessibili, un silenzio quasi claustrofobico e la venerazione per un cubetto di ghiaccio trasparente. Il tutto mentre ti spiega la filosofia del Wabi-Sabi dall'alto del suo divano di design scandinavo-nipponico, convinto che la vera decrescita felice si sperimenti meglio se sorseggiata da un calice di finissimo cristallo da collezione.",
+  "radar": { "dryness": 8.0, "uniqueness": 8.5, "balsamic": 7.0, "salinity": 3.5, "citrus": 8, "botanic-complexity": 9.0, "persistence": 8.2 },
+  "toniche": [
+    { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 0.5, "uniqueness": 0, "balsamic": 0.3, "salinity": 0, "citrus": 1.0, "botanic-complexity": 0.2, "persistence": 0.8 }, "consigliata": true },
+    { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.6, "uniqueness": 0.5, "balsamic": 1.2, "salinity": 0.4, "citrus": 0.4, "botanic-complexity": 0.8, "persistence": 0.4 }, "consigliata": false }
+  ],
+  "ethicalIndex" : { "env": 85, "soc": 80, "trad": 100, "tot": 88, "motivation": "Sostegno totale alla millenaria agricoltura locale di Kyoto per l'approvvigionamento di Yuzu e legno di Hinoki."},
+  "antipasti": [
+    { "nome": "Sashimi di ricciola", "img": "path", "descrizione": "Taglio pulito e minimale, asseconda la freschezza agrumata e tagliente dello Yuzu." },
+    { "nome": "Edamame al sale di Maldon", "img": "path", "descrizione": "[VEGANO] Essenziale e rigoroso, perfetto per ripulire il palato tra un sorso e l'altro." }
+  ],
+  "limited": null,
+  "decorations": [
+    ["https://assets-v2.lottiefiles.com/a/example-japan.lottie", "75%", "52%", "210px", "0deg", "0.98"]
+  ],
+  "politicalArea": {
+    "id": "csx",
+    "mot": "Il vertice del radical-chic intellettuale e cerebrale. Rappresenta quella sinistra elitaria e finto-austera che confonde l'ossessione per il design purista d'Oriente con l'elevazione spirituale, e che usa la cultura asiatica come status symbol per marcare la propria superiorità morale ed estetica."
+  },
+  "alc": 45.7
+},
+{
+    "id": "indlovu",
+    "nome": "Indlovu",
+    "provenienza": "🇿🇦 Sud Africa",
+    "isEmpty": false,
+    "bg-color": "#d2b48c",
+    "coordinate": { "lat": -33.9321, "lon": 18.8602 },
+    "aggettivi": [ "Irripetibile", "Savanico", "Territoriale" ],
+    "botaniche": [ "Botaniche dirigerite da elefante", "Frutto del Marula", "Aloe dell'Altopiano" ],
+    "profilo": "Berlo non è una scelta di gusto, è una transazione geopolitica ed ecologica. Chi ordina Indlovu adora far ruotare il ghiaccio nel tumbler accennando con finta noncuranza al fatto che sta bevendo un distillato estratto dal letame di elefante. È il trionfo del filantropo d'alta finanza: la certezza matematica di salvare la fauna del KwaZulu-Natal mentre, comodamente seduto in un loft dal design brutalista, specula sui mercati emergenti. Il profilo aromatico varia a seconda della stagione di pascolo del branco, permettendoti di sfoggiare chicche insostenibili del tipo: 'Si sente che a febbraio ha piovuto molto nel bush'. È la quintessenza del lusso post-coloniale armonizzato: l'Africa selvaggia viene magnificamente filtrata, sterilizzata e trasformata in un asset da collezione che si abbina divinamente ai tuoi investimenti ESG.",
+    "radar": { "dryness": 7.5, "uniqueness": 10.0, "balsamic": 4.5, "salinity": 5.0, "citrus": 6.0, "botanic-complexity": 9.5, "persistence": 8.8 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 0.8, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 1.5, "botanic-complexity": 0.5, "persistence": 1.0 }, "consigliata": true },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.3, "uniqueness": 0, "balsamic": 1.0, "salinity": 0.5, "citrus": 0.8, "botanic-complexity": 1.0, "persistence": 0.4 }, "consigliata": false }
+    ],
+    "ethicalIndex" : { "env": 95, "soc": 95, "trad": 85, "tot": 92, "motivation": "Il 15% dei profitti di ogni singola bottiglia viene interamente devoluto alla Africa Foundation per la salvaguardia della fauna selvatica."},
+    "antipasti": [
+      { "nome": "Biltong di manzo essiccato", "img": "path", "descrizione": "Speziato e proteico, richiama perfettamente le note calde e terrose della savana." },
+      { "nome": "Anacardi tostati al peperoncino", "img": "path", "descrizione": "[VEGANO] La spinta piccante contrasta la dolcezza nativa del frutto del Marula." }
+    ],
+    "limited": "Batch: #44983",
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/example-elephant.lottie", "80%", "45%", "220px", "0deg", "0.90"]
+    ],
+    "politicalArea": {
+      "id": "esx",
+      "mot": "Il perfetto posizionamento del filantropo illuminato e radical-chic. Sostiene l'Africa, finanzia le ong locali, fa beneficenza strutturata."
+    },
+    "alc": 43
+  },
+  {
+    "id": "canaima",
+    "nome": "Canaïma",
+    "provenienza": "🇻🇪 Venezuela",
+    "isEmpty": false,
+    "bg-color": "#2f7d5b",
+    "coordinate": { "lat": 6.2411, "lon": -62.8464 },
+    "aggettivi": [ "Tribale", "Forestale", "Ancestrale" ],
+    "botaniche": [ "Merey", "Copoazù", "Túpiro" ],
+    "profilo": "Canaima è il sogno di chiunque desidera sentirsi un po' sciamano e un po' protettore dei polmoni verdi della Terra. Distillato con botaniche mistiche raccolte dalle tribù indigene nel profondo della foresta amazzonica venezuelana, questo gin ti permette di fare 'decrescita felice' direttamente dal bancone del bar. Raccontare ai tuoi amici che il 10% di ciò che hanno appena pagato serve a ripiantare alberi grazie a Saving the Amazon cancella istantaneamente ogni senso di colpa capitalistico. Berlo dà quella magnifica sensazione di connessione con la Madre Terra, idealizzata da chi non ha mai visto una zanzara gigante in vita sua ma adora l'idea di salvare il mondo sorseggiando un distillato fruttato ed esotico, circondato da piante tropicali d'appartamento comprate su internet.",
+    "radar": { "dryness": 7.0, "uniqueness": 9.2, "balsamic": 6.0, "salinity": 4.5, "citrus": 7.5, "botanic-complexity": 8.8, "persistence": 8.5 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 0.6, "uniqueness": 0, "balsamic": 0.4, "salinity": 0, "citrus": 1.0, "botanic-complexity": 0.3, "persistence": 0.5 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.4, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.8, "citrus": 0.8, "botanic-complexity": 1.2, "persistence": 1.0 }, "consigliata": true }
+    ],
+    "ethicalIndex" : { "env": 98, "soc": 100, "trad": 90, "tot": 96, "motivation": "Il 10% del fatturato finanzia direttamente Saving the Amazon e i progetti di empowerment delle comunità indigene Pemon."},
+    "antipasti": [
+      { "nome": "Platano fritto croccante", "img": "path", "descrizione": "La dolcezza esotica del platano si sposa alle note native della Palma Moriche." },
+      { "nome": "Ceviche di mango e avocado", "img": "path", "descrizione": "[VEGANO] Fresco, acido e tropicale, amplifica la complessità del Copoazù." }
+    ],
+    "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/example-jungle.lottie", "82%", "48%", "250px", "0deg", "0.92"]
+    ],
+    "politicalArea": {
+      "id": "esx",
+      "mot": "Ecologismo radicale al 100%. È la sinistra verde, fiera oppositrice della deforestazione, che combatte il cambiamento climatico un drink alla volta."
+    },
+    "alc": 47
+  },
+  {
     "id": "jr-fl",
     "nome": "J. Rose",
     "provenienza": "🇮🇹 Salento",
