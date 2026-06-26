@@ -1,0 +1,74 @@
+{
+  "isl-hr": {
+    "price": 123.05,
+    "change": 4.17
+  },
+  "ki-no-bi": {
+    "price": 122.2,
+    "change": 2.43
+  },
+  "indlovu": {
+    "price": 111.68,
+    "change": 1.07
+  },
+  "canaima": {
+    "price": 114.71,
+    "change": 0.95
+  },
+  "jr-fl": {
+    "price": 116.85,
+    "change": 3.54
+  },
+  "xoriguer": {
+    "price": 115.55,
+    "change": 3.11
+  },
+  "poseidon": {
+    "price": 119.35,
+    "change": 1.77
+  },
+  "melagorai": {
+    "price": 112.01,
+    "change": 2.75
+  },
+  "portofino-winter": {
+    "price": 124.74,
+    "change": 2.9
+  },
+  "amuerte-white": {
+    "price": 108.97,
+    "change": 0.01
+  },
+  "bareksten-botanical": {
+    "price": 110.62,
+    "change": 1.57
+  },
+  "bareksten-double": {
+    "price": 111.42,
+    "change": 0.04
+  },
+  "son-of-a-birch": {
+    "price": 109.76,
+    "change": 2.53
+  },
+  "rupis": {
+    "price": 116.72,
+    "change": 2.12
+  },
+  "gordon": {
+    "price": 107.19,
+    "change": 0.19
+  },
+  "sipsmith": {
+    "price": 115.74,
+    "change": 1.66
+  },
+  "malfy-rosa": {
+    "price": 111.28,
+    "change": -0.56
+  },
+  "castelgy": {
+    "price": 108.94,
+    "change": 0
+  }
+}

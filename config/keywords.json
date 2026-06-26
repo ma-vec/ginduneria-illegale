@@ -1,0 +1,11 @@
+{
+  "SEA": ["sea", "ocean", "marine", "coast", "salinity", "island", "maritime", "beach", "reef", "navy"],
+  "EMERGING": ["startup", "innovation", "trend", "growth", "new", "experimental", "youth", "future", "disruptive"],
+  "ART": ["gallery", "design", "exhibition", "artist", "sculpture", "painting", "museum", "aesthetic", "fashion"],
+  "TRADITION": ["heritage", "century", "ancient", "monastery", "ancestral", "classic", "history", "origin", "old"],
+  "BOTANICALS": ["herbs", "foraging", "flowers", "distillery", "organic", "roots", "plants", "garden", "nature"],
+  "NORDIC": ["ice", "arctic", "fjord", "snow", "winter", "cold", "norway", "sweden", "glacier", "tundra"],
+  "EXPLORATION": ["travel", "amazon", "safari", "expedition", "adventure", "discovery", "wild", "route", "map"],
+  "LUXURY": ["premium", "exclusive", "gold", "elite", "expensive", "prestige", "limited", "luxury", "wealth"],
+  "HERITAGE": ["family", "vintage", "legacy", "archive", "founder", "generation", "craftsmanship", "historic"]
+}

@@ -1,0 +1,38 @@
+name: Ginduneria Market Engine Automated Pipeline
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Aggiornamento automatico ad alta frequenza: ogni 6 ore
+  workflow_dispatch: # Mantiene il controllo manuale in caso di force-update immediato
+
+permissions:
+  contents: write
+
+jobs:
+  update-market:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Esecuzione Calcolo Indici di Mercato
+        run: node scripts/updateIndices.js
+
+      - name: Esecuzione Calcolo Listino Prezzi Gin
+        run: node scripts/updatePrices.cjs
+
+      - name: Compilazione Registro Storico
+        run: node scripts/updateHistory.js
+
+      - name: Commit e Push delle Variazioni di Mercato
+        run: |
+          git config --global user.name "Ginduneria Bot"
+          git config --global user.email "bot@ginduneria.local"
+          git add data/config/ data/*.json config/*.json
+          git diff-index --quiet HEAD || git commit -m "Borsa: [Market Update] - Listino Indici e Valori Aggiornato"
+          git push

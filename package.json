@@ -1,0 +1,12 @@
+{
+  "name": "ginduneria-illegale",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update:indices": "node scripts/updateIndices.js",
+    "update:prices": "node scripts/updatePrices.cjs",
+    "update:history": "node scripts/updateHistory.cjs",
+    "market:update": "npm run update:indices && npm run update:prices && npm run update:history"
+  }
+}

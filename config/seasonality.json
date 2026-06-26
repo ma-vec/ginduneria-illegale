@@ -1,0 +1,6 @@
+{
+  "WINTER": { "months": [11, 0, 1], "modifiers": { "NORDIC": 0.3, "LUXURY": 0.1 } },
+  "SPRING": { "months": [2, 3, 4], "modifiers": { "BOTANICALS": 0.2, "ART": 0.1 } },
+  "SUMMER": { "months": [5, 6, 7], "modifiers": { "SEA": 0.3, "EXPLORATION": 0.2 } },
+  "AUTUMN": { "months": [8, 9, 10], "modifiers": { "TRADITION": 0.2, "HERITAGE": 0.1 } }
+}

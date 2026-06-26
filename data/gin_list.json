@@ -6,9 +6,9 @@
     "isEmpty": false,
     "bg-color": "#4E7FA7",
     "coordinate": { "lat": 57.896, "lon": -6.803 },
-    "aggettivi": [ "Iodato", "Iptonico", "Ascetico" ],
+    "aggettivi": [ "Iodato", "Ipnotico", "Ascetico" ],
     "botaniche": [ "Sugar Kelp", "Pepe cubebe", "Liquirizia" ],
-    "profilo": "Non è un gin, è un referendum sull'autenticità. Isle of Harris viene scelto da chi considera il termine 'terroir marino' una conversazione da aperitivo perfettamente normale. La bottiglia sembra disegnata da un architetto scandinavo durante un ritiro spirituale sull'Atlantico del Nord, mentre il protagonista botanico è il Sugar Kelp raccolto a mano da Lewis Mackenzie, raccoglitore di kelp professionista e presenza ricorrente nell'universo narrativo del gin: uno di quei rarissimi casi in cui il personaggio secondario del brand esiste davvero, ha un lavoro preciso e contribuisce concretamente all'economia dell'isola. Berlo significa dichiarare con studiata nonchalance che il mare non è uno sfondo, ma una categoria estetica. Il risultato? Ginepro elegante, agrumi misurati, salinità sussurrata e la sensazione che il tuo gin tonic abbia letto più saggi di ecologia di chi lo sta bevendo.",
+    "profilo": "Non è un gin, è un referendum sull'autenticità. Isle of Harris viene scelto da chi considera il termine 'terroir marino' una conversazione da aperitivo perfettamente normale. La bottiglia sembra disegnata da un architetto scandinavo durante un ritiro spirituale sull'Atlantico del Nord, mentre il protagonista botanico è il Sugar Kelp raccolto a mano da Lewis Mackenzie, raccoglitore di kelp professionista e presenza ricorrente nell'universo narrativo del gin: uno di quei rarissimi casi in cui il personaggio secondario del brand esiste davvero, ha un lavoro preciso e contribuisce concretamente all'economia dell'isola, con l'obiettivo - dichiarato dalla distilleria - di evitare lo spopolamento di Harris. Berlo significa dichiarare con studiata nonchalance che il mare non è uno sfondo, ma una categoria estetica. Il risultato? Ginepro elegante, agrumi misurati, salinità sussurrata e la sensazione che il tuo gin tonic abbia letto più saggi di ecologia di chi lo sta bevendo.",
     "radar": {
       "dryness": 8.5,
       "uniqueness": 9.5,
@@ -99,25 +99,25 @@
     "bg-color": "#d2b48c",
     "coordinate": { "lat": -33.9321, "lon": 18.8602 },
     "aggettivi": [ "Irripetibile", "Savanico", "Territoriale" ],
-    "botaniche": [ "Botaniche dirigerite da elefante", "Frutto del Marula", "Aloe dell'Altopiano" ],
-    "profilo": "Berlo non è una scelta di gusto, è una transazione geopolitica ed ecologica. Chi ordina Indlovu adora far ruotare il ghiaccio nel tumbler accennando con finta noncuranza al fatto che sta bevendo un distillato estratto dal letame di elefante. È il trionfo del filantropo d'alta finanza: la certezza matematica di salvare la fauna del KwaZulu-Natal mentre, comodamente seduto in un loft dal design brutalista, specula sui mercati emergenti. Il profilo aromatico varia a seconda della stagione di pascolo del branco, permettendoti di sfoggiare chicche insostenibili del tipo: 'Si sente che a febbraio ha piovuto molto nel bush'. È la quintessenza del lusso post-coloniale armonizzato: l'Africa selvaggia viene magnificamente filtrata, sterilizzata e trasformata in un asset da collezione che si abbina divinamente ai tuoi investimenti ESG.",
+    "botaniche": [ "Botaniche dallo sterco di elefante", "Frutto del Marula", "Aloe dell'Altopiano" ],
+    "profilo": "Berlo non è una scelta di gusto, è una transazione geopolitica ed ecologica. Chi ordina Indlovu adora far ruotare il ghiaccio nel tumbler accennando con finta noncuranza al fatto che sta bevendo un distillato estratto dal letame di elefante. È il trionfo del filantropo illumminato d'alta finanza: la certezza matematica di salvare la fauna del KwaZulu-Natal mentre sorseggia comodamente seduto in un loft dal design brutalista. Il profilo aromatico varia a seconda della stagione di pascolo del branco, permettendoti di sfoggiare chicche insostenibili del tipo: 'Si sente che a febbraio ha piovuto molto nel bush'. È la quintessenza del lusso post-coloniale armonizzato: l'Africa selvaggia viene magnificamente filtrata, sterilizzata e trasformata in un asset da collezione che si abbina divinamente ai tuoi investimenti ESG.",
     "radar": { "dryness": 7.5, "uniqueness": 10.0, "balsamic": 4.5, "salinity": 5.0, "citrus": 6.0, "botanic-complexity": 9.5, "persistence": 8.8 },
     "toniche": [
       { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 0.8, "uniqueness": 0, "balsamic": 0.5, "salinity": 0, "citrus": 1.5, "botanic-complexity": 0.5, "persistence": 1.0 }, "consigliata": true },
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.3, "uniqueness": 0, "balsamic": 1.0, "salinity": 0.5, "citrus": 0.8, "botanic-complexity": 1.0, "persistence": 0.4 }, "consigliata": false }
     ],
-    "ethicalIndex" : { "env": 95, "soc": 95, "trad": 85, "tot": 92, "motivation": "Il 15% dei profitti di ogni singola bottiglia viene interamente devoluto alla Africa Foundation per la salvaguardia della fauna selvatica."},
+    "ethicalIndex" : { "env": 95, "soc": 95, "trad": 85, "tot": 92, "motivation": "Il 15% dei profitti di ogni singola bottiglia viene interamente devoluto a HERD per la salvaguardia della fauna selvatica."},
     "antipasti": [
       { "nome": "Biltong di manzo essiccato", "img": "path", "descrizione": "Speziato e proteico, richiama perfettamente le note calde e terrose della savana." },
       { "nome": "Anacardi tostati al peperoncino", "img": "path", "descrizione": "[VEGANO] La spinta piccante contrasta la dolcezza nativa del frutto del Marula." }
     ],
-    "limited": "Batch: #44983",
+    "limited": "Batch: #44983 (codice di proenienza dello sterco)",
     "decorations": [
       ["https://assets-v2.lottiefiles.com/a/example-elephant.lottie", "80%", "45%", "220px", "0deg", "0.90"]
     ],
     "politicalArea": {
       "id": "esx",
-      "mot": "Il perfetto posizionamento del filantropo illuminato e radical-chic. Sostiene l'Africa, finanzia le ong locali, fa beneficenza strutturata."
+      "mot": "Il perfetto posizionamento del filantropo illuminato. Sostiene l'Africa, finanzia le ong locali, fa beneficenza strutturata."
     },
     "alc": 43
   },

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginduneria Market Desk</title>
+    <link rel="stylesheet" href="css/style-markets.css">
+</head>
+<body>
+    <script src="./js/nav-bar.js" defer></script>
+    <div class="market-shell">
+        <header class="hero">
+            <div class="hero__copy">
+                <p class="hero__eyebrow">Market Desk</p>
+                <h2>Quotazioni, indici, derivati.</h2>
+                <p class="hero__lede">Vista operativa del wallet con indici, allocazioni e singole bottiglie.</p>
+            </div>
+
+            <section class="history-panel" aria-labelledby="history-title">
+                <div class="history-panel__header">
+                    <div>
+                        <p class="panel__eyebrow">Historical chart</p>
+                        <h3 id="history-title">Andamento complessivo del mercato</h3>
+                    </div>
+                    <div class="history-panel__summary" id="history-summary"></div>
+                </div>
+                <div class="history-panel__controls" id="history-controls"></div>
+                <div class="history-chart" id="history-chart"></div>
+            </section>
+
+            <div class="hero__stats" id="market-stats"></div>
+            <div class="index-tape" id="index-tape"></div>
+        </header>
+
+        <main class="dashboard">
+            <section class="panel panel--wide">
+                <div class="panel__header">
+                    <div>
+                        <p class="panel__eyebrow">Wallet</p>
+                        <h2>Andamento del portafoglio</h2>
+                    </div>
+                    <p class="panel__note">Confronto sintetico tra le quotazioni del portafoglio.</p>
+                </div>
+                <div class="wallet-layout">
+                    <div class="wallet-chart" id="wallet-bar-chart"></div>
+                    <div class="allocation-card">
+                        <div class="allocation-card__header">
+                            <div>
+                                <p class="panel__eyebrow">Mix</p>
+                                <h3>Allocazione per paniere</h3>
+                            </div>
+                            <p class="allocation-card__note">Distribuzione per indice.</p>
+                        </div>
+                        <div class="allocation-donut-wrap">
+                            <div class="allocation-donut" id="allocation-donut"></div>
+                            <div class="allocation-donut__center" id="allocation-donut-center"></div>
+                        </div>
+                        <div class="allocation-legend" id="allocation-legend"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel panel--wide">
+                <div class="panel__header">
+                    <div>
+                        <p class="panel__eyebrow">INDEX</p>
+                        <h2>Settoriali e componenti</h2>
+                    </div>
+                    <p class="panel__note">Indice e componenti principali.</p>
+                </div>
+                <div class="index-book" id="index-book"></div>
+            </section>
+
+            <section class="panel panel--wide">
+                <div class="panel__header">
+                    <div>
+                        <p class="panel__eyebrow">Watchlist</p>
+                        <h2>Quotazioni singole dei gin</h2>
+                    </div>
+                    <p class="panel__note">Prezzo, variazione e esposizioni principali.</p>
+                </div>
+                <div class="bottle-grid" id="market-floor"></div>
+            </section>
+        </main>
+    </div>
+    <script src="js/script-markets.js"></script>
+</body>
+</html>
