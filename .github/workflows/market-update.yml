@@ -33,6 +33,10 @@ jobs:
         run: |
           git config --global user.name "Ginduneria Bot"
           git config --global user.email "bot@ginduneria.local"
-          git add data/config/ data/*.json config/*.json
-          git diff-index --quiet HEAD || git commit -m "Borsa: [Market Update] - Listino Indici e Valori Aggiornato"
-          git push
+          # Usiamo il jolly per aggiungere tutti i file modificati nelle cartelle chiave, senza bloccarci se una cartella è vuota
+          git add data/*.json config/*.json 2>/dev/null || true
+          # Se hai i file dentro delle sottocartelle di data (es. data/history), aggiungiamo anche quelli in sicurezza
+          git add data/**/*.json 2>/dev/null || true
+          
+          # Esegue il commit e il push solo se ci sono reali variazioni
+          git diff-index --quiet HEAD || (git commit -m "Borsa: [Market Update] - Listino Indici e Valori Aggiornato" && git push)
