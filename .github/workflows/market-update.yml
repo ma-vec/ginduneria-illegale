@@ -27,7 +27,7 @@ jobs:
         run: node scripts/updatePrices.cjs
 
       - name: Compilazione Registro Storico
-        run: node scripts/updateHistory.js
+        run: node scripts/updateHistory.cjs
 
       - name: Commit e Push delle Variazioni di Mercato
         run: |

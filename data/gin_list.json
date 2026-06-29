@@ -122,6 +122,70 @@
     "alc": 43
   },
   {
+    "id": "cape-saint",
+    "nome": "Cape Saint Blaize",
+    "provenienza": "🇿🇦 Sud Africa",
+    "isEmpty": false,
+    "bg-color": "#dd9957",
+    "coordinate": { "lat": -34.1811, "lon": 22.1059 },
+    "aggettivi": [ "Ventoso", "Selvatico", "Minerale" ],
+    "botaniche": [ "Fynbos", "Honeybush", "Honeybush" ],
+    "profilo": "Scegli Cape Saint Blaize perché hai trasformato il Sudafrica nella tua nuova personalità. Dopo il primo sorso pronunci 'fynbos' con una sicurezza sospetta, come se avessi scritto la tesi sulla flora del Capo, quando fino alla settimana prima eri convinto fosse il nome di un festival indie. Ti affascina l'idea di bere un ecosistema unico al mondo e, improvvisamente, inizi a infilare nelle conversazioni frasi tipo 'la biodiversità del Capo è davvero sottovalutata', sperando che nessuno ti chieda di indicarlo su una cartina. In fondo non cerchi un gin famoso: cerchi il sottile piacere di spiegare agli altri perché il loro non racconta un patrimonio botanico dichiarato hotspot mondiale. E se qualcuno ti chiede com'è? Rispondi semplicemente: 'Ha molto territorio.' Nessuno capirà davvero cosa intendi, ma annuiranno lo stesso.",
+    "radar": {
+  "dryness": 8.2,
+  "uniqueness": 8.7,
+  "balsamic": 6.8,
+  "salinity": 4.5,
+  "citrus": 6.8,
+  "botanic-complexity": 8.8,
+  "persistence": 8.0
+},
+    "toniche": [
+  {
+    "label": "Indian Tonic",
+    "tipo": "indiana",
+    "valori": {
+      "dryness": 1.0,
+      "uniqueness": 0,
+      "balsamic": 0.5,
+      "salinity": 0,
+      "citrus": 0.8,
+      "botanic-complexity": -0.2,
+      "persistence": 0.8
+    },
+    "consigliata": true
+  },
+  {
+    "label": "Mediterranean Tonic",
+    "tipo": "mediterranea",
+    "valori": {
+      "dryness": -0.5,
+      "uniqueness": 0.3,
+      "balsamic": 1.0,
+      "salinity": 0.5,
+      "citrus": 0.5,
+      "botanic-complexity": 0.8,
+      "persistence": 0.3
+    },
+    "consigliata": false
+  }
+],
+    "ethicalIndex" : { "env": 84, "soc": 88, "trad": 80, "tot": 84, "motivation": "Valorizza una delle biodiversità più ricche del pianeta attraverso botaniche autoctone, contribuendo a raccontare il territorio sudafricano senza ridurlo a semplice esotismo."},
+    "antipasti": [
+      { "nome": "Biltong di manzo essiccato", "img": "path", "descrizione": "Speziato e proteico, richiama perfettamente le note calde e terrose della savana." },
+      { "nome": "Anacardi tostati al peperoncino", "img": "path", "descrizione": "[VEGANO] La spinta piccante contrasta la dolcezza nativa del frutto del Marula." }
+    ],
+    "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/example-elephant.lottie", "80%", "45%", "220px", "0deg", "0.90"]
+    ],
+    "politicalArea": {
+      "id": "sx",
+      "mot": "È il gin di chi crede nella sostenibilità, nella biodiversità e nelle produzioni locali... ma senza sentire il bisogno di fartelo pesare ogni cinque minuti."
+    },
+    "alc": 43
+  },
+  {
     "id": "canaima",
     "nome": "Canaïma",
     "provenienza": "🇻🇪 Venezuela",
@@ -181,6 +245,84 @@
     },
     "alc": 43
   },
+  {
+  "id": "papa-salt",
+  "nome": "Papa Salt",
+  "provenienza": "🇦🇺 Australia",
+  "isEmpty": false,
+  "bg-color": "#67afab",
+  "coordinate": { "lat": -28.643, "lon": 153.615 },
+  "aggettivi": [ "Costiero", "Disinvolto", "Luminoso" ],
+  "botaniche": [ "Wattleseed", "Guscio d'ostrica", "Wax flower" ],
+  "profilo": "Chi sceglie Papa Salt è convinto che la felicità sia una disciplina scientifica e che il modo migliore per dimostrarlo sia vivere a duecento metri dall'oceano. Ti dice che il nome deriva dall'espressione australiana per indicare l'amico che vive sempre in spiaggia, come se fosse un'informazione che tutti dovrebbero conoscere. Poi aggiunge, con apparente casualità, che la distilleria è completamente off-grid e alimentata dal sole: non per fare il moralista, ma perché nelle sue storie Instagram anche la sostenibilità deve avere una bella luce. Se scopri che dietro il progetto c'è Margot Robbie alza appena le spalle: 'Ah sì, quasi dimenticavo...'. In realtà aspettava questo momento dall'inizio della conversazione.",
+  "radar": {
+    "dryness": 7.5,
+    "uniqueness": 8.0,
+    "balsamic": 4.5,
+    "salinity": 8,
+    "citrus": 7,
+    "botanic-complexity": 7.5,
+    "persistence": 7.0
+  },
+  "toniche": [
+    {
+      "label": "Indian Tonic",
+      "tipo": "indiana",
+      "valori": {
+        "dryness": 1.0,
+        "uniqueness": 0,
+        "balsamic": -0.5,
+        "salinity": 0.5,
+        "citrus": 1.0,
+        "botanic-complexity": -0.5,
+        "persistence": 0.5
+      },
+      "consigliata": false
+    },
+    {
+      "label": "Mediterranean Tonic",
+      "tipo": "mediterranea",
+      "valori": {
+        "dryness": -0.5,
+        "uniqueness": 0.5,
+        "balsamic": 0.5,
+        "salinity": 1.0,
+        "citrus": 1.5,
+        "botanic-complexity": 0.5,
+        "persistence": 0.8
+      },
+      "consigliata": true
+    }
+  ],
+  "ethicalIndex": {
+    "env": 96,
+    "soc": 85,
+    "trad": 80,
+    "tot": 87,
+    "motivation": "Distilleria off-grid alimentata da energia solare, forte valorizzazione del territorio australiano e filosofia produttiva orientata alla sostenibilità più che al semplice marketing."
+  },
+  "antipasti": [
+    {
+      "nome": "Ostriche con finger lime",
+      "img": "path",
+      "descrizione": "La sapidità marina dialoga perfettamente con il carattere costiero del gin."
+    },
+    {
+      "nome": "Bao ai funghi e lime",
+      "img": "path",
+      "descrizione": "[VEGANO] Morbido, fresco e leggermente agrumato, richiama lo spirito rilassato della Gold Coast."
+    }
+  ],
+  "limited": null,
+  "decorations": [
+    ["https://assets-v2.lottiefiles.com/a/69380222-1152-11ee-a797-53a1a12e57c6/YBIJvutdMA.lottie", "18%", "78%", "170px", "0deg", "0.7"]
+  ],
+  "politicalArea": {
+    "id": "sx",
+    "mot": "L'ecologista rilassato del Parlamento dei Gin. Crede nella sostenibilità, nell'energia solare e nella vita lenta, ma senza trasformare ogni aperitivo in una conferenza sul cambiamento climatico. Preferisce convincerti con un tramonto sulla Gold Coast piuttosto che con un grafico."
+  },
+  "alc": 43
+},
   {
     "id": "xoriguer",
     "nome": "Xoriguer",
@@ -301,6 +443,85 @@
     },
     "alc": 43
   },
+  {
+  "id": "amuerte-lbl",
+  "nome": "Amuerte",
+  "provenienza": "🇧🇪 Belgio",
+  "isEmpty": false,
+  "bg-color": "#68D7F5",
+  "coordinate": { "lat": 51.2089, "lon": 3.2242 },
+  "aggettivi": [ "Solare", "Esotico", "Sfrontato" ],
+  "botaniche": [ "Cherimoya", "Foglia di coca dal Perù", "Tamarillo" ],
+  "profilo": "Chi sceglie Amuerte Light Blue Summer 2026 non vuole semplicemente un gin estivo: vuole far sapere di aver trovato il beach club che nessuno conosce ancora. Ogni sorso è un invito implicito a chiedergli dove sia stato in vacanza, domanda alla quale risponderà pronunciando almeno tre nomi di isole che probabilmente non troveresti su una cartina. Il teschio resta protagonista, ma sembra essersi preso un anno sabbatico: adesso sorseggia cocktail sotto una palma, parla di biodiversità tropicale con sorprendente convinzione e sostiene che la vera esclusività sia 'viaggiare lentamente'.",
+  "radar": {
+    "dryness": 5.5,
+    "uniqueness": 8.5,
+    "balsamic": 5.5,
+    "salinity": 3.5,
+    "citrus": 9.0,
+    "botanic-complexity": 8.5,
+    "persistence": 6.5
+  },
+  "toniche": [
+    {
+      "label": "Light Tonic",
+      "tipo": "indiana",
+      "valori": {
+        "dryness": 1.5,
+        "uniqueness": 0,
+        "balsamic": -0.5,
+        "salinity": 0.2,
+        "citrus": 1.2,
+        "botanic-complexity": -1.0,
+        "persistence": 0.5
+      },
+      "consigliata": true
+    },
+    {
+      "label": "Mediterranean Tonic",
+      "tipo": "mediterranea",
+      "valori": {
+        "dryness": -0.5,
+        "uniqueness": 0.5,
+        "balsamic": 0.5,
+        "salinity": 0.5,
+        "citrus": 1.5,
+        "botanic-complexity": 0.5,
+        "persistence": 0.8
+      },
+      "consigliata": false
+    }
+  ],
+  "ethicalIndex": {
+    "env": 50,
+    "soc": 55,
+    "trad": 65,
+    "tot": 67,
+    "motivation": "Packaging iconico e botaniche ricercate, ma permane una limitata trasparenza sulla filiera della foglia di coca e sull'impatto sociale della produzione."
+  },
+  "antipasti": [
+    {
+      "nome": "Tartare di ricciola al finger lime",
+      "img": "path",
+      "descrizione": "La freschezza agrumata richiama perfettamente il carattere estivo del gin."
+    },
+    {
+      "nome": "Mango, avocado e peperoncino",
+      "img": "path",
+      "descrizione": "[VEGANA] Dolcezza tropicale e lieve piccantezza per accompagnare le botaniche esotiche."
+    }
+  ],
+  "limited": "Summer Edition 2026",
+  "decorations": [
+    ["https://assets-v2.lottiefiles.com/a/ee29e2c8-117c-11ee-b074-bf4cb3d6144a/sNVMFnQ9ux.lottie", "72%", "16%", "170px", "0deg", "0.8"],
+    ["https://assets-v2.lottiefiles.com/a/69380222-1152-11ee-a797-53a1a12e57c6/YBIJvutdMA.lottie", "82%", "82%", "140px", "0deg", "0.6"]
+  ],
+  "politicalArea": {
+    "id": "csx",
+    "mot": "È la corrente glamour dell'élite progressista: organizza aperitivi in terrazza parlando di biodiversità tropicale mentre sceglie il resort esclusivamente in base alla tonalità dell'acqua. Convinto di vivere con leggerezza, prenota solo luoghi raggiungibili con almeno due coincidenze aeree."
+  },
+  "alc": 43
+},
   {
     "id": "amuerte-white",
     "nome": "Amuerte",

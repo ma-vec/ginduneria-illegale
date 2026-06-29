@@ -1,74 +1,82 @@
 {
   "isl-hr": {
-    "price": 123.05,
-    "change": 4.17
+    "price": 126.64,
+    "change": 2.92
   },
   "ki-no-bi": {
-    "price": 122.2,
-    "change": 2.43
+    "price": 126.02,
+    "change": 3.13
   },
   "indlovu": {
-    "price": 111.68,
-    "change": 1.07
+    "price": 113.12,
+    "change": 1.29
+  },
+  "cape-saint": {
+    "price": 101.65,
+    "change": 1.65
   },
   "canaima": {
-    "price": 114.71,
-    "change": 0.95
+    "price": 118.69,
+    "change": 3.47
   },
   "jr-fl": {
-    "price": 116.85,
-    "change": 3.54
+    "price": 118.58,
+    "change": 1.48
+  },
+  "papa-salt": {
+    "price": 101.73,
+    "change": 1.73
   },
   "xoriguer": {
-    "price": 115.55,
-    "change": 3.11
+    "price": 115.7,
+    "change": 0.13
   },
   "poseidon": {
-    "price": 119.35,
-    "change": 1.77
+    "price": 122.56,
+    "change": 2.69
   },
   "melagorai": {
-    "price": 112.01,
-    "change": 2.75
+    "price": 112.41,
+    "change": 0.35
   },
   "portofino-winter": {
-    "price": 124.74,
-    "change": 2.9
+    "price": 128.97,
+    "change": 3.39
   },
   "amuerte-white": {
-    "price": 108.97,
-    "change": 0.01
+    "price": 111.35,
+    "change": 2.18
   },
   "bareksten-botanical": {
-    "price": 110.62,
-    "change": 1.57
+    "price": 113.02,
+    "change": 2.17
   },
   "bareksten-double": {
-    "price": 111.42,
-    "change": 0.04
+    "price": 113.4,
+    "change": 1.78
   },
   "son-of-a-birch": {
-    "price": 109.76,
-    "change": 2.53
+    "price": 111.3,
+    "change": 1.4
   },
   "rupis": {
-    "price": 116.72,
-    "change": 2.12
+    "price": 118.87,
+    "change": 1.84
   },
   "gordon": {
-    "price": 107.19,
-    "change": 0.19
+    "price": 108.64,
+    "change": 1.35
   },
   "sipsmith": {
-    "price": 115.74,
-    "change": 1.66
+    "price": 118.07,
+    "change": 2.01
   },
   "malfy-rosa": {
-    "price": 111.28,
-    "change": -0.56
+    "price": 111.65,
+    "change": 0.33
   },
   "castelgy": {
-    "price": 108.94,
-    "change": 0
+    "price": 111.03,
+    "change": 1.92
   }
 }
