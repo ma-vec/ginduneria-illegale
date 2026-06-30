@@ -1,62 +1,62 @@
 {
   "ESG": {
-    "value": 120.46,
-    "previous": 118.58,
-    "change": 1.59,
-    "lastUpdate": "2026-06-29"
+    "value": 122.24,
+    "previous": 120.46,
+    "change": 1.47,
+    "lastUpdate": "2026-06-30"
   },
   "EMERGING": {
-    "value": 125.09,
-    "previous": 122.64,
-    "change": 2,
-    "lastUpdate": "2026-06-29"
+    "value": 127.47,
+    "previous": 125.09,
+    "change": 1.9,
+    "lastUpdate": "2026-06-30"
   },
   "ART": {
-    "value": 132.79,
-    "previous": 129.55,
+    "value": 136.11,
+    "previous": 132.79,
     "change": 2.5,
-    "lastUpdate": "2026-06-29"
+    "lastUpdate": "2026-06-30"
   },
   "SEA": {
-    "value": 139.28,
-    "previous": 135.49,
+    "value": 143.18,
+    "previous": 139.28,
     "change": 2.8,
-    "lastUpdate": "2026-06-29"
+    "lastUpdate": "2026-06-30"
   },
   "TRADITION": {
-    "value": 120.46,
-    "previous": 118.58,
-    "change": 1.59,
-    "lastUpdate": "2026-06-29"
+    "value": 122.24,
+    "previous": 120.46,
+    "change": 1.47,
+    "lastUpdate": "2026-06-30"
   },
   "BOTANICALS": {
-    "value": 134.49,
-    "previous": 131.21,
+    "value": 137.85,
+    "previous": 134.49,
     "change": 2.5,
-    "lastUpdate": "2026-06-29"
+    "lastUpdate": "2026-06-30"
   },
   "NORDIC": {
-    "value": 104.9,
-    "previous": 104.17,
-    "change": 0.7,
-    "lastUpdate": "2026-06-29"
+    "value": 105.42,
+    "previous": 104.9,
+    "change": 0.5,
+    "lastUpdate": "2026-06-30"
   },
   "EXPLORATION": {
-    "value": 100.2,
-    "previous": 100.1,
-    "change": 0.1,
-    "lastUpdate": "2026-06-29"
+    "value": 100.1,
+    "previous": 100.2,
+    "change": -0.1,
+    "lastUpdate": "2026-06-30"
   },
   "LUXURY": {
-    "value": 134.49,
-    "previous": 131.21,
+    "value": 137.85,
+    "previous": 134.49,
     "change": 2.5,
-    "lastUpdate": "2026-06-29"
+    "lastUpdate": "2026-06-30"
   },
   "HERITAGE": {
-    "value": 100.2,
-    "previous": 100.6,
-    "change": -0.4,
-    "lastUpdate": "2026-06-29"
+    "value": 99.4,
+    "previous": 100.2,
+    "change": -0.8,
+    "lastUpdate": "2026-06-30"
   }
 }
