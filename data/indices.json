@@ -1,62 +1,62 @@
 {
   "ESG": {
-    "value": 149,
-    "previous": 146.89,
-    "change": 1.44,
-    "lastUpdate": "2026-07-03"
+    "value": 150.97,
+    "previous": 149,
+    "change": 1.32,
+    "lastUpdate": "2026-07-04"
   },
   "EMERGING": {
-    "value": 165.55,
-    "previous": 161.51,
-    "change": 2.5,
-    "lastUpdate": "2026-07-03"
+    "value": 169.52,
+    "previous": 165.55,
+    "change": 2.4,
+    "lastUpdate": "2026-07-04"
   },
   "ART": {
-    "value": 176.3,
-    "previous": 173.35,
-    "change": 1.7,
-    "lastUpdate": "2026-07-03"
+    "value": 178.42,
+    "previous": 176.3,
+    "change": 1.2,
+    "lastUpdate": "2026-07-04"
   },
   "SEA": {
-    "value": 216.65,
-    "previous": 210.75,
+    "value": 222.72,
+    "previous": 216.65,
     "change": 2.8,
-    "lastUpdate": "2026-07-03"
+    "lastUpdate": "2026-07-04"
   },
   "TRADITION": {
-    "value": 149,
-    "previous": 146.89,
-    "change": 1.44,
-    "lastUpdate": "2026-07-03"
+    "value": 150.97,
+    "previous": 149,
+    "change": 1.32,
+    "lastUpdate": "2026-07-04"
   },
   "BOTANICALS": {
-    "value": 192.84,
-    "previous": 188.14,
+    "value": 197.66,
+    "previous": 192.84,
     "change": 2.5,
-    "lastUpdate": "2026-07-03"
+    "lastUpdate": "2026-07-04"
   },
   "NORDIC": {
     "value": 110.16,
-    "previous": 109.94,
-    "change": 0.2,
-    "lastUpdate": "2026-07-03"
+    "previous": 110.16,
+    "change": 0,
+    "lastUpdate": "2026-07-04"
   },
   "EXPLORATION": {
-    "value": 97.21,
+    "value": 97.11,
     "previous": 97.21,
-    "change": 0,
-    "lastUpdate": "2026-07-03"
+    "change": -0.1,
+    "lastUpdate": "2026-07-04"
   },
   "LUXURY": {
-    "value": 199.64,
-    "previous": 194.77,
+    "value": 204.63,
+    "previous": 199.64,
     "change": 2.5,
-    "lastUpdate": "2026-07-03"
+    "lastUpdate": "2026-07-04"
   },
   "HERITAGE": {
-    "value": 91.64,
-    "previous": 92.29,
+    "value": 91,
+    "previous": 91.64,
     "change": -0.7,
-    "lastUpdate": "2026-07-03"
+    "lastUpdate": "2026-07-04"
   }
 }
