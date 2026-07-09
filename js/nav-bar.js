@@ -6,6 +6,7 @@ const navBaseUrl = new URL('.', navScriptUrl.href);
 const navLogoUrl = new URL('../assets/images/ginduneria_logo.png', navBaseUrl).href;
 const homeUrl = new URL('../index.html', navBaseUrl).href;
 const marketUrl = new URL('../markets.html', navBaseUrl).href;
+const globeUrl = new URL('../globe.html', navBaseUrl).href;
 
 document.addEventListener('DOMContentLoaded', () => {
 	if (document.querySelector('[data-ginduneria-nav]')) {
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		</button>
 		<nav class="ginduneria-nav__menu" id="ginduneria-nav-menu" aria-label="Menu principale">
 			<a href="${homeUrl}">Home</a>
+			<a href="${globeUrl}">Mondo dei Gin</a>
 			<a href="${marketUrl}">Stock Market 📈</a>
 		</nav>
 	`;

@@ -45,7 +45,7 @@
           "botanic-complexity": 1,
           "persistence": 1
         },
-        "consigliata": false
+        "consigliata": true
       }
     ],
     "ethicalIndex": {
@@ -55,6 +55,12 @@
       "tot": 93,
       "motivation": "Sugar Kelp raccolto manualmente in modo sostenibile, produzione interamente locale, creazione di occupazione stabile nelle Ebridi Esterne e forte legame con la comunità dell'isola."
     },
+    "filters" : {
+    "cont": "eu",
+    "ecosistema": ["mar", "med"],
+    "botanicals-ter": true,
+    "ong": false
+  },
     "politicalArea": {
       "id": "esx",
       "mot": "Il gin ufficiale di chi legge report sulla biodiversità marina per piacere personale. Se una bottiglia può avere un ecosistema, un programma di sviluppo locale e un sub di fiducia con nome e cognome, questa è lei."
@@ -77,6 +83,12 @@
     { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.6, "uniqueness": 0.5, "balsamic": 1.2, "salinity": 0.4, "citrus": 0.4, "botanic-complexity": 0.8, "persistence": 0.4 }, "consigliata": false }
   ],
   "ethicalIndex" : { "env": 85, "soc": 80, "trad": 100, "tot": 88, "motivation": "Sostegno totale alla millenaria agricoltura locale di Kyoto per l'approvvigionamento di Yuzu e legno di Hinoki."},
+  "filters" : {
+    "cont": "as",
+    "ecosistema": ["bos"],
+    "botanicals-ter": true,
+    "ong": false
+  },
   "antipasti": [
     { "nome": "Sashimi di ricciola", "img": "path", "descrizione": "Taglio pulito e minimale, asseconda la freschezza agrumata e tagliente dello Yuzu." },
     { "nome": "Edamame al sale di Maldon", "img": "path", "descrizione": "[VEGANO] Essenziale e rigoroso, perfetto per ripulire il palato tra un sorso e l'altro." }
@@ -107,6 +119,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.3, "uniqueness": 0, "balsamic": 1.0, "salinity": 0.5, "citrus": 0.8, "botanic-complexity": 1.0, "persistence": 0.4 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 95, "soc": 95, "trad": 85, "tot": 92, "motivation": "Il 15% dei profitti di ogni singola bottiglia viene interamente devoluto a HERD per la salvaguardia della fauna selvatica."},
+    "filters" : {
+    "cont": "af",
+    "ecosistema": ["sel"],
+    "botanicals-ter": true,
+    "ong": true
+  },
     "antipasti": [
       { "nome": "Biltong di manzo essiccato", "img": "path", "descrizione": "Speziato e proteico, richiama perfettamente le note calde e terrose della savana." },
       { "nome": "Anacardi tostati al peperoncino", "img": "path", "descrizione": "[VEGANO] La spinta piccante contrasta la dolcezza nativa del frutto del Marula." }
@@ -171,6 +189,12 @@
   }
 ],
     "ethicalIndex" : { "env": 84, "soc": 88, "trad": 80, "tot": 84, "motivation": "Valorizza una delle biodiversità più ricche del pianeta attraverso botaniche autoctone, contribuendo a raccontare il territorio sudafricano senza ridurlo a semplice esotismo."},
+    "filters" : {
+    "cont": "af",
+    "ecosistema": ["mar", "sel"],
+    "botanicals-ter": true,
+    "ong": false
+  },
     "antipasti": [
       { "nome": "Biltong di manzo essiccato", "img": "path", "descrizione": "Speziato e proteico, richiama perfettamente le note calde e terrose della savana." },
       { "nome": "Anacardi tostati al peperoncino", "img": "path", "descrizione": "[VEGANO] La spinta piccante contrasta la dolcezza nativa del frutto del Marula." }
@@ -193,7 +217,7 @@
     "bg-color": "#2f7d5b",
     "coordinate": { "lat": 6.2411, "lon": -62.8464 },
     "aggettivi": [ "Tribale", "Forestale", "Ancestrale" ],
-    "botaniche": [ "Merey", "Copoazù", "Túpiro" ],
+    "botaniche": [ "Merey", "Copoazù", "Açai" ],
     "profilo": "Canaima è il sogno di chiunque desidera sentirsi un po' sciamano e un po' protettore dei polmoni verdi della Terra. Distillato con botaniche mistiche raccolte dalle tribù indigene nel profondo della foresta amazzonica venezuelana, questo gin ti permette di fare 'decrescita felice' direttamente dal bancone del bar. Raccontare ai tuoi amici che il 10% di ciò che hanno appena pagato serve a ripiantare alberi grazie a Saving the Amazon cancella istantaneamente ogni senso di colpa capitalistico. Berlo dà quella magnifica sensazione di connessione con la Madre Terra, idealizzata da chi non ha mai visto una zanzara gigante in vita sua ma adora l'idea di salvare il mondo sorseggiando un distillato fruttato ed esotico, circondato da piante tropicali d'appartamento comprate su internet.",
     "radar": { "dryness": 7.0, "uniqueness": 9.2, "balsamic": 6.0, "salinity": 4.5, "citrus": 7.5, "botanic-complexity": 8.8, "persistence": 8.5 },
     "toniche": [
@@ -201,6 +225,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.4, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.8, "citrus": 0.8, "botanic-complexity": 1.2, "persistence": 1.0 }, "consigliata": true }
     ],
     "ethicalIndex" : { "env": 98, "soc": 100, "trad": 90, "tot": 96, "motivation": "Il 10% del fatturato finanzia direttamente Saving the Amazon e i progetti di empowerment delle comunità indigene Pemon."},
+    "filters" : {
+      "cont": "am",
+      "ecosistema": ["sel", "tro", "bos"],
+      "botanicals-ter": true,
+      "ong": true
+    },
     "antipasti": [
       { "nome": "Platano fritto croccante", "img": "path", "descrizione": "La dolcezza esotica del platano si sposa alle note native della Palma Moriche." },
       { "nome": "Ceviche di mango e avocado", "img": "path", "descrizione": "[VEGANO] Fresco, acido e tropicale, amplifica la complessità del Copoazù." }
@@ -231,6 +261,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness":0, "balsamic": 1.5, "salinity": 1, "citrus": 0.5, "botanic-complexity": 1.0, "persistence": 1 }, "consigliata": true }
     ],
     "ethicalIndex" : { "env": 60, "soc": 70, "trad": 80, "tot": 70, "motivation": "Botaniche locali e tutela della tradizione london dry e arte italiana ma nessun impegno dichiarato"},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["med"],
+      "botanicals-ter": false,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
@@ -295,11 +331,17 @@
     }
   ],
   "ethicalIndex": {
-    "env": 96,
+    "env": 98,
     "soc": 85,
-    "trad": 80,
-    "tot": 87,
+    "trad": 83,
+    "tot": 89,
     "motivation": "Distilleria off-grid alimentata da energia solare, forte valorizzazione del territorio australiano e filosofia produttiva orientata alla sostenibilità più che al semplice marketing."
+  },
+  "filters" : {
+    "cont": "oc",
+    "ecosistema": ["mar", "sel"],
+    "botanicals-ter": true,
+    "ong": false
   },
   "antipasti": [
     {
@@ -339,6 +381,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 0, "balsamic": 1.5, "salinity": 0.8, "citrus": 1.5, "botanic-complexity": -0.5, "persistence": -0.3 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 77, "soc": 80, "trad": 96, "tot": 84, "motivation": "Sostiene economia dell'isola con produzione non industriale, alambicchi a legna del 1700. Unico gin IGP al mondo."},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["mar", "med"],
+      "botanicals-ter": true,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
@@ -369,6 +417,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.2, "uniqueness": 0, "balsamic": 1.2, "salinity": 1, "citrus": 0.8, "botanic-complexity": 0.2, "persistence": 0.5 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 95, "soc": 88, "trad": 75, "tot": 86, "motivation": "Finanzia direttamente Sea Shepherd, plastica 100% riciclata. Sensibilizza su tutela oceani e specie da proteggere."},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["mar", "med"],
+      "botanicals-ter": false,
+      "ong": true
+    },
     "antipasti": [
       { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
@@ -380,36 +434,6 @@
     "politicalArea": {
       "id": "esx",
       "mot": "Il leader della piazza. Essendo quello che finanzia Sea Shepherd, è ufficialmente il gin che pattuglia i mari, sperona le baleniere e presidia i confini marittimi in nome dell'ecologia militante. Se ci fosse un centro sociale in mezzo all'oceano, servirebbe solo Poseidon."
-    },
-    "alc": 45
-  },
-  {
-    "id": "melagorai",
-    "nome": "Melagorai",
-    "provenienza": "🇮🇹 Trento",
-    "isEmpty": false,
-    "bg-color": "#8b0000",
-    "coordinate": { "lat": 46.067, "lon": 11.121 },
-    "aggettivi": [ "Nobile", "Territoriale", "Elegante" ],
-    "botaniche": [ "Mela Jonagold", "Limone del Garda", "Ginepro montano" ],
-    "profilo": "Chi beve Melagorai è convinto di avere un rapporto sano con il territorio: Non folkloristico, non turistico: sano. Dice frasi come “si sente la mela, ma non è dolce” con un tono da persona che ha appena spiegato perché compra solo pane a lievitazione spontanea. La bottiglia la sceglie perché “non urla”, e infatti lui non urla mai — al massimo corregge con gentilezza. Quando versa Melagorai parla di mela Jonagold come se l'avesse raccolta personalmente, anche se l'unica cosa che ha raccolto nella vita è una shopper di tela al mercato bio. Il ginepro gli piace perché “rimette ordine”, il limone del Garda perché “pulisce senza invadere”: parole che usa spesso anche per descrivere le persone. Non cerca il colpo di scena, detesta i gin che fanno spettacolo.",
-    "radar": { "dryness": 6.0, "uniqueness": 7.5, "balsamic": 5.0, "salinity": 2.0, "citrus": 8.0, "botanic-complexity": 6.5, "persistence": 7.0 },
-    "toniche": [
-      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0.5, "balsamic": -0.8, "salinity": 0, "citrus": 0.8, "botanic-complexity": 0.5, "persistence": 0.5 }, "consigliata": false },
-      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": 0.5, "uniqueness": 1.2, "balsamic": 0.8, "salinity": 0, "citrus": 1.5, "botanic-complexity": 1.0, "persistence": 0.8 }, "consigliata": true }
-    ],
-    "ethicalIndex" : { "env": 70, "soc": 85, "trad": 75, "tot": 77, "motivation": "Valorizza la filiera corta, partendo dai produttori locali della Valsugana"},
-    "antipasti": [
-      { "nome": "Involtini Bresaola e Caprino", "img": "path", "descrizione": "Tradizione alpina che sposa la mela Jonagold." },
-      { "nome": "Spiedini di Tofu e Mela", "img": "path", "descrizione": "[VEGANA] Tofu affumicato grigliato con cubetti di mela." }
-    ],
-    "limited": null,
-    "decorations": [
-      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "20%", "80%", "150px", "-8deg", "0.9"]
-    ],
-    "politicalArea": {
-      "id": "sx",
-      "mot": "Arriva dai boschi del Trentino, sa di resina e di aria di montagna. È l'ala verde che vuole il ritorno alla natura, la protezione delle valli e la decrescita felice (ma con un ottimo grado alcolico)."
     },
     "alc": 45
   },
@@ -429,6 +453,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.5, "citrus": 1.0, "botanic-complexity": 1.0, "persistence": 1.2 }, "consigliata": true }
     ],
     "ethicalIndex" : { "env": 90, "soc": 80, "trad": 85, "tot": 85, "motivation": "Certificato BCorp e parte di OneOcean per la tutela di Portofino"},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["mar", "med"],
+      "botanicals-ter": true,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Focaccia di Recco", "img": "path", "descrizione": "Sottile e formaggiosa, ideale con la lavanda." },
       { "nome": "Farinata di ceci", "img": "path", "descrizione": "[VEGANA] Croccante e sapida per esaltare il rosmarino." }
@@ -499,6 +529,12 @@
     "tot": 67,
     "motivation": "Packaging iconico e botaniche ricercate, ma permane una limitata trasparenza sulla filiera della foglia di coca e sull'impatto sociale della produzione."
   },
+  "filters" : {
+    "cont": "eu",
+    "ecosistema": ["tro", "sel"],
+    "botanicals-ter": false,
+    "ong": false
+  },
   "antipasti": [
     {
       "nome": "Tartare di ricciola al finger lime",
@@ -538,6 +574,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 0.8, "balsamic": 0.5, "salinity": 0.5, "citrus": 1.2, "botanic-complexity": 0.5, "persistence": 0.8 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 50, "soc": 55, "trad": 65, "tot": 67, "motivation": "Assenza di trasparenza sull'impatto etico reale della raccolta di foglie di coca in Perù."},
+    "filters" : {
+    "cont": "eu",
+    "ecosistema": ["tro", "sel"],
+    "botanicals-ter": false,
+    "ong": false
+  },
     "antipasti": [
       { "nome": "Ceviche di spigola", "img": "path", "descrizione": "Pesce crudo e lime per richiamare il Perù." },
       { "nome": "Tacos con Avocado", "img": "path", "descrizione": "[VEGANA] Crema di avocado e peperoncino per la foglia di coca." }
@@ -569,6 +611,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.0, "uniqueness": 0.5, "balsamic": 1.5, "salinity": 0, "citrus": 0.8, "botanic-complexity": 1.2, "persistence": 0.8 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 80, "soc": 70, "trad": 75, "tot": 75, "motivation": "Uso di botaniche esclusivamente locali e alcol base autoprodotto"},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["bor", "mon", "sel"],
+      "botanicals-ter": true,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Gravlax di salmone", "img": "path", "descrizione": "Salmone marinato all'aneto, sapore di fiordo." },
       { "nome": "Carpaccio di Barbabietola", "img": "path", "descrizione": "[VEGANA] Note terrose che esaltano il muschio del gin." }
@@ -600,6 +648,12 @@
       { "label": "Elderflower Tonic", "tipo": "mediterranea", "valori": { "dryness": -2.0, "uniqueness": 0.8, "balsamic": -1.0, "salinity": 0, "citrus": 0.5, "botanic-complexity": 1.5, "persistence": -0.5 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 80, "soc": 70, "trad": 75, "tot": 75, "motivation": "Uso di botaniche esclusivamente locali e alcol base autoprodotto"},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["bor", "mon", "sel"],
+      "botanicals-ter": true,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Aringa affumicata", "img": "path", "descrizione": "Sapore forte e primordiale per reggere il corpo del gin." },
       { "nome": "Pane di segale e burro salato", "img": "path", "descrizione": "L'essenzialità del nord che sposa la secchezza del Double." }
@@ -630,6 +684,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.8, "uniqueness": 1.0, "balsamic": 1.2, "salinity": 0, "citrus": 0.8, "botanic-complexity": 0.8, "persistence": 1.0 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 82, "soc": 75, "trad": 70, "tot": 75, "motivation": "Microproduttore locale da botaniche autoctone del trentino."},
+    "filters": {
+      "cont": "eu",
+      "ecosistema": ["mon", "sel", "bos"],
+      "botanicals-ter": true,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Trota affumicata", "img": "path", "descrizione": "Delicatezza alpina perfetta con la betulla." },
       { "nome": "Tempura di Salvia", "img": "path", "descrizione": "[VEGANA] Erbe fritte per richiamare la verticalità montana." }
@@ -643,36 +703,6 @@
       "mot": "Già dal nome capisci che ha voglia di contestare. Con la sua linfa di betulla, è il gin che partecipa ai friday for future e guarda con sospetto chiunque usi cannucce di plastica."
     },
     "alc": 45
-  },
-  {
-    "id": "rupis",
-    "nome": "Rupis",
-    "provenienza": "🇮🇹 Ischia",
-    "isEmpty": false,
-    "bg-color": "#4f7942",
-    "coordinate": { "lat": 40.7379, "lon": 13.9486 },
-    "aggettivi": [ "Vegetale", "Avvolgente", "Armonico" ],
-    "botaniche": [ "Rucola selvatica", "Pipernia", "Corbezzolo" ],
-    "profilo": "Ogni sorso di Rupis è un viaggio a Ischia che racconti con enfasi manco fossi nato lì. In realtà, ciò che ti piace è dire “botanico” scandendo bene le sillabe: il gin è buono, certo, ma la vera spezia sei tu, che trasformi la bottiglia in un souvenir di viaggio radical chic.",
-    "radar": { "dryness": 5.0, "uniqueness": 8.5, "balsamic": 6.5, "salinity": 4.5, "citrus": 6.0, "botanic-complexity": 8.0, "persistence": 7.5 },
-    "toniche": [
-      { "label": "Strong Indian", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0.5, "balsamic": 0.5, "salinity": 0.2, "citrus": -0.5, "botanic-complexity": -1.0, "persistence": 0.2 }, "consigliata": false },
-      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.8, "citrus": 1.2, "botanic-complexity": 1.2, "persistence": 1.2 }, "consigliata": true }
-    ],
-    "ethicalIndex" : { "env": 75, "soc": 80, "trad": 80, "tot": 78, "motivation": "Microproduttore isolano che utilizza botaniche del territorio."},
-    "antipasti": [
-      { "nome": "Mozzarella di bufala e Arancia", "img": "path", "descrizione": "Il dolce del latte calma l'amaro della rucola." },
-      { "nome": "Crema di Fave e Cicoria", "img": "path", "descrizione": "[VEGANA] Tradizione del sud per il profilo vegetale." }
-    ],
-    "limited": null,
-    "decorations": [
-      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "22%", "76%", "132px", "-4deg", "0.82"]
-    ],
-    "politicalArea": {
-      "id": "dx",
-      "mot": "Il barone del Sud. Radicato nel territorio, legato alle tradizioni dell'isola e con un'eleganza un po' antica. È il grande elettore che decide le sorti della coalizione davanti a un tramonto sul mare."
-    },
-    "alc": 42
   },
   {
     "id": "gordon",
@@ -690,6 +720,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.0, "uniqueness": 0.5, "balsamic": 0.2, "salinity": 0, "citrus": 1.0, "botanic-complexity": 0.5, "persistence": 0.2 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 65, "soc": 50, "trad": 70, "tot": 62, "motivation": "Processi efficienti in linea con obiettivi di Diageo ma produzione di massa e trasparenza limitata"},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["med"],
+      "botanicals-ter": false,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Patatine classiche", "img": "path", "descrizione": "Il sale chiama il ginepro semplice." },
       { "nome": "Hummus e Carote", "img": "path", "descrizione": "[VEGANA] Semplice e diretto come il distillato." }
@@ -720,6 +756,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -1.2, "uniqueness": 0.8, "balsamic": 1.0, "salinity": 0, "citrus": 1.2, "botanic-complexity": 0.8, "persistence": -0.4 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 80, "soc": 80, "trad": 90, "tot": 83, "motivation": "Uno dei pionieri BCorp tra i distillatori, utilizza tradizionali alambicchi in rame di 2 secoli."},
+    "filters": {
+      "cont": "eu",
+      "ecosistema": ["bos"],
+      "botanicals-ter": false,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Uova e Caviale", "img": "path", "descrizione": "Lusso classico per un London Dry superiore." },
       { "nome": "Mandorle Tostate", "img": "path", "descrizione": "[VEGANA] Frutta secca salata per la cassia cinese." }
@@ -733,6 +775,78 @@
       "mot": "Il Gin con la G maiuscola. Londinese, impeccabile, moderato in tutto. È il centro perfetto: rassicura i mercati e piace sia a destra che a sinistra perché non urla mai, ma governa il bicchiere con competenza tecnica."
     },
     "alc": 41.6
+  },
+   {
+    "id": "melagorai",
+    "nome": "Melagorai",
+    "provenienza": "🇮🇹 Trento",
+    "isEmpty": true,
+    "bg-color": "#8b0000",
+    "coordinate": { "lat": 46.067, "lon": 11.121 },
+    "aggettivi": [ "Nobile", "Territoriale", "Elegante" ],
+    "botaniche": [ "Mela Jonagold", "Limone del Garda", "Ginepro montano" ],
+    "profilo": "Chi beve Melagorai è convinto di avere un rapporto sano con il territorio: Non folkloristico, non turistico: sano. Dice frasi come “si sente la mela, ma non è dolce” con un tono da persona che ha appena spiegato perché compra solo pane a lievitazione spontanea. La bottiglia la sceglie perché “non urla”, e infatti lui non urla mai — al massimo corregge con gentilezza. Quando versa Melagorai parla di mela Jonagold come se l'avesse raccolta personalmente, anche se l'unica cosa che ha raccolto nella vita è una shopper di tela al mercato bio. Il ginepro gli piace perché “rimette ordine”, il limone del Garda perché “pulisce senza invadere”: parole che usa spesso anche per descrivere le persone. Non cerca il colpo di scena, detesta i gin che fanno spettacolo.",
+    "radar": { "dryness": 6.0, "uniqueness": 7.5, "balsamic": 5.0, "salinity": 2.0, "citrus": 8.0, "botanic-complexity": 6.5, "persistence": 7.0 },
+    "toniche": [
+      { "label": "Indian Tonic", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0.5, "balsamic": -0.8, "salinity": 0, "citrus": 0.8, "botanic-complexity": 0.5, "persistence": 0.5 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": 0.5, "uniqueness": 1.2, "balsamic": 0.8, "salinity": 0, "citrus": 1.5, "botanic-complexity": 1.0, "persistence": 0.8 }, "consigliata": true }
+    ],
+    "ethicalIndex" : { "env": 70, "soc": 85, "trad": 75, "tot": 77, "motivation": "Valorizza la filiera corta, partendo dai produttori locali della Valsugana"},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["mon", "med"],
+      "botanicals-ter": true,
+      "ong": false
+    },
+    "antipasti": [
+      { "nome": "Involtini Bresaola e Caprino", "img": "path", "descrizione": "Tradizione alpina che sposa la mela Jonagold." },
+      { "nome": "Spiedini di Tofu e Mela", "img": "path", "descrizione": "[VEGANA] Tofu affumicato grigliato con cubetti di mela." }
+    ],
+    "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "20%", "80%", "150px", "-8deg", "0.9"]
+    ],
+    "politicalArea": {
+      "id": "sx",
+      "mot": "Arriva dai boschi del Trentino, sa di resina e di aria di montagna. È l'ala verde che vuole il ritorno alla natura, la protezione delle valli e la decrescita felice (ma con un ottimo grado alcolico)."
+    },
+    "alc": 45
+  },
+  {
+    "id": "rupis",
+    "nome": "Rupis",
+    "provenienza": "🇮🇹 Ischia",
+    "isEmpty": true,
+    "bg-color": "#4f7942",
+    "coordinate": { "lat": 40.7379, "lon": 13.9486 },
+    "aggettivi": [ "Vegetale", "Avvolgente", "Armonico" ],
+    "botaniche": [ "Rucola selvatica", "Pipernia", "Corbezzolo" ],
+    "profilo": "Ogni sorso di Rupis è un viaggio a Ischia che racconti con enfasi manco fossi nato lì. In realtà, ciò che ti piace è dire “botanico” scandendo bene le sillabe: il gin è buono, certo, ma la vera spezia sei tu, che trasformi la bottiglia in un souvenir di viaggio radical chic.",
+    "radar": { "dryness": 5.0, "uniqueness": 8.5, "balsamic": 6.5, "salinity": 4.5, "citrus": 6.0, "botanic-complexity": 8.0, "persistence": 7.5 },
+    "toniche": [
+      { "label": "Strong Indian", "tipo": "indiana", "valori": { "dryness": 1.5, "uniqueness": 0.5, "balsamic": 0.5, "salinity": 0.2, "citrus": -0.5, "botanic-complexity": -1.0, "persistence": 0.2 }, "consigliata": false },
+      { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 1.0, "balsamic": 1.5, "salinity": 0.8, "citrus": 1.2, "botanic-complexity": 1.2, "persistence": 1.2 }, "consigliata": true }
+    ],
+    "ethicalIndex" : { "env": 75, "soc": 80, "trad": 80, "tot": 78, "motivation": "Microproduttore isolano che utilizza botaniche del territorio."},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["mar", "med"],
+      "botanicals-ter": true,
+      "ong": false
+    },
+    "antipasti": [
+      { "nome": "Mozzarella di bufala e Arancia", "img": "path", "descrizione": "Il dolce del latte calma l'amaro della rucola." },
+      { "nome": "Crema di Fave e Cicoria", "img": "path", "descrizione": "[VEGANA] Tradizione del sud per il profilo vegetale." }
+    ],
+    "limited": null,
+    "decorations": [
+      ["https://assets-v2.lottiefiles.com/a/a7905998-1184-11ee-8e25-df58e522418d/Gyb4mXVl6i.lottie", "22%", "76%", "132px", "-4deg", "0.82"]
+    ],
+    "politicalArea": {
+      "id": "dx",
+      "mot": "Il barone del Sud. Radicato nel territorio, legato alle tradizioni dell'isola e con un'eleganza un po' antica. È il grande elettore che decide le sorti della coalizione davanti a un tramonto sul mare."
+    },
+    "alc": 42
   },
   {
     "id": "malfy-rosa",
@@ -753,6 +867,12 @@
       { "nome": "Gamberi al vapore", "img": "path", "descrizione": "Dolcezza agrumata che sposa il pompelmo." },
       { "nome": "Olive di Cerignola", "img": "path", "descrizione": "[VEGANA] Grassezza e sale contro l'acidità rosa." }
     ],
+"filters": {
+      "cont": "eu",
+      "ecosistema": ["med"],
+      "botanicals-ter": false,
+      "ong": false
+    },
     "ethicalIndex" : { "env": 60, "soc": 60, "trad": 55, "tot": 58, "motivation": "Sotto Pernod Ricard, presenta standard di riciclo e agricoltura sostenibile, ma identità molto orientata al marketing."},
     "limited": null,
     "decorations": [
@@ -780,6 +900,12 @@
       { "label": "Mediterranean Tonic", "tipo": "mediterranea", "valori": { "dryness": -0.5, "uniqueness": 0, "balsamic": 0, "salinity": 0, "citrus": 0.5, "botanic-complexity": 0, "persistence": 0 }, "consigliata": false }
     ],
     "ethicalIndex" : { "env": 40, "soc": 55, "trad": 40, "tot": 45, "motivation": "Prodotto white label (Lidl). Prezzo basso che implica una filiera senza particolari tutele etiche o ambientali."},
+    "filters" : {
+      "cont": "eu",
+      "ecosistema": ["bor"],
+      "botanicals-ter": false,
+      "ong": false
+    },
     "antipasti": [
       { "nome": "Crostini al burro", "img": "path", "descrizione": "Base grassa per l'alcolicità grezza." },
       { "nome": "Pringles Original", "img": "path", "descrizione": "[VEGANA] Il sapore dell'università e delle serate low-budget." }

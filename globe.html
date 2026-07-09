@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondo dei Gin | GinDuneria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style-globe.css">
+</head>
+<body class="globe-page">
+    <main class="globe-shell">
+        <section class="globe-stage" aria-label="Esplorazione del mondo dei gin">
+            <div class="globe-stage__frame">
+                <div id="globe-root" class="globe-root" aria-label="Globo interattivo"></div>
+            </div>
+        </section>
+
+        <aside class="continent-panel" id="continent-panel" aria-live="polite" aria-label="Scheda continente">
+            <button class="continent-panel__close" type="button" aria-label="Chiudi popup">×</button>
+            <div class="continent-panel__content" id="continent-panel-content"></div>
+        </aside>
+    </main>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
+    <script src="./js/script-globe2.js" defer></script>
+    <script src="./js/nav-bar.js" defer></script>
+</body>
+</html>

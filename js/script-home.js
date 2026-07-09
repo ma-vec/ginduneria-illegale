@@ -13,6 +13,87 @@
     let ginDataPromise = null;
     let videoSectionsCreated = false;
     let ginVideos = [];
+    const filterDefinitions = [
+        {
+            id: "provenienza",
+            title: "Provenienza",
+            options: [
+                { value: "eu", label: "Europa" },
+                { value: "as", label: "Asia" },
+                { value: "am", label: "Americhe" },
+                { value: "af", label: "Africa" },
+                { value: "oc", label: "Oceania" }
+            ]
+        },
+        {
+            id: "profilo",
+            title: "Profilo gustativo",
+            options: [
+                { value: "dryness", label: "Secco" },
+                { value: "uniqueness", label: "Inedito" },
+                { value: "balsamic", label: "Balsamico" },
+                { value: "salinity", label: "Sapido" },
+                { value: "citrus", label: "Agrumato" },
+                { value: "botanic-complexity", label: "Botanico" },
+                { value: "persistence", label: "Persistente" }
+            ]
+        },
+        {
+            id: "tonica",
+            title: "Tonica",
+            options: [
+                { value: "indiana", label: "Indiana" },
+                { value: "mediterranea", label: "Mediterranea" }
+            ]
+        },
+        {
+            id: "ecosistema",
+            title: "Ecosistema",
+            options: [
+                { value: "mar", label: "🌊 Marittimo" },
+                { value: "med", label: "🌿 Mediterraneo" },
+                { value: "bos", label: "🌲 Boschivo" },
+                { value: "mon", label: "⛰️ Montano" },
+                { value: "bor", label: "❄️ Boreale" },
+                { value: "sel", label: "🌍 Selvaggio" },
+                { value: "tro", label: "🌸 Tropicale" }
+            ]
+        },
+        {
+            id: "sostenibilita",
+            title: "Sostenibilità",
+            options: [
+                { value: "ethical", label: "Elevato rating etico" },
+                { value: "botanicals-ter", label: "Botaniche del territorio" },
+                { value: "ong", label: "Sostiene ONG" }
+            ]
+        },
+        {
+            id: "altro",
+            title: "Altro",
+            options: [
+                { value: "available", label: "Bottiglia disponibile" },
+                { value: "limited", label: "Limited edition" }
+            ]
+        }
+    ];
+    const filterState = {
+        provenienza: new Set(),
+        profilo: new Set(),
+        tonica: new Set(),
+        ecosistema: new Set(),
+        sostenibilita: new Set(),
+        altro: new Set()
+    };
+    const filterCheckboxes = new Map();
+    let filterPanel = null;
+    let filterBackdrop = null;
+    let filterSummary = null;
+    let filterResults = null;
+    let filterCount = null;
+    let filterClearButton = null;
+    let filterButton = null;
+    let filtersPanelOpen = false;
     const heroEnabled = Boolean(hero && text2 && text3 && ctaText && progressBar);
 
     function getPrimaryScrollTarget() {
@@ -29,12 +110,69 @@
         });
     }
 
+    function getFilterCount() {
+        return Object.values(filterState).reduce((total, selection) => total + selection.size, 0);
+    }
+
+    function closeFilterPanel() {
+        if (!filterPanel) return;
+
+        filtersPanelOpen = false;
+        document.body.classList.remove("filters-open");
+        filterPanel.classList.remove("is-open");
+        filterPanel.setAttribute("aria-hidden", "true");
+        if (filterBackdrop) {
+            filterBackdrop.classList.remove("is-visible");
+        }
+        updateToggleState();
+    }
+
+    function openFilterPanel() {
+        if (!filterPanel) return;
+
+        filtersPanelOpen = true;
+        document.body.classList.add("filters-open");
+        filterPanel.classList.add("is-open");
+        filterPanel.setAttribute("aria-hidden", "false");
+        if (filterBackdrop) {
+            filterBackdrop.classList.add("is-visible");
+        }
+        updateToggleState();
+    }
+
+    function toggleFilterPanel() {
+        if (filtersPanelOpen) {
+            closeFilterPanel();
+            return;
+        }
+
+        if (activeView !== "list") {
+            setView("list", { scrollToTarget: false });
+        }
+
+        openFilterPanel();
+    }
+
+    function updateFilterButtonState() {
+        if (!filterButton) return;
+
+        filterButton.classList.toggle("is-active", filtersPanelOpen);
+        filterButton.setAttribute("aria-pressed", String(filtersPanelOpen));
+        filterButton.setAttribute("aria-expanded", String(filtersPanelOpen));
+    }
+
     function updateToggleState() {
         viewButtons.forEach((button) => {
+            if (button.dataset.view === "filter") {
+                return;
+            }
+
             const isActive = button.dataset.view === activeView;
             button.classList.toggle("is-active", isActive);
             button.setAttribute("aria-pressed", String(isActive));
         });
+
+        updateFilterButtonState();
     }
 
     function setView(view, options = {}) {
@@ -43,6 +181,11 @@
 
         document.body.classList.toggle("mode-video", view === "video");
         document.body.classList.toggle("mode-list", view !== "video");
+
+        if (view === "video" && filtersPanelOpen) {
+            closeFilterPanel();
+        }
+
         updateToggleState();
 
         if (view === "video") {
@@ -57,6 +200,282 @@
                 scrollToPrimaryTarget();
             }
         }
+    }
+
+    function createFilterControl(definition, option) {
+        const optionId = `filter-${definition.id}-${option.value}`;
+        const label = document.createElement("label");
+        label.className = "filters-panel__option";
+        label.htmlFor = optionId;
+
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.id = optionId;
+        input.dataset.filterGroup = definition.id;
+        input.dataset.filterValue = option.value;
+
+        const text = document.createElement("span");
+        text.textContent = option.label;
+
+        label.appendChild(input);
+        label.appendChild(text);
+
+        filterCheckboxes.set(optionId, input);
+
+        return label;
+    }
+
+    function createFilterSection(definition) {
+        const section = document.createElement("section");
+        section.className = "filters-panel__section";
+        section.classList.add("is-collapsed");
+        section.dataset.sectionId = definition.id;
+
+        const header = document.createElement("button");
+        header.type = "button";
+        header.className = "filters-panel__section-toggle";
+        header.setAttribute("aria-expanded", "false");
+        header.innerHTML = `
+            <strong>${definition.title}</strong>
+            <span class="filters-panel__chevron" aria-hidden="true"></span>
+        `;
+
+        const body = document.createElement("div");
+        body.className = "filters-panel__section-body";
+
+        definition.options.forEach((option) => {
+            body.appendChild(createFilterControl(definition, option));
+        });
+
+        header.addEventListener("click", () => {
+            const isCollapsed = section.classList.contains("is-collapsed");
+
+            if (isCollapsed) {
+                document.querySelectorAll(".filters-panel__section.is-collapsed").forEach((otherSection) => {
+                    if (otherSection !== section) {
+                        otherSection.classList.add("is-collapsed");
+                        const otherHeader = otherSection.querySelector(".filters-panel__section-toggle");
+                        if (otherHeader) {
+                            otherHeader.setAttribute("aria-expanded", "false");
+                        }
+                    }
+                });
+            }
+
+            section.classList.toggle("is-collapsed");
+            header.setAttribute("aria-expanded", String(section.classList.contains("is-collapsed") ? false : true));
+        });
+
+        section.appendChild(header);
+        section.appendChild(body);
+        return section;
+    }
+
+    function syncFilterInputs() {
+        filterCheckboxes.forEach((input) => {
+            const group = input.dataset.filterGroup;
+            const value = input.dataset.filterValue;
+            input.checked = filterState[group]?.has(value) || false;
+        });
+    }
+
+    function setFilterState(group, value, isChecked) {
+        const targetSet = filterState[group];
+
+        if (!targetSet) return;
+
+        if (isChecked) {
+            targetSet.add(value);
+        } else {
+            targetSet.delete(value);
+        }
+    }
+
+    function updateFilterSummary(dataLength = 0) {
+        const activeCount = getFilterCount();
+        const label = activeCount === 0 ? "Nessun filtro attivo" : `${activeCount} filtri attivi`;
+
+        if (filterCount) {
+            filterCount.textContent = label;
+        }
+
+        if (filterSummary) {
+            filterSummary.textContent = label;
+        }
+
+        if (filterResults) {
+            filterResults.textContent = `${dataLength} bottiglie in vista`;
+        }
+
+        if (filterClearButton) {
+            filterClearButton.disabled = activeCount === 0;
+        }
+    }
+
+    function renderFilterPanel() {
+        if (filterPanel) return;
+
+        filterBackdrop = document.createElement("button");
+        filterBackdrop.type = "button";
+        filterBackdrop.className = "filters-backdrop";
+        filterBackdrop.setAttribute("aria-label", "Chiudi filtri");
+
+        filterPanel = document.createElement("aside");
+        filterPanel.className = "filters-panel";
+        filterPanel.setAttribute("aria-hidden", "true");
+        filterPanel.setAttribute("aria-label", "Filtri bottiglie");
+
+        const header = document.createElement("header");
+        header.className = "filters-panel__header";
+        header.innerHTML = `
+            <div>
+                <p class="filters-panel__eyebrow">Refine the library</p>
+                <h3>Filtri</h3>
+            </div>
+        `;
+
+        const closeButton = document.createElement("button");
+        closeButton.type = "button";
+        closeButton.className = "filters-panel__close";
+        closeButton.setAttribute("aria-label", "Chiudi filtri");
+        closeButton.textContent = "×";
+        header.appendChild(closeButton);
+
+        const summary = document.createElement("p");
+        summary.className = "filters-panel__summary";
+        summary.textContent = "Nessun filtro attivo";
+
+        const sections = document.createElement("div");
+        sections.className = "filters-panel__sections";
+
+        filterDefinitions.forEach((definition) => {
+            sections.appendChild(createFilterSection(definition));
+        });
+
+        const footer = document.createElement("footer");
+        footer.className = "filters-panel__footer";
+
+        const results = document.createElement("p");
+        results.className = "filters-panel__results";
+        results.textContent = "0 bottiglie in vista";
+
+        const clearButton = document.createElement("button");
+        clearButton.type = "button";
+        clearButton.className = "filters-panel__clear";
+        clearButton.textContent = "Azzera filtri";
+
+        footer.appendChild(results);
+        footer.appendChild(clearButton);
+
+        filterPanel.appendChild(header);
+        filterPanel.appendChild(summary);
+        filterPanel.appendChild(sections);
+        filterPanel.appendChild(footer);
+
+        filterSummary = summary;
+        filterResults = results;
+        filterCount = summary;
+        filterClearButton = clearButton;
+
+        closeButton.addEventListener("click", closeFilterPanel);
+        filterBackdrop.addEventListener("click", closeFilterPanel);
+
+        clearButton.addEventListener("click", () => {
+            Object.values(filterState).forEach((selection) => selection.clear());
+            syncFilterInputs();
+            renderCatalog(ginData);
+        });
+
+        filterPanel.addEventListener("change", (event) => {
+            const target = event.target;
+
+            if (!(target instanceof HTMLInputElement) || target.type !== "checkbox") {
+                return;
+            }
+
+            const group = target.dataset.filterGroup;
+            const value = target.dataset.filterValue;
+
+            if (!group || !value) {
+                return;
+            }
+
+            setFilterState(group, value, target.checked);
+            renderCatalog(ginData);
+        });
+
+        document.body.appendChild(filterBackdrop);
+        document.body.appendChild(filterPanel);
+    }
+
+    function ginMatchesFilter(definitionId, gin) {
+        switch (definitionId) {
+            case "provenienza": {
+                if (!filterState.provenienza.size) return true;
+                return filterState.provenienza.has(gin?.filters?.cont);
+            }
+            case "profilo": {
+                if (!filterState.profilo.size) return true;
+                return Array.from(filterState.profilo).every((key) => Number(gin?.radar?.[key]) > 7);
+            }
+            case "tonica": {
+                if (!filterState.tonica.size) return true;
+                return (gin?.toniche || []).some((tonica) => {
+                    if (!filterState.tonica.has(tonica?.tipo)) {
+                        return false;
+                    }
+
+                    return tonica?.consigliata === true;
+                });
+            }
+            case "ecosistema": {
+                if (!filterState.ecosistema.size) return true;
+                const ecosistemi = Array.isArray(gin?.filters?.ecosistema) ? gin.filters.ecosistema : [];
+                return ecosistemi.some((ecosistema) => filterState.ecosistema.has(ecosistema));
+            }
+            case "sostenibilita": {
+                if (!filterState.sostenibilita.size) return true;
+
+                return Array.from(filterState.sostenibilita).every((value) => {
+                    if (value === "ethical") {
+                        return Number(gin?.ethicalIndex?.tot) > 84;
+                    }
+
+                    if (value === "botanicals-ter") {
+                        return gin?.filters?.["botanicals-ter"] === true;
+                    }
+
+                    if (value === "ong") {
+                        return gin?.filters?.ong === true;
+                    }
+
+                    return false;
+                });
+            }
+            case "altro": {
+                if (!filterState.altro.size) return true;
+
+                return Array.from(filterState.altro).every((value) => {
+                    if (value === "available") {
+                        return gin?.isEmpty === false;
+                    }
+
+                    if (value === "limited") {
+                        return typeof gin?.limited === "string" && gin.limited.trim().length > 0;
+                    }
+
+                    return false;
+                });
+            }
+            default:
+                return true;
+        }
+    }
+
+    function filterGins(data) {
+        const definitionIds = filterDefinitions.map((definition) => definition.id);
+
+        return data.filter((gin) => definitionIds.every((definitionId) => ginMatchesFilter(definitionId, gin)));
     }
 
     function scrollToPrimaryTarget() {
@@ -126,7 +545,11 @@
 
         const topMeta = document.createElement("div");
         topMeta.className = "catalog-card__top-meta";
-        topMeta.textContent = (gin.aggettivi || []).slice(0, 2).join(" · ");
+        if (gin.isEmpty === true) {
+            topMeta.textContent = "ESAURITO";
+        } else {
+            topMeta.textContent = (gin.aggettivi || []).slice(0, 2).join(" · ");
+        }
 
         const name = document.createElement("h3");
         name.textContent = gin.nome;
@@ -673,11 +1096,22 @@
     function renderCatalog(data) {
         if (!catalogGrid) return;
 
+        const filteredData = filterGins(data);
+
         catalogGrid.innerHTML = "";
 
-        data.forEach((gin, index) => {
+        filteredData.forEach((gin, index) => {
             catalogGrid.appendChild(createBottleCard(gin, index));
         });
+
+        if (filteredData.length === 0) {
+            const emptyState = document.createElement("div");
+            emptyState.className = "home-error home-error--filters";
+            emptyState.textContent = "Nessuna bottiglia corrisponde ai filtri selezionati.";
+            catalogGrid.appendChild(emptyState);
+        }
+
+        updateFilterSummary(filteredData.length);
 
         if (window.polyfillCountryFlagEmojis) {
             window.polyfillCountryFlagEmojis();
@@ -874,10 +1308,25 @@
         ctaText.addEventListener("click", scrollToPrimaryTarget);
     }
 
+    renderFilterPanel();
+    filterButton = viewButtons.find((button) => button.dataset.view === "filter") || null;
+    updateFilterButtonState();
+
     viewButtons.forEach((button) => {
+        if (button.dataset.view === "filter") {
+            button.addEventListener("click", toggleFilterPanel);
+            return;
+        }
+
         button.addEventListener("click", () => {
             setView(button.dataset.view || "list");
         });
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && filtersPanelOpen) {
+            closeFilterPanel();
+        }
     });
 
     if (heroEnabled) {
@@ -939,7 +1388,11 @@
     }
 
     loadGinList()
-        .then(renderCatalog)
+        .then((data) => {
+            ginData = data;
+            syncFilterInputs();
+            renderCatalog(data);
+        })
         .then(() => {
             setView("list", { scrollToTarget: false });
         })
