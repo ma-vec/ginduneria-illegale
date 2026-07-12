@@ -1,62 +1,62 @@
 {
   "ESG": {
-    "value": 231.19,
-    "previous": 227.16,
-    "change": 1.77,
-    "lastUpdate": "2026-07-11"
+    "value": 235.26,
+    "previous": 231.19,
+    "change": 1.76,
+    "lastUpdate": "2026-07-12"
   },
   "EMERGING": {
-    "value": 301.35,
-    "previous": 295.73,
+    "value": 307.08,
+    "previous": 301.35,
     "change": 1.9,
-    "lastUpdate": "2026-07-11"
+    "lastUpdate": "2026-07-12"
   },
   "ART": {
-    "value": 292.04,
-    "previous": 285.75,
-    "change": 2.2,
-    "lastUpdate": "2026-07-11"
+    "value": 296.71,
+    "previous": 292.04,
+    "change": 1.6,
+    "lastUpdate": "2026-07-12"
   },
   "SEA": {
-    "value": 475.85,
-    "previous": 462.89,
+    "value": 489.17,
+    "previous": 475.85,
     "change": 2.8,
-    "lastUpdate": "2026-07-11"
+    "lastUpdate": "2026-07-12"
   },
   "TRADITION": {
-    "value": 231.19,
-    "previous": 227.16,
-    "change": 1.77,
-    "lastUpdate": "2026-07-11"
+    "value": 235.26,
+    "previous": 231.19,
+    "change": 1.76,
+    "lastUpdate": "2026-07-12"
   },
   "BOTANICALS": {
-    "value": 386.71,
-    "previous": 377.28,
+    "value": 396.38,
+    "previous": 386.71,
     "change": 2.5,
-    "lastUpdate": "2026-07-11"
+    "lastUpdate": "2026-07-12"
   },
   "NORDIC": {
-    "value": 147.63,
-    "previous": 144.45,
-    "change": 2.2,
-    "lastUpdate": "2026-07-11"
+    "value": 151.32,
+    "previous": 147.63,
+    "change": 2.5,
+    "lastUpdate": "2026-07-12"
   },
   "EXPLORATION": {
-    "value": 101.36,
-    "previous": 100.96,
+    "value": 101.77,
+    "previous": 101.36,
     "change": 0.4,
-    "lastUpdate": "2026-07-11"
+    "lastUpdate": "2026-07-12"
   },
   "LUXURY": {
-    "value": 400.41,
-    "previous": 390.64,
+    "value": 410.42,
+    "previous": 400.41,
     "change": 2.5,
-    "lastUpdate": "2026-07-11"
+    "lastUpdate": "2026-07-12"
   },
   "HERITAGE": {
-    "value": 81.42,
-    "previous": 81.66,
-    "change": -0.3,
-    "lastUpdate": "2026-07-11"
+    "value": 81.34,
+    "previous": 81.42,
+    "change": -0.1,
+    "lastUpdate": "2026-07-12"
   }
 }
