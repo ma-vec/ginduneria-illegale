@@ -1,62 +1,62 @@
 {
   "ESG": {
-    "value": 265.53,
-    "previous": 261.06,
-    "change": 1.71,
-    "lastUpdate": "2026-07-13"
+    "value": 269.98,
+    "previous": 265.53,
+    "change": 1.67,
+    "lastUpdate": "2026-07-14"
   },
   "EMERGING": {
-    "value": 353.07,
-    "previous": 345.81,
-    "change": 2.1,
-    "lastUpdate": "2026-07-13"
+    "value": 361.54,
+    "previous": 353.07,
+    "change": 2.4,
+    "lastUpdate": "2026-07-14"
   },
   "ART": {
-    "value": 341.15,
-    "previous": 333.48,
-    "change": 2.3,
-    "lastUpdate": "2026-07-13"
+    "value": 349.34,
+    "previous": 341.15,
+    "change": 2.4,
+    "lastUpdate": "2026-07-14"
   },
   "SEA": {
-    "value": 593.48,
-    "previous": 577.32,
+    "value": 610.1,
+    "previous": 593.48,
     "change": 2.8,
-    "lastUpdate": "2026-07-13"
+    "lastUpdate": "2026-07-14"
   },
   "TRADITION": {
-    "value": 265.53,
-    "previous": 261.06,
-    "change": 1.71,
-    "lastUpdate": "2026-07-13"
+    "value": 269.98,
+    "previous": 265.53,
+    "change": 1.67,
+    "lastUpdate": "2026-07-14"
   },
   "BOTANICALS": {
-    "value": 471.17,
-    "previous": 459.68,
+    "value": 482.95,
+    "previous": 471.17,
     "change": 2.5,
-    "lastUpdate": "2026-07-13"
+    "lastUpdate": "2026-07-14"
   },
   "NORDIC": {
-    "value": 169.04,
-    "previous": 167.53,
-    "change": 0.9,
-    "lastUpdate": "2026-07-13"
+    "value": 170.22,
+    "previous": 169.04,
+    "change": 0.7,
+    "lastUpdate": "2026-07-14"
   },
   "EXPLORATION": {
-    "value": 105.07,
-    "previous": 104.55,
-    "change": 0.5,
-    "lastUpdate": "2026-07-13"
+    "value": 105.49,
+    "previous": 105.07,
+    "change": 0.4,
+    "lastUpdate": "2026-07-14"
   },
   "LUXURY": {
-    "value": 487.87,
-    "previous": 475.97,
+    "value": 500.07,
+    "previous": 487.87,
     "change": 2.5,
-    "lastUpdate": "2026-07-13"
+    "lastUpdate": "2026-07-14"
   },
   "HERITAGE": {
-    "value": 81.74,
-    "previous": 81.66,
-    "change": 0.1,
-    "lastUpdate": "2026-07-13"
+    "value": 81.49,
+    "previous": 81.74,
+    "change": -0.3,
+    "lastUpdate": "2026-07-14"
   }
 }
