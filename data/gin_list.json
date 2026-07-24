@@ -1,5 +1,78 @@
 ﻿[
   {
+    "id": "ginduno",
+    "nome": "GinDuno",
+    "provenienza": "🇮🇹 Villa Duna",
+    "isEmpty": false,
+    "bg-color": "#8dae99",
+    "coordinate": { "lat": 45.748, "lon": 9.613 },
+    "aggettivi": [ "Contemplativo", "Etereo", "Rituale" ],
+    "botaniche": [ "Alloro", "Arancia", "Liquirizia" ],
+    "profilo": "Non è un gin fatto per Duna. È un gin fatto da Duna, che è una distinzione fondamentale e che, peraltro, lei sarebbe perfettamente in grado di difendere con un abbaio. Il ginepro è alpino, l'ispirazione è montana, il nome è suo: tutto il resto è soltanto il tentativo umano di dare una forma distillata alla visione di una Golden Retriever che, con la consueta serenità, probabilmente considera il mondo intero un grande prato da esplorare e qualsiasi botanica commestibile una questione di pubblico interesse. Il risultato ha un'estetica da distilleria artigianale di montagna, ma con una filosofia produttiva molto precisa: Duna supervisiona, Duna approva, Duna probabilmente annusa. Non è chiaro se abbia mai partecipato attivamente alla distillazione, ma nessuno ha avuto il coraggio di contestare la sua autorità. Del resto, quando il master distiller ha quattro zampe, un mantello dorato e lo sguardo di chi non ha mai sbagliato una scelta botanica, la gerarchia aziendale diventa piuttosto semplice. Lo si beve immaginando una baita alpina perfettamente integrata nel paesaggio, davanti a una grande vetrata affacciata sulle montagne, mentre Duna osserva il tramonto con la gravità di chi ha appena fondato una distilleria sostenibile e sta valutando se concedere un'altra carezza al personale. Il ghiaccio tintinna, il ginepro sale nel bicchiere e per un istante tutto sembra molto serio. Poi Duna vede un bastoncino. E il progetto imprenditoriale più sofisticato delle Alpi viene immediatamente sospeso.",
+    "radar": {
+      "dryness": 8.5,
+      "uniqueness": 9.5,
+      "balsamic": 5.5,
+      "salinity": 8.5,
+      "citrus": 7.0,
+      "botanic-complexity": 8.0,
+      "persistence": 8.0
+    },
+    "toniche": [
+      {
+        "label": "Indian Tonic",
+        "tipo": "indiana",
+        "valori": {
+          "dryness": 0.5,
+          "uniqueness": 0,
+          "balsamic": 0.5,
+          "salinity": 0,
+          "citrus": 1,
+          "botanic-complexity": 0.5,
+          "persistence": 1
+        },
+        "consigliata": false
+      },
+      {
+        "label": "Mediterranean Tonic",
+        "tipo": "mediterranea",
+        "valori": {
+          "dryness": -0.5,
+          "uniqueness": 0.5,
+          "balsamic": 1,
+          "salinity": 1,
+          "citrus": 0.5,
+          "botanic-complexity": 1,
+          "persistence": 1
+        },
+        "consigliata": true
+      }
+    ],
+    "ethicalIndex": {
+      "env": 91,
+      "soc": 94,
+      "trad": 95,
+      "tot": 93,
+      "motivation": "Perchè è fatto da Duna e basta quello!"
+    },
+    "filters" : {
+    "cont": "eu",
+    "ecosistema": ["mon", "bos"],
+    "botanicals-ter": false,
+    "ong": false
+  },
+    "politicalArea": {
+      "id": "esx",
+      "mot": "Duna non vende un gin: porta avanti un progetto di responsabilità, equità e rispetto, con la sola eccezione dei biscotti, sui quali mantiene una posizione decisamente più liberista."
+    },
+    "alc": 38,
+    "antipasti": [
+      { "nome": "Polenta taragna con funghi porcini", "img": "path", "descrizione": "Calda, rustica e confortante, perfetta per esaltare le note balsamiche dell'alloro." },
+      { "nome": "Crostini con crema di formaggio e erbe alpine", "img": "path", "descrizione": "[VEGANO] Cremosa e aromatica, accompagna delicatamente il profilo erbaceo del gin." }
+    ],
+    "limited": "Classic Alpine"
+  },
+  {
     "id": "isl-hr",
     "nome": "Isle of Harris",
     "provenienza": "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scozia",
