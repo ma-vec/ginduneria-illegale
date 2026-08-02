@@ -8,7 +8,7 @@
     "coordinate": { "lat": 45.748, "lon": 9.613 },
     "aggettivi": [ "Contemplativo", "Etereo", "Rituale" ],
     "botaniche": [ "Alloro", "Arancia", "Liquirizia" ],
-    "profilo": "Non è un gin fatto per Duna. È un gin fatto da Duna, che è una distinzione fondamentale e che, peraltro, lei sarebbe perfettamente in grado di difendere con un abbaio. Il ginepro è alpino, l'ispirazione è montana, il nome è suo: tutto il resto è soltanto il tentativo umano di dare una forma distillata alla visione di una Golden Retriever che, con la consueta serenità, probabilmente considera il mondo intero un grande prato da esplorare e qualsiasi botanica commestibile una questione di pubblico interesse. Il risultato ha un'estetica da distilleria artigianale di montagna, ma con una filosofia produttiva molto precisa: Duna supervisiona, Duna approva, Duna probabilmente annusa. Non è chiaro se abbia mai partecipato attivamente alla distillazione, ma nessuno ha avuto il coraggio di contestare la sua autorità. Del resto, quando il master distiller ha quattro zampe, un mantello dorato e lo sguardo di chi non ha mai sbagliato una scelta botanica, la gerarchia aziendale diventa piuttosto semplice. Lo si beve immaginando una baita alpina perfettamente integrata nel paesaggio, davanti a una grande vetrata affacciata sulle montagne, mentre Duna osserva il tramonto con la gravità di chi ha appena fondato una distilleria sostenibile e sta valutando se concedere un'altra carezza al personale. Il ghiaccio tintinna, il ginepro sale nel bicchiere e per un istante tutto sembra molto serio. Poi Duna vede un bastoncino. E il progetto imprenditoriale più sofisticato delle Alpi viene immediatamente sospeso.",
+    "profilo": "Non è un gin fatto per Duna. È un gin fatto da Duna, che è una distinzione fondamentale e che, peraltro, lei sarebbe perfettamente in grado di difendere con un abbaio. Il ginepro è alpino, l'ispirazione è montana, il nome è suo: tutto il resto è soltanto il tentativo umano di dare una forma distillata alla visione di una Golden Retriever che, con la consueta serenità, probabilmente considera il mondo intero un grande prato da esplorare e qualsiasi botanica commestibile una questione di pubblico interesse. Il risultato ha un'estetica da distilleria artigianale di montagna, ma con una filosofia produttiva molto precisa: Duna supervisiona, Duna approva, Duna probabilmente annusa. Non è chiaro se abbia mai partecipato attivamente alla distillazione, ma nessuno ha avuto il coraggio di contestare la sua autorità. Del resto, quando il master distiller ha quattro zampe, un mantello dorato e lo sguardo di chi non ha mai sbagliato una scelta botanica, la gerarchia aziendale diventa piuttosto semplice. Lo si beve immaginando una baita alpina perfettamente integrata nel paesaggio, davanti a una grande vetrata affacciata sulle montagne, mentre Duna osserva il tramonto con la gravità di chi ha appena fondato una distilleria sostenibile e sta valutando se concedere un'altra carezza al personale. Il ghiaccio tintinna, il ginepro sale nel bicchiere e per un istante tutto sembra molto serio. Poi Duna vede una lucertola e il progetto imprenditoriale più sofisticato delle Alpi viene immediatamente sospeso.",
     "radar": {
       "dryness": 8.5,
       "uniqueness": 9.5,
@@ -317,6 +317,87 @@
       "mot": "Ecologismo radicale al 100%. È la sinistra verde, fiera oppositrice della deforestazione, che combatte il cambiamento climatico un drink alla volta."
     },
     "alc": 47
+  },
+     {
+    "id": "nordes",
+    "nome": "Nordés",
+    "provenienza": "🇪🇸 Spagna",
+    "isEmpty": false,
+    "bg-color": "#A8C9FF",
+    "coordinate": { "lat": 42.783, "lon": -8.467 },
+    "aggettivi": [ "Atlantico", "Avvolgente", "Armonico" ],
+    "botaniche": [ "Uva albariño", "Tè nero", "Erba cedrina" ],
+    "profilo": "Nordés non si beve: si interpreta. È il gin di chi non ha semplicemente scelto un distillato, ma ha deciso di intraprendere un piccolo viaggio culturale in Galizia: vino albariño, botaniche locali, erbe aromatiche e quell’immancabile riferimento all’Atlantico che trasforma un gin tonic in una riflessione sul rapporto fra uomo, territorio e umidità. Il bicchiere compare con studiata nonchalance davanti a una vetrata enorme, oltre la quale il paesaggio sembra casuale ma è stato evidentemente progettato da qualcuno. Il legno è rigorosamente “materico” e nessuno osa chiamare semplicemente arredamento ciò che l’architetto ha definito “dialogo tra interno e paesaggio”. Da qualche parte c’è una ceramica artigianale galiziana che non può essere toccata. Al primo sorso si parla di freschezza, autenticità e carattere atlantico. Al secondo qualcuno dice che 'la Galizia è ancora poco valorizzata', con il tono di chi sta valutando seriamente di comprare una casa a Santiago de Compostela per ristrutturarla in stile minimalista. Nordés non si beve per distinguersi. Si beve perché, evidentemente, si è già distinti — e sarebbe scortese non farlo sapere almeno un pochino.",
+    "radar": {
+  "dryness": 6.8,
+  "uniqueness": 8.8,
+  "balsamic": 6.5,
+  "salinity": 4.8,
+  "citrus": 7.2,
+  "botanic-complexity": 8.5,
+  "persistence": 7.2
+},
+    "toniche": [
+  {
+    "label": "Indian Tonic",
+    "tipo": "indiana",
+    "valori": {
+      "dryness": 0.8,
+      "uniqueness": 0.2,
+      "balsamic": 0.5,
+      "salinity": 0,
+      "citrus": 0.8,
+      "botanic-complexity": 0.3,
+      "persistence": 0.8
+    },
+    "consigliata": true
+  },
+  {
+    "label": "Mediterranean Tonic",
+    "tipo": "mediterranea",
+    "valori": {
+      "dryness": -0.3,
+      "uniqueness": 0.4,
+      "balsamic": 0.8,
+      "salinity": 0.7,
+      "citrus": 0.8,
+      "botanic-complexity": 0.7,
+      "persistence": 0.5
+    },
+    "consigliata": false
+  }
+],
+    "ethicalIndex": {
+      "env": 72,
+      "soc": 81,
+      "trad": 90,
+      "tot": 81,
+      "motivation": "Forte legame con la Galizia: valorizza fortemente l'identità agricola e gastronomica regionale"
+    },
+    "filters" : {
+    "cont": "eu",
+    "ecosistema": ["mar", "bor"],
+    "botanicals-ter": true,
+    "ong": false
+  },
+    "politicalArea": {
+      "id": "csx",
+      "mot": "il gin di chi vuole sentirsi profondamente legato alla Galizia senza rinunciare a un aperitivo molto elegante. Ha un'identità territoriale fortissima, botaniche locali e un'estetica raffinata, ma con quella leggera aria da “ho scoperto la Spagna autentica prima che diventasse mainstream”. Non abbastanza ideologico per i Centri sociali, troppo cosmopolita per i Conservatori: Galizia, ma con il blazer di lino."
+    },
+    "alc": 40,
+    "antipasti": [
+  {
+    "nome": "Gambero rosso, avocado e lime",
+    "img": "path",
+    "descrizione": "Fresco e delicatamente agrumato, valorizza la componente floreale e marina di Nordés senza coprirne le botaniche."
+  },
+  {
+    "nome": "Toast galiziano con formaggio cremoso, acciuga e peperone del Padrón",
+    "img": "path",
+    "descrizione": "Sapido, cremoso e leggermente vegetale, richiama la Galizia e crea un contrasto elegante con il lato aromatico del gin."
+  }
+],
+    "limited": null
   },
   {
     "id": "jr-fl",

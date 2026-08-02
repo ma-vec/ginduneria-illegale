@@ -80,6 +80,7 @@
     const panel = document.getElementById("continent-panel");
     const panelContent = document.getElementById("continent-panel-content");
     const backdrop = document.getElementById("drawer-backdrop");
+    const closeButton = panel.querySelector(".continent-panel__close");
 
     if (!globeRoot || !panel || !panelContent || typeof Globe !== "function") {
         return;
@@ -99,6 +100,31 @@
         return getContinent(continentId)?.color || "#d6b66c";
     }
 
+    function getAngularDistance(lat1, lng1, lat2, lng2) {
+        const rad = Math.PI / 180;
+        const phi1 = lat1 * rad;
+        const phi2 = lat2 * rad;
+        const deltaPhi = (lat2 - lat1) * rad;
+        const deltaLambda = (lng2 - lng1) * rad;
+        const a = Math.sin(deltaPhi / 2) ** 2 + Math.cos(phi1) * Math.cos(phi2) * Math.sin(deltaLambda / 2) ** 2;
+        return 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)) / rad;
+    }
+
+    function findNearestContinent(lat, lng) {
+        let nearest = null;
+        let bestDistance = Infinity;
+
+        Object.values(CONTINENTS).forEach((continent) => {
+            const distance = getAngularDistance(lat, lng, continent.lat, continent.lng);
+            if (distance < bestDistance) {
+                bestDistance = distance;
+                nearest = continent;
+            }
+        });
+
+        return bestDistance <= 35 ? nearest : null;
+    }
+
     function clamp(value, min, max) {
         return Math.max(min, Math.min(max, value));
     }
@@ -110,6 +136,7 @@
     function renderIntroState() {
         panelContent.innerHTML = "";
         setPanelOpenForMobile(false);
+        panel.hidden = true;
     }
 
     function createGinCard(gin, index, continentId) {
@@ -257,9 +284,67 @@
             }));
     }
 
+    function buildCallouts(continentId) {
+        const continent = getContinent(continentId);
+        if (!continent) return [];
+
+        const points = state.ginList
+            .filter((gin) => getGinContinent(gin) === continentId && gin.coordinate)
+            .map((gin) => ({
+                lat: gin.coordinate.lat,
+                lng: gin.coordinate.lon,
+                ginId: gin.id,
+                name: gin.nome,
+                accent: gin["bg-color"] || getContinentColor(continentId),
+                side: gin.coordinate.lon >= continent.lng ? "right" : "left"
+            }));
+
+        const right = points.filter((point) => point.side === "right").sort((a, b) => b.lat - a.lat);
+        const left = points.filter((point) => point.side === "left").sort((a, b) => b.lat - a.lat);
+
+        const isMobile = window.matchMedia("(max-width: 760px)").matches;
+        const step = isMobile ? 20 : 26;
+
+        [right, left].forEach((list) => {
+            const center = (list.length - 1) / 2;
+            list.forEach((item, index) => {
+                item.offsetY = Math.round((index - center) * step);
+                item.stem = isMobile ? 34 : 44;
+                item.line = isMobile ? 48 : 64;
+            });
+        });
+
+        return [...right, ...left];
+    }
+
+    function createCalloutElement(point) {
+        const anchor = document.createElement("a");
+        anchor.className = `gin-callout gin-callout--${point.side}`;
+        anchor.href = `./bottle.html?id=${point.ginId}`;
+        anchor.style.setProperty("--accent", point.accent);
+        anchor.style.setProperty("--offset-y", `${point.offsetY || 0}px`);
+        anchor.style.setProperty("--stem", `${point.stem || 44}px`);
+        anchor.style.setProperty("--line", `${point.line || 64}px`);
+        anchor.innerHTML = `
+            <span class="gin-callout__dot"></span>
+            <span class="gin-callout__stem"></span>
+            <span class="gin-callout__line"></span>
+            <span class="gin-callout__label">${point.name}</span>
+        `;
+        return anchor;
+    }
+
     function updateGinPins() {
-        if (!globe || !state.selectedContinent) return;
-        globe.pointsData(buildPins(state.selectedContinent));
+        if (!globe) return;
+
+        if (!state.selectedContinent || !panel.classList.contains("is-open")) {
+            globe.pointsData([]);
+            return;
+        }
+
+        const pins = buildPins(state.selectedContinent);
+
+        globe.pointsData(pins);
     }
 
     function getContinentCentroid(continentId) {
@@ -275,6 +360,20 @@
         globe.ringsData([{ lat: continent.lat, lng: continent.lng, color: continent.color }]);
     }
 
+    function closePanel() {
+        panel.classList.remove("is-open");
+        backdrop.classList.remove("is-visible");
+        backdrop.hidden = true;
+        panel.hidden = true;
+        state.selectedContinent = null;
+        state.hoveredGinId = null;
+        if (globe) {
+            globe.pointsData([]);
+            globe.ringsData([]);
+            updateLabels();
+        }
+    }
+
     function selectContinent(continentId, options = {}) {
         const continent = getContinent(continentId);
         if (!continent) return;
@@ -287,6 +386,7 @@
         updateLabels();
         updateGinPins();
         renderContinentRing(continentId);
+        panel.hidden = false;
         panel.classList.add("is-open");
 
         if (globe) {
@@ -302,7 +402,7 @@
 
     function updateLabels() {
         if (!globe) return;
-        globe.labelsData(CONTINENTS ? Object.values(CONTINENTS) : []);
+        globe.labelsData(Object.values(CONTINENTS));
     }
 
     function createGlobe() {
@@ -317,24 +417,33 @@
             .labelsData(Object.values(CONTINENTS))
             .labelLat((d) => d.lat)
             .labelLng((d) => d.lng)
-            .labelText((d) => d.short)
-            .labelColor((d) => (d.id === state.hoveredContinent ? "#f6efe0" : d.color))
-            .labelSize((d) => (d.id === state.hoveredContinent ? 1.34 : 1.04))
-            .labelAltitude((d) => (d.id === state.hoveredContinent ? 0.07 : 0.04))
+            .labelText((d) => d.name.toUpperCase())
+            .labelColor((d) => {
+                if (d.id === state.selectedContinent || d.id === state.hoveredContinent) return "#fff7df";
+                return "#eef4ff";
+            })
+            .labelSize((d) => (d.id === state.hoveredContinent || d.id === state.selectedContinent ? 1.9 : 1.45))
+            .labelAltitude((d) => (d.id === state.hoveredContinent || d.id === state.selectedContinent ? 0.1 : 0.065))
             .labelIncludeDot(true)
-            .labelDotRadius((d) => (d.id === state.hoveredContinent ? 0.22 : 0.14))
+            .labelDotRadius((d) => (d.id === state.hoveredContinent || d.id === state.selectedContinent ? 0.3 : 0.22))
             .labelDotOrientation("bottom")
-            .labelsTransitionDuration(250)
+            .labelsTransitionDuration(240)
             .onLabelHover((d) => {
                 state.hoveredContinent = d ? d.id : state.selectedContinent;
                 updateLabels();
                 renderContinentRing(state.hoveredContinent || state.selectedContinent);
             })
             .onLabelClick((d) => selectContinent(d.id, { duration: 1300 }))
+            .onGlobeClick(({ lat, lng }) => {
+                const continent = findNearestContinent(lat, lng);
+                if (continent) {
+                    selectContinent(continent.id, { duration: 1300 });
+                }
+            })
             .pointsData([])
-            .pointColor((point) => (point.isHovered ? "#f6efe0" : point.accent))
-            .pointAltitude((point) => (point.isHovered ? 0.06 : 0.035))
-            .pointRadius((point) => (point.isHovered ? 0.22 : 0.16))
+            .pointColor((point) => (point.isHovered ? "#ffffff" : point.accent))
+            .pointAltitude(() => 0)
+            .pointRadius((point) => (point.isHovered ? 0.34 : 0.26))
             .pointLabel((point) => `${point.name}<br/>${point.country}`)
             .onPointHover((point) => {
                 state.hoveredGinId = point ? point.ginId : null;
@@ -477,10 +586,14 @@
     }
 
     function bindBackdrop() {
+        if (closeButton) {
+            closeButton.addEventListener("click", closePanel);
+            closeButton.addEventListener("pointerup", closePanel);
+            closeButton.addEventListener("mousedown", closePanel);
+        }
+
         backdrop.addEventListener("click", () => {
-            panel.classList.remove("is-open");
-            backdrop.classList.remove("is-visible");
-            backdrop.hidden = true;
+            closePanel();
         });
     }
 
@@ -501,6 +614,12 @@
         createGlobe();
         bindBackdrop();
         renderIntroState();
+        updateLabels();
+        window.__ginGlobeDebug = {
+            selectContinent,
+            closePanel,
+            findNearestContinent
+        };
     }
 
     loadGinList()
@@ -519,10 +638,8 @@
         });
 
     document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && window.matchMedia("(max-width: 760px)").matches) {
-            panel.classList.remove("is-open");
-            backdrop.classList.remove("is-visible");
-            backdrop.hidden = true;
+        if (event.key === "Escape") {
+            closePanel();
         }
     });
 
@@ -530,6 +647,10 @@
         if (!window.matchMedia("(max-width: 760px)").matches) {
             backdrop.hidden = true;
             backdrop.classList.remove("is-visible");
+        }
+        if (globe) {
+            updateLabels();
+            updateGinPins();
         }
     });
 })();

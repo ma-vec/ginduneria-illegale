@@ -61,6 +61,17 @@
     "priceChange": 1.48
   },
   {
+    "id": "nordes",
+    "name": "Nordès",
+    "basePrice": 100,
+    "currentPrice": 100,
+    "exposure": {
+      "NORDIC": 45,
+      "BOTANICALS": 55
+    },
+    "priceChange": 0
+  },
+  {
     "id": "jr-fl",
     "name": "J. Rose",
     "basePrice": 100,
