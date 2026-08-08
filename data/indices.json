@@ -1,62 +1,62 @@
 {
   "ESG": {
-    "value": 1006.02,
-    "previous": 991.76,
-    "change": 1.44,
-    "lastUpdate": "2026-08-07"
+    "value": 1018.85,
+    "previous": 1006.02,
+    "change": 1.27,
+    "lastUpdate": "2026-08-08"
   },
   "EMERGING": {
-    "value": 1979.58,
-    "previous": 1959.98,
-    "change": 1,
-    "lastUpdate": "2026-08-07"
+    "value": 2001.36,
+    "previous": 1979.58,
+    "change": 1.1,
+    "lastUpdate": "2026-08-08"
   },
   "ART": {
-    "value": 1940.06,
-    "previous": 1902.02,
-    "change": 2,
-    "lastUpdate": "2026-08-07"
+    "value": 1973.04,
+    "previous": 1940.06,
+    "change": 1.7,
+    "lastUpdate": "2026-08-08"
   },
   "SEA": {
-    "value": 7901.55,
-    "previous": 7686.33,
+    "value": 8122.79,
+    "previous": 7901.55,
     "change": 2.8,
-    "lastUpdate": "2026-08-07"
+    "lastUpdate": "2026-08-08"
   },
   "TRADITION": {
-    "value": 1006.02,
-    "previous": 991.76,
-    "change": 1.44,
-    "lastUpdate": "2026-08-07"
+    "value": 1018.85,
+    "previous": 1006.02,
+    "change": 1.27,
+    "lastUpdate": "2026-08-08"
   },
   "BOTANICALS": {
-    "value": 4569.24,
-    "previous": 4457.8,
+    "value": 4683.47,
+    "previous": 4569.24,
     "change": 2.5,
-    "lastUpdate": "2026-08-07"
+    "lastUpdate": "2026-08-08"
   },
   "NORDIC": {
-    "value": 277.93,
-    "previous": 276,
-    "change": 0.7,
-    "lastUpdate": "2026-08-07"
+    "value": 277.65,
+    "previous": 277.93,
+    "change": -0.1,
+    "lastUpdate": "2026-08-08"
   },
   "EXPLORATION": {
-    "value": 95.98,
+    "value": 95.69,
     "previous": 95.98,
-    "change": 0,
-    "lastUpdate": "2026-08-07"
+    "change": -0.3,
+    "lastUpdate": "2026-08-08"
   },
   "LUXURY": {
-    "value": 4920.03,
-    "previous": 4800.03,
+    "value": 5043.03,
+    "previous": 4920.03,
     "change": 2.5,
-    "lastUpdate": "2026-08-07"
+    "lastUpdate": "2026-08-08"
   },
   "HERITAGE": {
     "value": 52.75,
     "previous": 52.75,
     "change": 0,
-    "lastUpdate": "2026-08-07"
+    "lastUpdate": "2026-08-08"
   }
 }
