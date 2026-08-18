@@ -1,62 +1,62 @@
 {
   "ESG": {
-    "value": 1713.59,
-    "previous": 1685.15,
-    "change": 1.69,
-    "lastUpdate": "2026-08-17"
+    "value": 1743.58,
+    "previous": 1713.59,
+    "change": 1.75,
+    "lastUpdate": "2026-08-18"
   },
   "EMERGING": {
-    "value": 3418.19,
-    "previous": 3357.75,
-    "change": 1.8,
-    "lastUpdate": "2026-08-17"
+    "value": 3486.55,
+    "previous": 3418.19,
+    "change": 2,
+    "lastUpdate": "2026-08-18"
   },
   "ART": {
-    "value": 4126.24,
-    "previous": 4041.37,
-    "change": 2.1,
-    "lastUpdate": "2026-08-17"
+    "value": 4229.4,
+    "previous": 4126.24,
+    "change": 2.5,
+    "lastUpdate": "2026-08-18"
   },
   "SEA": {
-    "value": 22250.95,
-    "previous": 21644.89,
+    "value": 22873.98,
+    "previous": 22250.95,
     "change": 2.8,
-    "lastUpdate": "2026-08-17"
+    "lastUpdate": "2026-08-18"
   },
   "TRADITION": {
-    "value": 1713.59,
-    "previous": 1685.15,
-    "change": 1.69,
-    "lastUpdate": "2026-08-17"
+    "value": 1743.58,
+    "previous": 1713.59,
+    "change": 1.75,
+    "lastUpdate": "2026-08-18"
   },
   "BOTANICALS": {
-    "value": 11445.13,
-    "previous": 11165.98,
+    "value": 11731.26,
+    "previous": 11445.13,
     "change": 2.5,
-    "lastUpdate": "2026-08-17"
+    "lastUpdate": "2026-08-18"
   },
   "NORDIC": {
-    "value": 349.99,
-    "previous": 346.52,
-    "change": 1,
-    "lastUpdate": "2026-08-17"
+    "value": 352.79,
+    "previous": 349.99,
+    "change": 0.8,
+    "lastUpdate": "2026-08-18"
   },
   "EXPLORATION": {
-    "value": 87.78,
-    "previous": 87.08,
-    "change": 0.8,
-    "lastUpdate": "2026-08-17"
+    "value": 88.31,
+    "previous": 87.78,
+    "change": 0.6,
+    "lastUpdate": "2026-08-18"
   },
   "LUXURY": {
-    "value": 12323.82,
-    "previous": 12023.24,
+    "value": 12631.92,
+    "previous": 12323.82,
     "change": 2.5,
-    "lastUpdate": "2026-08-17"
+    "lastUpdate": "2026-08-18"
   },
   "HERITAGE": {
-    "value": 49.04,
+    "value": 49.19,
     "previous": 49.04,
-    "change": 0,
-    "lastUpdate": "2026-08-17"
+    "change": 0.3,
+    "lastUpdate": "2026-08-18"
   }
 }
