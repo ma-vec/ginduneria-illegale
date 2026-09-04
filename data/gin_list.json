@@ -859,6 +859,87 @@
     "alc": 45
   },
   {
+  "id": "gingino",
+  "nome": "Gingino",
+  "provenienza": "🇮🇹 Brescia",
+  "isEmpty": false,
+  "bg-color": "#b4e5e2",
+  "coordinate": { "lat": 45.5416, "lon": 10.2118 },
+  "aggettivi": [ "Garbato", "Classico", "Concreto" ],
+  "botaniche": [ "Ginepro", "Coriandolo", "Agrumi" ],
+  "profilo": "Una sera, mentre gli altri discutevano animatamente di alghe raccolte nell’Atlantico, bacche amazzoniche e botaniche che richiedevano una carta geografica per essere pronunciate, lui arrivò con Gingino. Nessuna spedizione artica, nessun botanico da intervistare: semplicemente un London Dry italiano, fatto bene e senza bisogno di convocare National Geographic per spiegare cosa c’è nel bicchiere. Lo assaggi e sorride: “Buono, no?”. Gli altri cercano il pepe di una foresta che non sapevano esistesse, lui ordina il secondo giro. Non è contrario all'eccentricità: semplicemente non ritiene necessario attraversare tre continenti per fare un buon gin tonic. E, forse, è proprio questa la sua forma più raffinata di snobismo.",
+  "radar": {
+    "dryness": 8.0,
+    "uniqueness": 5.0,
+    "balsamic": 5.5,
+    "salinity": 2.5,
+    "citrus": 6.5,
+    "botanic-complexity": 6.5,
+    "persistence": 7.0
+  },
+  "toniche": [
+    {
+      "label": "Indian Tonic",
+      "tipo": "indiana",
+      "valori": {
+        "dryness": 0.8,
+        "uniqueness": 0,
+        "balsamic": 0.5,
+        "salinity": 0,
+        "citrus": 0.8,
+        "botanic-complexity": 0.3,
+        "persistence": 0.8
+      },
+      "consigliata": true
+    },
+    {
+      "label": "Mediterranean Tonic",
+      "tipo": "mediterranea",
+      "valori": {
+        "dryness": -0.5,
+        "uniqueness": 0.2,
+        "balsamic": 0.8,
+        "salinity": 0.3,
+        "citrus": 1.0,
+        "botanic-complexity": 0.5,
+        "persistence": 0.6
+      },
+      "consigliata": false
+    }
+  ],
+  "ethicalIndex": {
+    "env": 65,
+    "soc": 70,
+    "trad": 82,
+    "tot": 72,
+    "motivation": "Produzione italiana e impostazione artigianale valorizzano il territorio e la tradizione del London Dry, ma il progetto presenta meno elementi distintivi sul piano ambientale e sociale rispetto ai gin maggiormente impegnati su questi fronti."
+  },
+  "filters": {
+    "cont": "eu",
+    "ecosistema": [ "urb", "agr" ],
+    "botanicals-ter": false,
+    "ong": false
+  },
+  "politicalArea": {
+    "id": "cdx",
+    "mot": "È il gin del “facciamolo bene, facciamolo italiano e non complichiamoci troppo la vita”: territorio, artigianalità e identità locale, ma senza la componente provocatoria o internazionale che caratterizza i gin più eccentrici. Non vuole reinventare il gin: vuole semplicemente farlo bene."
+  },
+  "alc": 40,
+  "antipasti": [
+    {
+      "nome": "Crostino con robiola, miele e nocciole",
+      "img": "path",
+      "descrizione": "Cremoso, delicatamente dolce e croccante, accompagna il ginepro senza sovrastarlo."
+    },
+    {
+      "nome": "Bresaola con rucola e scaglie di Grana",
+      "img": "path",
+      "descrizione": "Sapida e asciutta, una combinazione semplice e italiana che valorizza il carattere secco del gin."
+    }
+  ],
+  "limited": null
+},
+  {
     "id": "gordon",
     "nome": "Gordon's",
     "provenienza": "🇬🇧 Regno Unito",
