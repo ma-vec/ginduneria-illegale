@@ -1,86 +1,86 @@
 {
   "isl-hr": {
-    "price": 290393.65,
-    "change": 2.49
+    "price": 299583.95,
+    "change": 3.16
   },
   "ki-no-bi": {
-    "price": 510236.19,
-    "change": 3.42
+    "price": 527196.31,
+    "change": 3.32
   },
   "indlovu": {
-    "price": 9849.27,
-    "change": 2.79
+    "price": 9965.73,
+    "change": 1.18
   },
   "cape-saint": {
-    "price": 14136.24,
-    "change": 1.48
+    "price": 14213.73,
+    "change": 0.55
   },
   "canaima": {
-    "price": 39093.11,
-    "change": 0.56
+    "price": 40389.31,
+    "change": 3.32
   },
   "nordes": {
-    "price": 3641.55,
-    "change": 3.43
+    "price": 3719.42,
+    "change": 2.14
   },
   "jr-fl": {
-    "price": 25540.79,
-    "change": 3.82
+    "price": 26279.75,
+    "change": 2.89
   },
   "papa-salt": {
-    "price": 306864.6,
-    "change": 1.85
+    "price": 311423.96,
+    "change": 1.49
   },
   "xoriguer": {
-    "price": 3682.71,
-    "change": 1.86
+    "price": 3724.02,
+    "change": 1.12
   },
   "poseidon": {
-    "price": 724947.12,
-    "change": 2.04
+    "price": 738683.71,
+    "change": 1.89
   },
   "melagorai": {
-    "price": 11445.34,
-    "change": 2.46
+    "price": 11643.27,
+    "change": 1.73
   },
   "portofino-winter": {
-    "price": 810155.15,
-    "change": 2.1
+    "price": 830548.84,
+    "change": 2.52
   },
   "amuerte-white": {
-    "price": 3261.82,
-    "change": 1.02
+    "price": 3284.95,
+    "change": 0.71
   },
   "bareksten-botanical": {
-    "price": 2074.08,
-    "change": 0.42
+    "price": 2101.96,
+    "change": 1.34
   },
   "bareksten-double": {
-    "price": 1901.62,
-    "change": 0.42
+    "price": 1927.52,
+    "change": 1.36
   },
   "son-of-a-birch": {
-    "price": 2097.82,
-    "change": 1.51
+    "price": 2112.88,
+    "change": 0.72
   },
   "rupis": {
-    "price": 6210.81,
-    "change": 0.82
+    "price": 6341.71,
+    "change": 2.11
   },
   "gordon": {
-    "price": 55.66,
-    "change": -1.86
+    "price": 55.43,
+    "change": -0.4
   },
   "sipsmith": {
-    "price": 9166.66,
-    "change": 2.17
+    "price": 9345.36,
+    "change": 1.95
   },
   "malfy-rosa": {
-    "price": 807.75,
-    "change": -0.53
+    "price": 810.34,
+    "change": 0.32
   },
   "castelgy": {
-    "price": 542.83,
-    "change": 1.15
+    "price": 540.12,
+    "change": -0.5
   }
 }
