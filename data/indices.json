@@ -1,62 +1,62 @@
 {
   "ESG": {
-    "value": 8482.74,
-    "previous": 8359.44,
-    "change": 1.48,
+    "value": 8606.8,
+    "previous": 8482.74,
+    "change": 1.46,
     "lastUpdate": "2026-09-18"
   },
   "EMERGING": {
-    "value": 28313.48,
-    "previous": 27622.91,
+    "value": 29021.32,
+    "previous": 28313.48,
     "change": 2.5,
     "lastUpdate": "2026-09-18"
   },
   "ART": {
-    "value": 47255.09,
-    "previous": 46102.53,
+    "value": 48436.47,
+    "previous": 47255.09,
     "change": 2.5,
     "lastUpdate": "2026-09-18"
   },
   "SEA": {
-    "value": 417140.08,
-    "previous": 406965.93,
+    "value": 427568.58,
+    "previous": 417140.08,
     "change": 2.5,
     "lastUpdate": "2026-09-18"
   },
   "TRADITION": {
-    "value": 8482.74,
-    "previous": 8359.44,
-    "change": 1.48,
+    "value": 8606.8,
+    "previous": 8482.74,
+    "change": 1.46,
     "lastUpdate": "2026-09-18"
   },
   "BOTANICALS": {
-    "value": 185373.06,
-    "previous": 180851.77,
+    "value": 190007.39,
+    "previous": 185373.06,
     "change": 2.5,
     "lastUpdate": "2026-09-18"
   },
   "NORDIC": {
-    "value": 491.95,
-    "previous": 490.97,
+    "value": 492.93,
+    "previous": 491.95,
     "change": 0.2,
     "lastUpdate": "2026-09-18"
   },
   "EXPLORATION": {
-    "value": 64.55,
-    "previous": 65.01,
-    "change": -0.7,
+    "value": 64.23,
+    "previous": 64.55,
+    "change": -0.5,
     "lastUpdate": "2026-09-18"
   },
   "LUXURY": {
-    "value": 199604.97,
-    "previous": 194736.56,
+    "value": 204595.09,
+    "previous": 199604.97,
     "change": 2.5,
     "lastUpdate": "2026-09-18"
   },
   "HERITAGE": {
-    "value": 34.22,
-    "previous": 34.29,
-    "change": -0.2,
+    "value": 34.05,
+    "previous": 34.22,
+    "change": -0.5,
     "lastUpdate": "2026-09-18"
   }
 }
