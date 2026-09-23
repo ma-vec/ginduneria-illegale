@@ -1,86 +1,86 @@
 {
   "isl-hr": {
-    "price": 792583.55,
-    "change": 2.07
+    "price": 810589.18,
+    "change": 2.27
   },
   "ki-no-bi": {
-    "price": 1598537.28,
-    "change": 1.83
+    "price": 1659528.76,
+    "change": 3.82
   },
   "indlovu": {
-    "price": 18262.4,
-    "change": 2.76
+    "price": 18860.63,
+    "change": 3.28
   },
   "cape-saint": {
-    "price": 26640.76,
-    "change": 2.33
+    "price": 27178.43,
+    "change": 2.02
   },
   "canaima": {
-    "price": 84065.82,
-    "change": 1.65
-  },
-  "nordes": {
-    "price": 8657.75,
-    "change": 1.55
-  },
-  "jr-fl": {
-    "price": 56730.33,
-    "change": 2.23
-  },
-  "papa-salt": {
-    "price": 849400.31,
-    "change": 2.58
-  },
-  "xoriguer": {
-    "price": 6003.06,
-    "change": 1.94
-  },
-  "poseidon": {
-    "price": 2394664.25,
-    "change": 3.44
-  },
-  "melagorai": {
-    "price": 21460.4,
-    "change": 1.05
-  },
-  "portofino-winter": {
-    "price": 2807883.04,
-    "change": 3.67
-  },
-  "amuerte-white": {
-    "price": 5146.74,
-    "change": 0.05
-  },
-  "bareksten-botanical": {
-    "price": 3278.41,
-    "change": 2.42
-  },
-  "bareksten-double": {
-    "price": 2697.05,
-    "change": 1.31
-  },
-  "son-of-a-birch": {
-    "price": 3367.92,
-    "change": -0.05
-  },
-  "rupis": {
-    "price": 11214.79,
-    "change": 0.14
-  },
-  "gordon": {
-    "price": 47.44,
-    "change": 0.22
-  },
-  "sipsmith": {
-    "price": 16603.91,
-    "change": 0.78
-  },
-  "malfy-rosa": {
-    "price": 1186.36,
+    "price": 85629.62,
     "change": 1.86
   },
+  "nordes": {
+    "price": 8770.28,
+    "change": 1.3
+  },
+  "jr-fl": {
+    "price": 58885.45,
+    "change": 3.8
+  },
+  "papa-salt": {
+    "price": 875334.71,
+    "change": 3.05
+  },
+  "xoriguer": {
+    "price": 6008.67,
+    "change": 0.09
+  },
+  "poseidon": {
+    "price": 2430928.83,
+    "change": 1.51
+  },
+  "melagorai": {
+    "price": 21521.12,
+    "change": 0.28
+  },
+  "portofino-winter": {
+    "price": 2877693.49,
+    "change": 2.49
+  },
+  "amuerte-white": {
+    "price": 5280.16,
+    "change": 2.59
+  },
+  "bareksten-botanical": {
+    "price": 3350,
+    "change": 2.18
+  },
+  "bareksten-double": {
+    "price": 2711.48,
+    "change": 0.53
+  },
+  "son-of-a-birch": {
+    "price": 3449.45,
+    "change": 2.42
+  },
+  "rupis": {
+    "price": 11268.96,
+    "change": 0.48
+  },
+  "gordon": {
+    "price": 47.2,
+    "change": -0.5
+  },
+  "sipsmith": {
+    "price": 16587.87,
+    "change": -0.1
+  },
+  "malfy-rosa": {
+    "price": 1203.09,
+    "change": 1.41
+  },
   "castelgy": {
-    "price": 616.16,
-    "change": 0.63
+    "price": 620.35,
+    "change": 0.68
   }
 }
