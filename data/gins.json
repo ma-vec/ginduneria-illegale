@@ -3,245 +3,245 @@
     "id": "isl-hr",
     "name": "Isle of Harris",
     "basePrice": 100,
-    "currentPrice": 7764962.69,
+    "currentPrice": 8052155.25,
     "exposure": {
       "SEA": 60,
       "EXPLORATION": 20,
       "ART": 20
     },
-    "priceChange": 2.53
+    "priceChange": 3.7
   },
   {
     "id": "ki-no-bi",
     "name": "Ki No Bi",
     "basePrice": 100,
-    "currentPrice": 19321616.14,
+    "currentPrice": 20209213.22,
     "exposure": {
       "LUXURY": 15,
       "BOTANICALS": 25,
       "ART": 40,
       "EMERGING": 20
     },
-    "priceChange": 3.02
+    "priceChange": 4.59
   },
   {
     "id": "indlovu",
     "name": "Indlovu",
     "basePrice": 100,
-    "currentPrice": 55646.33,
+    "currentPrice": 57182.36,
     "exposure": {
       "EXPLORATION": 60,
       "EMERGING": 30,
       "BOTANICALS": 10
     },
-    "priceChange": 1.14
+    "priceChange": 2.76
   },
   {
     "id": "cape-saint",
     "name": "Cape Saint Blaize",
     "basePrice": 100,
-    "currentPrice": 111876.11,
+    "currentPrice": 115565.4,
     "exposure": {
       "EXPLORATION": 35,
       "EMERGING": 45,
       "BOTANICALS": 20
     },
-    "priceChange": 1
+    "priceChange": 3.3
   },
   {
     "id": "canaima",
     "name": "Canaïma",
     "basePrice": 100,
-    "currentPrice": 416181.44,
+    "currentPrice": 420403.17,
     "exposure": {
       "EXPLORATION": 40,
       "BOTANICALS": 35,
       "EMERGING": 25
     },
-    "priceChange": 0.74
+    "priceChange": 1.01
   },
   {
     "id": "nordes",
     "name": "Nordès",
     "basePrice": 100,
-    "currentPrice": 61693.62,
+    "currentPrice": 63345.85,
     "exposure": {
       "NORDIC": 45,
       "BOTANICALS": 55
     },
-    "priceChange": 3.88
+    "priceChange": 2.68
   },
   {
     "id": "jr-fl",
     "name": "J. Rose",
     "basePrice": 100,
-    "currentPrice": 310452.72,
+    "currentPrice": 316219.76,
     "exposure": {
       "ART": 70,
       "HERITAGE": 5,
       "LUXURY": 25
     },
-    "priceChange": 1.19
+    "priceChange": 1.86
   },
   {
     "id": "papa-salt",
     "name": "Papa Salt",
     "basePrice": 100,
-    "currentPrice": 7798819.1,
+    "currentPrice": 7907568,
     "exposure": {
       "EXPLORATION": 20,
       "SEA": 60,
       "BOTANICALS": 20
     },
-    "priceChange": 2.6
+    "priceChange": 1.39
   },
   {
     "id": "xoriguer",
     "name": "Xoriguer",
     "basePrice": 100,
-    "currentPrice": 14795.26,
+    "currentPrice": 14784.74,
     "exposure": {
       "HERITAGE": 70,
       "BOTANICALS": 25,
       "SEA": 5
     },
-    "priceChange": 2.14
+    "priceChange": -0.07
   },
   {
     "id": "poseidon",
     "name": "Poseidon",
     "basePrice": 100,
-    "currentPrice": 26838737.06,
+    "currentPrice": 27475821.99,
     "exposure": {
       "SEA": 90,
       "BOTANICALS": 10
     },
-    "priceChange": 4.21
+    "priceChange": 2.37
   },
   {
     "id": "melagorai",
     "name": "Melagorai",
     "basePrice": 100,
-    "currentPrice": 86745.75,
+    "currentPrice": 87933.42,
     "exposure": {
       "BOTANICALS": 70,
       "HERITAGE": 30
     },
-    "priceChange": 1.2
+    "priceChange": 1.37
   },
   {
     "id": "portofino-winter",
     "name": "Portofino",
     "basePrice": 100,
-    "currentPrice": 43681979.15,
+    "currentPrice": 45075998.45,
     "exposure": {
       "LUXURY": 30,
       "SEA": 30,
       "BOTANICALS": 10,
       "ART": 30
     },
-    "priceChange": 2.6
+    "priceChange": 3.19
   },
   {
     "id": "amuerte-white",
     "name": "Amuerte",
     "basePrice": 100,
-    "currentPrice": 12285.86,
+    "currentPrice": 12412.32,
     "exposure": {
       "LUXURY": 20,
       "EXPLORATION": 40,
       "ART": 30,
       "EMERGING": 10
     },
-    "priceChange": 0.9
+    "priceChange": 1.03
   },
   {
     "id": "bareksten-botanical",
     "name": "Bareksten",
     "basePrice": 100,
-    "currentPrice": 7199.57,
+    "currentPrice": 7457.78,
     "exposure": {
       "NORDIC": 75,
       "BOTANICALS": 25
     },
-    "priceChange": 0.58
+    "priceChange": 3.59
   },
   {
     "id": "bareksten-double",
     "name": "Bareksten Double",
     "basePrice": 100,
-    "currentPrice": 6259.69,
+    "currentPrice": 6416.05,
     "exposure": {
       "NORDIC": 70,
       "BOTANICALS": 30
     },
-    "priceChange": 2.38
+    "priceChange": 2.5
   },
   {
     "id": "son-of-a-birch",
     "name": "Son of a birch",
     "basePrice": 100,
-    "currentPrice": 8389.44,
+    "currentPrice": 8591.49,
     "exposure": {
       "NORDIC": 40,
       "BOTANICALS": 40,
       "HERITAGE": 20
     },
-    "priceChange": 0.38
+    "priceChange": 2.41
   },
   {
     "id": "rupis",
     "name": "Rupis",
     "basePrice": 100,
-    "currentPrice": 35394.08,
+    "currentPrice": 36255.01,
     "exposure": {
       "HERITAGE": 40,
       "BOTANICALS": 20,
       "SEA": 40
     },
-    "priceChange": 2.33
+    "priceChange": 2.43
   },
   {
     "id": "gordon",
     "name": "Gordon's",
     "basePrice": 100,
-    "currentPrice": 40.33,
+    "currentPrice": 39.91,
     "exposure": {
       "HERITAGE": 95,
       "BOTANICALS": 5
     },
-    "priceChange": -1.02
+    "priceChange": -1.03
   },
   {
     "id": "sipsmith",
     "name": "Sipsmith",
     "basePrice": 100,
-    "currentPrice": 65114.21,
+    "currentPrice": 65591.64,
     "exposure": {
       "HERITAGE": 60,
       "LUXURY": 20,
       "BOTANICALS": 20
     },
-    "priceChange": 0.46
+    "priceChange": 0.73
   },
   {
     "id": "malfy-rosa",
     "name": "Malfy Rosa",
     "basePrice": 100,
-    "currentPrice": 2317.66,
+    "currentPrice": 2326.04,
     "exposure": {
       "BOTANICALS": 30
     },
-    "priceChange": 1.13
+    "priceChange": 0.36
   },
   {
     "id": "castelgy",
     "name": "Castelgy",
     "basePrice": 100,
-    "currentPrice": 934.21,
+    "currentPrice": 937.8,
     "exposure": {
       "BOTANICALS": 20
     },
-    "priceChange": 1.15
+    "priceChange": 0.38
   }
 ]
