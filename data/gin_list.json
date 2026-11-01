@@ -1,9 +1,90 @@
 ﻿[
   {
+  "id": "bloom",
+  "nome": "GinDuno",
+  "provenienza": "🇮🇹 Villa Duna",
+  "isEmpty": true,
+  "bg-color": "#EBCBD6",
+  "coordinate": { "lat": 45.748, "lon": 9.613 },
+  "aggettivi": [ "Floreale", "Delicato", "Luminoso" ],
+  "botaniche": [ "Lavanda", "Ibisco", "Arancia" ],
+  "profilo": "Alpine Bloom è la primavera secondo Duna: non quella dei prati pieni di margherite e delle cartoline un po' stucchevoli, ma una stagione più sottile, fatta di profumi che arrivano con il vento e colori che sembrano dipinti con una mano particolarmente felice. La lavanda porta una calma quasi aristocratica, l'ibisco aggiunge una sfumatura floreale e leggermente acidula, mentre l'arancia illumina il tutto con una freschezza agrumata che impedisce al bicchiere di diventare un bouquet da salotto. È un gin più morbido e gentile del suo predecessore, ma non per questo dolce: Duna, del resto, può concedersi molte cose, ma non compromette mai il carattere. Lo si beve immaginando una terrazza alpina all'inizio della primavera, quando la neve si ritira lentamente e il paesaggio ricomincia a fiorire. La luce è rosa, l'aria è fresca e tutto sembra perfettamente armonioso. Duna osserva la scena con soddisfazione, annusa una lavanda e si allontana: probabilmente ha appena approvato la nuova direzione creativa, anche se resta da capire se abbia apprezzato soprattutto le botaniche o la possibilità di rotolarsi nel prato.",
+  "radar": {
+    "dryness": 8.0,
+    "uniqueness": 9.5,
+    "balsamic": 6.0,
+    "salinity": 3.0,
+    "citrus": 8.0,
+    "botanic-complexity": 8.0,
+    "persistence": 7.5
+  },
+  "toniche": [
+    {
+      "label": "Indian Tonic",
+      "tipo": "indiana",
+      "valori": {
+        "dryness": 0.5,
+        "uniqueness": 0,
+        "balsamic": 0.5,
+        "salinity": 0,
+        "citrus": 1,
+        "botanic-complexity": 0.5,
+        "persistence": 1
+      },
+      "consigliata": true
+    },
+    {
+      "label": "Mediterranean Tonic",
+      "tipo": "mediterranea",
+      "valori": {
+        "dryness": -0.5,
+        "uniqueness": 0.5,
+        "balsamic": 1,
+        "salinity": 1,
+        "citrus": 0.5,
+        "botanic-complexity": 1,
+        "persistence": 1
+      },
+      "consigliata": false
+    }
+  ],
+  "ethicalIndex": {
+    "env": 91,
+    "soc": 94,
+    "trad": 95,
+    "tot": 93,
+    "motivation": "Perché è fatto da Duna. E, come ogni progetto supervisionato da lei, anche questa edizione celebra la biodiversità, l'armonia con il territorio e il diritto inalienabile a ricevere carezze durante l'orario di lavoro."
+  },
+  "filters": {
+    "cont": "eu",
+    "ecosistema": [ "mon", "bos" ],
+    "botanicals-ter": false,
+    "ong": false
+  },
+  "politicalArea": {
+    "id": "esx",
+    "mot": "Duna continua a promuovere un modello produttivo fondato su biodiversità, delicatezza e rispetto dell'ambiente. Alpine Bloom aggiunge una nuova sensibilità: la primavera come bene comune, i fiori come patrimonio collettivo e la lavanda come diritto fondamentale. Sui biscotti, tuttavia, resta una convinta sostenitrice della proprietà privata."
+  },
+  "alc": 38,
+  "antipasti": [
+    {
+      "nome": "Caprino fresco, miele e scorza d'arancia",
+      "img": "path",
+      "descrizione": "La freschezza del caprino e la nota agrumata accompagnano il profilo floreale senza renderlo eccessivamente dolce."
+    },
+    {
+      "nome": "Tartare di salmone, lime e finocchietto",
+      "img": "path",
+      "descrizione": "Delicata ma sapida, con una freschezza erbacea che bilancia la morbidezza della lavanda e dell'ibisco."
+    }
+  ],
+  "limited": "Alpine Bloom"
+},
+  {
     "id": "ginduno",
     "nome": "GinDuno",
     "provenienza": "🇮🇹 Villa Duna",
-    "isEmpty": false,
+    "isEmpty": true,
     "bg-color": "#8dae99",
     "coordinate": { "lat": 45.748, "lon": 9.613 },
     "aggettivi": [ "Contemplativo", "Etereo", "Rituale" ],
@@ -220,8 +301,8 @@
     "bg-color": "#dd9957",
     "coordinate": { "lat": -34.1811, "lon": 22.1059 },
     "aggettivi": [ "Ventoso", "Selvatico", "Minerale" ],
-    "botaniche": [ "Fynbos", "Honeybush", "Buchu" ],
-    "profilo": "Scegli Cape Saint Blaize perché hai trasformato il Sudafrica nella tua nuova personalità. Dopo il primo sorso pronunci 'fynbos' con una sicurezza sospetta, come se avessi scritto la tesi sulla flora del Capo, quando fino alla settimana prima eri convinto fosse il nome di un festival indie. Ti affascina l'idea di bere un ecosistema unico al mondo e, improvvisamente, inizi a infilare nelle conversazioni frasi tipo 'la biodiversità del Capo è davvero sottovalutata', sperando che nessuno ti chieda di indicarlo su una cartina. In fondo non cerchi un gin famoso: cerchi il sottile piacere di spiegare agli altri perché il loro non racconta un patrimonio botanico dichiarato hotspot mondiale. E se qualcuno ti chiede com'è? Rispondi semplicemente: 'Ha molto territorio.' Nessuno capirà davvero cosa intendi, ma annuiranno lo stesso.",
+    "botaniche": [ "Botaniche del Fynbos", "Honeybush", "Buchu" ],
+    "profilo": "Scegli Cape Saint Blaize perché hai trasformato il Sudafrica nella tua nuova personalità. Dopo il primo sorso pronunci fynbos con una sicurezza sospetta, come se avessi scritto la tesi sulla flora del Capo, quando fino alla settimana prima eri convinto fosse il nome di un festival indie. Ti affascina l'idea di bere un ecosistema unico al mondo e, improvvisamente, inizi a infilare nelle conversazioni frasi tipo «la biodiversità del Capo è davvero sottovalutata», sperando che nessuno ti chieda di indicarlo su una cartina. Il vero salto culturale arriva quando scopri che dietro la bottiglia c'è Luxolo, l'artigiano vasaio che l'ha realizzata, e Wilko, il distillatore. A quel punto non hai più comprato un gin: hai adottato una piccola filiera di saperi africani. Racconti la lavorazione della ceramica con la stessa partecipazione emotiva di un documentario sull'artigianato preindustriale, mentre spieghi che Wilko non distilla semplicemente botaniche, ma interpreta il territorio. Se poi qualcuno osa chiamarla «una bella bottiglia», lo correggi: «È un oggetto artigianale con una precisa identità culturale». In fondo non cerchi un gin famoso: cerchi il sottile piacere di spiegare agli altri perché il loro non racconta un patrimonio botanico dichiarato hotspot mondiale. E se qualcuno ti chiede com'è? Rispondi semplicemente: «Ha molto territorio, ma soprattutto ha una storia». Nessuno capirà davvero cosa intendi, ma annuiranno lo stesso.",
     "radar": {
   "dryness": 8.2,
   "uniqueness": 8.7,

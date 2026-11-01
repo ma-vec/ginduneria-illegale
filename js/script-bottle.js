@@ -735,10 +735,10 @@ console.log("totSeggi:", totSeggi);
         return {
             name: area.name,
             y: seats[index],
-            color: area.color,
+            color: isSelected ? area.color : hexToRGBA(area.color, 0.25),
             label: area.label,
-            borderColor: isSelected ? "#ffffff" : area.color,
-            borderWidth: isSelected ? 0.8 : 0
+            borderColor: isSelected ? "#ffffff" : hexToRGBA(area.color, 0.55),
+            borderWidth: isSelected ? 0.8 : 0.35
         };
     });
 
