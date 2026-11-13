@@ -1,62 +1,62 @@
 {
   "ESG": {
-    "value": 94545.51,
-    "previous": 93286.15,
-    "change": 1.35,
-    "lastUpdate": "2026-11-12"
+    "value": 95786.42,
+    "previous": 94545.51,
+    "change": 1.31,
+    "lastUpdate": "2026-11-13"
   },
   "EMERGING": {
-    "value": 682355.26,
-    "previous": 674264.09,
-    "change": 1.2,
-    "lastUpdate": "2026-11-12"
+    "value": 689861.17,
+    "previous": 682355.26,
+    "change": 1.1,
+    "lastUpdate": "2026-11-13"
   },
   "ART": {
-    "value": 1645386.18,
-    "previous": 1611543.76,
-    "change": 2.1,
-    "lastUpdate": "2026-11-12"
+    "value": 1681584.68,
+    "previous": 1645386.18,
+    "change": 2.2,
+    "lastUpdate": "2026-11-13"
   },
   "SEA": {
-    "value": 35511840.93,
-    "previous": 34645698.47,
+    "value": 36399636.95,
+    "previous": 35511840.93,
     "change": 2.5,
-    "lastUpdate": "2026-11-12"
+    "lastUpdate": "2026-11-13"
   },
   "TRADITION": {
-    "value": 94545.51,
-    "previous": 93286.15,
-    "change": 1.35,
-    "lastUpdate": "2026-11-12"
+    "value": 95786.42,
+    "previous": 94545.51,
+    "change": 1.31,
+    "lastUpdate": "2026-11-13"
   },
   "BOTANICALS": {
-    "value": 14132733.64,
-    "previous": 13788032.82,
+    "value": 14486051.98,
+    "previous": 14132733.64,
     "change": 2.5,
-    "lastUpdate": "2026-11-12"
+    "lastUpdate": "2026-11-13"
   },
   "NORDIC": {
-    "value": 1233.25,
-    "previous": 1229.56,
-    "change": 0.3,
-    "lastUpdate": "2026-11-12"
+    "value": 1238.18,
+    "previous": 1233.25,
+    "change": 0.4,
+    "lastUpdate": "2026-11-13"
   },
   "EXPLORATION": {
-    "value": 23.4,
-    "previous": 23.56,
+    "value": 23.24,
+    "previous": 23.4,
     "change": -0.7,
-    "lastUpdate": "2026-11-12"
+    "lastUpdate": "2026-11-13"
   },
   "LUXURY": {
-    "value": 17330872.64,
-    "previous": 16908168.43,
+    "value": 17764144.46,
+    "previous": 17330872.64,
     "change": 2.5,
-    "lastUpdate": "2026-11-12"
+    "lastUpdate": "2026-11-13"
   },
   "HERITAGE": {
     "value": 17.04,
-    "previous": 16.97,
-    "change": 0.4,
-    "lastUpdate": "2026-11-12"
+    "previous": 17.04,
+    "change": 0,
+    "lastUpdate": "2026-11-13"
   }
 }
